@@ -597,8 +597,43 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
 @media(max-width:900px){.kanji-grid-100{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.kanji-head{display:block}.kanji-head .vocab-head-actions{margin-top:12px}.kanji-grid-100{grid-template-columns:repeat(2,minmax(0,1fr))}.kanji-answer-grid{grid-template-columns:1fr}.kanji-pack-row select{width:100%;min-width:0}.kanji-input-row{display:block}.kanji-input-row .btn{width:100%;margin-top:8px}.review-due-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+/* Optional kanji handwriting / tracing practice */
+.kanji-entry-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:11px;padding-top:10px;border-top:1px solid #EDF1F4}
+.kanji-entry-actions .trace-count{font-size:.64rem;color:var(--muted);font-weight:750}
+.kanji-trace-link{border:1px solid #BFD1E1;background:#fff;color:var(--blue);border-radius:8px;padding:6px 8px;font-size:.68rem;font-weight:850}
+.kanji-trace-link:hover{background:var(--blue-soft)}
+.kanji-trace-card{margin-top:20px;border:1px solid var(--line);border-radius:16px;background:#fff;padding:22px;box-shadow:0 8px 26px rgba(37,76,110,.06)}
+.kanji-trace-top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:start}
+.kanji-trace-meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.kanji-trace-meta span{padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#F9FBFC;font-size:.72rem;color:#52616D}
+.kanji-trace-word{font-size:1.55rem;font-weight:930;margin:4px 0 2px}.kanji-trace-reading{color:var(--blue);font-size:.82rem;font-weight:800}.kanji-trace-en{color:var(--muted);font-size:.8rem;margin-top:2px}
+.kanji-trace-counter{font-size:.76rem;color:var(--muted);font-weight:800;white-space:nowrap}
+.kanji-trace-workspace{display:grid;grid-template-columns:minmax(280px,1fr) minmax(210px,.72fr);gap:22px;align-items:start;margin-top:20px}
+.kanji-trace-canvas-wrap{width:100%;max-width:600px;aspect-ratio:1/1;border:1px solid #C9D5DF;border-radius:14px;overflow:hidden;background:#fff;position:relative;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
+#kanjiTraceCanvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair;user-select:none;-webkit-user-select:none}
+.kanji-trace-side{display:grid;gap:10px}.kanji-trace-side .btn{width:100%}
+.kanji-trace-side-note{padding:12px 13px;border-radius:10px;background:#F5F8FA;border-left:4px solid var(--blue);color:#4B5A67;font-size:.76rem;line-height:1.5}
+.kanji-trace-hint{margin-top:14px;color:var(--muted);font-size:.75rem;line-height:1.5}
+.kanji-trace-status{min-height:24px;margin-top:12px;font-weight:800;color:var(--good)}
+.kanji-trace-brush{display:grid;gap:5px;padding:10px 0}.kanji-trace-brush label{font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:850}.kanji-trace-brush input{width:100%;accent-color:var(--blue)}
+.kanji-stroke-order-panel{padding:13px;border:1px solid #D4DEE7;border-radius:11px;background:#FAFCFD;display:grid;gap:9px}
+.kanji-stroke-order-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.kanji-stroke-order-head b{font-size:.82rem}.kanji-stroke-order-badge{font-size:.62rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;color:var(--blue);background:var(--blue-soft);padding:4px 6px;border-radius:999px}
+.kanji-stroke-order-status{font-size:.72rem;color:#53616D;line-height:1.4;min-height:1.2em}
+.kanji-stroke-order-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.kanji-stroke-order-actions button{border:1px solid var(--line);background:#fff;color:#3F5263;border-radius:8px;padding:7px 5px;font-size:.68rem;font-weight:850;cursor:pointer}
+.kanji-stroke-order-actions button:hover:not(:disabled){border-color:#A8C1D6;color:var(--blue)}
+.kanji-stroke-order-actions button:disabled{opacity:.42;cursor:not-allowed}
+.kanji-stroke-order-options{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.kanji-stroke-order-options button{border:1px solid var(--line);background:#fff;color:#52616D;border-radius:8px;padding:7px 6px;font-size:.66rem;font-weight:800}
+.kanji-stroke-order-source{font-size:.61rem;color:#7A8792;line-height:1.4}
+.kanji-stroke-order-source a{color:#637C92}
 
-.review-due-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:760px){.kanji-trace-workspace{grid-template-columns:1fr}.kanji-trace-canvas-wrap{margin:0 auto}.kanji-trace-top{grid-template-columns:1fr}.kanji-trace-side{grid-template-columns:repeat(2,minmax(0,1fr))}.kanji-trace-side-note,.kanji-trace-brush{grid-column:1/-1}}
+@media(max-width:480px){.kanji-trace-card{padding:14px}.kanji-trace-side{grid-template-columns:1fr}.kanji-trace-side-note,.kanji-trace-brush{grid-column:auto}}
+
+
+.review-due-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 .beta-pill{
   display:inline-block;margin:0 auto 20px;padding:7px 11px;border-radius:999px;
   border:1px solid #BED0E0;background:#fff;color:var(--blue);font-size:.72rem;font-weight:900;
@@ -779,19 +814,18 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
 
 <section id="welcome" class="welcome">
   <div class="welcome-inner">
-    <div class="beta-pill">v0.1 beta · Units 1–2</div>
+    <div class="beta-pill">v0.2 beta · Units 1–3</div>
     <div class="welcome-mark">に</div>
     <h1>Learn Japanese by actually using it.</h1>
-    <p>A structured beginner course built around actually reading and making Japanese sentences. v0.1 includes the complete first two units: foundational sentences, hiragana mastery, and core particles.</p>
+    <p>A structured beginner course built around actually reading and making Japanese sentences. v0.2 includes three complete units: foundational sentences, hiragana mastery, core particles, everyday verb forms, and the first kanji pack.</p>
     <div class="welcome-actions">
       <button class="btn" id="startLearning" type="button">Start learning</button>
       <button class="btn secondary" id="explore" type="button">Explore course →</button>
     </div>
     <div class="welcome-testing-actions">
-      <button class="btn secondary" id="testOutUnitOne" type="button">Test out of Unit 1</button>
       <button class="btn text dev-start-btn" id="devModeStart" type="button">Developer mode</button>
     </div>
-    <div class="welcome-testing-note">Already know beginner Japanese? Pass the Unit 1 placement final to skip ahead. Developer mode exposes unfinished Unit 3 and kanji tools for testing.</div>
+    <div class="welcome-testing-note">Developer mode exposes future kanji packs and development tools without changing normal progression.</div>
     <div id="mobileStorageNote" style="display:none;margin-top:14px;color:var(--muted);font-size:.75rem;line-height:1.45"></div>
   </div>
 </section>
@@ -1064,8 +1098,8 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
           </div>
           <button class="btn orange" id="continueLearning">Continue learning →</button>
         </div>
-        <div class="beta-release-note"><b>v0.1 course:</b> Units 1 and 2 are available now. Within an unlocked unit, every lesson is open. Read in order, take notes first, practice heavily, or test your prior knowledge—the <b>unit final</b> is the progression gate.</div>
-        <div id="courseDevBanner" class="dev-banner hidden"><b>Developer mode:</b> Unit 3 and the Kanji section are exposed for testing. Unit 3 is still an outline and does not yet have full practice banks or a final.</div>
+        <div class="beta-release-note"><b>v0.2 course:</b> Units 1–3 are available now. Within an unlocked unit, every lesson is open. Read in order, take notes first, practice heavily, or test your prior knowledge—the <b>unit final</b> is the progression gate.</div>
+        <div id="courseDevBanner" class="dev-banner hidden"><b>Developer mode:</b> all future kanji packs and development-only tools are exposed for testing. Released Units 1–3 still use the normal course rules.</div>
         <div id="courseProgressSummary" class="course-progress-summary"></div>
         <div id="courseMapList" class="course-map-list"></div>
       </div>
@@ -1099,7 +1133,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
         <h1 class="page-title">Particle Practice</h1>
         <p class="lead">Practice particles from meaning, not from guesswork. Every sentence tells you what it means in English, so an unfamiliar word should never be the reason you miss the particle.</p>
 
-        <div class="particle-test-note">
+        <div class="particle-test-note" id="particleAccessNote">
           <b>Unlocked:</b> Particle Practice becomes available after you complete Unit 2 and pass its final.
         </div>
 
@@ -1287,6 +1321,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
           </div>
           <div class="vocab-head-actions">
             <button class="btn secondary" id="startKanjiDrill">Assisted recognition</button>
+            <button class="btn secondary" id="startKanjiTrace">Trace / writing</button>
             <button class="btn orange" id="startKanjiMastery">No-help mastery →</button>
           </div>
         </div>
@@ -1325,6 +1360,18 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
 
         <div id="kanjiChallengeSummary" class="kanji-summary"></div>
         <div id="kanjiChallengeArea"></div>
+      </div>
+    </section>
+
+    <section id="kanjiTrace" class="view">
+      <div class="page page-wide">
+        <div class="eyebrow">Optional writing practice</div>
+        <h1 class="page-title">Trace kanji</h1>
+        <p class="lead">Draw directly over a faint kanji guide with a mouse, trackpad, finger, or stylus. This is shape practice only: tracing is optional and does not change kanji mastery.</p>
+        <div class="settings-row">
+          <button class="btn secondary" id="backFromKanjiTrace">← Back to kanji</button>
+        </div>
+        <div id="kanjiTraceArea"></div>
       </div>
     </section>
 
@@ -1369,16 +1416,17 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
 
         <div class="about-grid">
           <div class="about-card">
-            <h2>What is in v0.1</h2>
+            <h2>What is in v0.2</h2>
             <p><b>Introduction:</b> optional zero-knowledge orientation covering the writing systems, romaji, SVO/SOV word order, particles, and basic grammar vocabulary.</p>
             <p><b>Unit 1:</b> first Japanese sentences, basic verb forms, existence, adjectives, wants, and the first ten hiragana.</p>
             <p><b>Unit 2:</b> a full core-particle unit covering は, が, を, に, で, へ, と, の, も, から, and まで.</p>
-            <p>Vocabulary mastery, kana mastery, adaptive review, lesson checks, and required unit finals are included.</p>
+            <p><b>Unit 3:</b> the polite verb system, negative/past/past-negative forms, verb families, dictionary form, する / くる, longer action sentences, and the first 10 kanji.</p>
+            <p>Vocabulary mastery, kana mastery, kanji recognition/recall/tracing, adaptive review, lesson checks, and required unit finals are included.</p>
           </div>
           <div class="about-card">
             <h2>Coming later</h2>
-            <p>Units 3–13 are visible on the roadmap but are not part of this beta yet.</p>
-            <p>Kanji begins with Unit 3. The kanji system is already under development, but it is hidden from v0.1 learners until that unit exists.</p>
+            <p>Units 4–13 are visible on the roadmap but are not part of this beta yet.</p>
+            <p>Kanji begins in Unit 3 with 10 characters. Additional 10-kanji packs are planned for Units 4–12 and remain locked until those units are released.</p>
             <p>Listening, speaking, account/cloud sync, and intermediate material are later additions.</p>
           </div>
         </div>
@@ -1386,7 +1434,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
         <div class="simple-section">
           <h2>Your progress</h2>
           <div id="aboutProgress"></div>
-          <p class="small">Progress is stored locally in this browser. v0.1 does not yet have accounts or cloud sync, so clearing browser storage can erase progress.</p>
+          <p class="small">Progress is stored locally in this browser. v0.2 does not yet have accounts or cloud sync, so clearing browser storage can erase progress.</p>
         </div>
 
         <div class="simple-section danger-zone">
@@ -1399,7 +1447,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
 
         <div class="simple-section">
           <h2>Developer testing</h2>
-          <p>Developer mode exposes Unit 3's lesson outline and all kanji packs without changing normal public-beta progression.</p>
+          <p>Developer mode exposes all future kanji packs and development-only tools without changing normal public-beta progression.</p>
           <button class="btn secondary" id="aboutDevToggle">Toggle developer mode</button>
         </div>
 
@@ -1459,6 +1507,14 @@ Object.assign(meta,{
 "かきます":["kakimasu","write"],"まちます":["machimasu","wait"],"ききます":["kikimasu","listen / ask"],
 "いいます":["iimasu","say"],"はい":["hai","yes"],"いいえ":["iie","no"],"かいます":["kaimasu","buy"],
 "はたらきます":["hatarakimasu","work"],"とうきょう":["toukyou","Tokyo"]
+});
+Object.assign(meta,{
+"のみませんでした":["nomimasen deshita","did not drink"],"たべませんでした":["tabemasen deshita","did not eat"],"よみませんでした":["yomimasen deshita","did not read"],"みませんでした":["mimasen deshita","did not watch / see"],"いきませんでした":["ikimasen deshita","did not go"],
+"かいました":["kaimashita","bought"],"かいません":["kaimasen","do not buy"],"かいませんでした":["kaimasen deshita","did not buy"],"かきました":["kakimashita","wrote"],"かきません":["kakimasen","do not write"],"かきませんでした":["kakimasen deshita","did not write"],
+"べんきょうしません":["benkyou shimasen","do not study"],"べんきょうしました":["benkyou shimashita","studied"],"べんきょうしませんでした":["benkyou shimasen deshita","did not study"],
+"きます":["kimasu","come"],"きません":["kimasen","do not / will not come"],"きました":["kimashita","came"],"きませんでした":["kimasen deshita","did not come"],
+"りょうりします":["ryouri shimasu","cook"],"りょうりしました":["ryouri shimashita","cooked"],"りょうりしません":["ryouri shimasen","do not cook"],"りょうりしませんでした":["ryouri shimasen deshita","did not cook"],
+"せんしゅう":["senshuu","last week"],"あまり":["amari","not very / not much"],"テレビ":["terebi","television"],"コーヒー":["koohii","coffee"],"パン":["pan","bread"]
 });
 
 
@@ -1645,8 +1701,17 @@ unit2LessonData.forEach((data,n)=>{
 });
 courseUnits[1].implemented=true;
 
-const APP_VERSION="0.1 beta";
-const PUBLIC_UNIT_COUNT=2;
+const unit3LessonData=[{"title":"Polite verbs as a system","lead":"Stop memorizing every 〜ます verb as an isolated phrase. Learn the four polite forms as one small system built around the same action.","objective":"Recognize the positive/negative and non-past/past pattern shared by familiar polite verbs.","focus":["のみます","のみません","のみました","のみませんでした"],"sections":[["One action, four polite forms","You already know several verbs ending in <b>〜ます</b>. The important next step is seeing that the ending carries grammar. Compare <span class=\"jp\">のみます</span>, <span class=\"jp\">のみません</span>, <span class=\"jp\">のみました</span>, and <span class=\"jp\">のみませんでした</span>. All four are still the action “drink”; the ending tells you whether the action is positive or negative and non-past or past."],["Two decisions: time and positive/negative","For the polite forms in this unit, make two decisions. First: is the action <b>non-past</b> or <b>past</b>? Second: is it <b>positive</b> or <b>negative</b>? That gives you ます, ません, ました, or ませんでした."],["Non-past is wider than English present tense","Japanese non-past can describe a habit, a general fact, or a future action when the context makes the time clear. <span class=\"jp\">あした いきます</span> is naturally “I will go tomorrow,” even though the verb uses the same non-past form as a routine statement."],["Kanji begins alongside Unit 3","Unit 3 also opens the first 10-kanji pack. Kanji study remains a separate mastery track, but the Unit 3 final can include basic recognition of the characters and example-word readings introduced in that pack."]],"examples":[{"tokens":["わたし","は","みず","を","のみます"],"en":"I drink water / I will drink water.","focus":["のみます"]},{"tokens":["わたし","は","みず","を","のみません"],"en":"I do not drink water / I will not drink water.","focus":["のみません"]},{"tokens":["きのう","わたし","は","みず","を","のみました"],"en":"Yesterday I drank water.","focus":["のみました"]},{"tokens":["きのう","わたし","は","みず","を","のみませんでした"],"en":"Yesterday I did not drink water.","focus":["のみませんでした"]}],"rule":"Polite verb system: <b>〜ます = non-past positive</b>, <b>〜ません = non-past negative</b>, <b>〜ました = past positive</b>, <b>〜ませんでした = past negative</b>."},{"title":"Non-past negative","lead":"Use 〜ません with routines, preferences, and future plans without adding a separate Japanese word for English “not.”","objective":"Choose and produce polite non-past negative verbs from context.","focus":["のみません","いきません","みません","べんきょうしません"],"sections":[["The negative is inside the verb ending","In a polite verb sentence, you normally do not insert a separate word meaning “not.” Change the verb: <span class=\"jp\">のみます</span> → <span class=\"jp\">のみません</span>, <span class=\"jp\">いきます</span> → <span class=\"jp\">いきません</span>."],["Habit or future comes from context","<span class=\"jp\">まいにち コーヒー を のみません</span> describes a habit: “I do not drink coffee every day.” <span class=\"jp\">あした がっこう に いきません</span> is future: “I will not go to school tomorrow.” The verb form itself is the same."],["Particles keep their jobs","Negating the verb does not change the noun relationships. Objects still take を, destinations still take に, action locations still take で, and companions still take と."],["Frequency words often pair naturally with negatives","Words such as <span class=\"jp\">あまり</span> (“not very much / not often”) commonly appear with a negative verb: <span class=\"jp\">あまり テレビ を みません</span> — “I do not watch much television.”"]],"examples":[{"tokens":["わたし","は","コーヒー","を","のみません"],"en":"I do not drink coffee.","focus":["のみません"]},{"tokens":["あした","わたし","は","がっこう","に","いきません"],"en":"Tomorrow I will not go to school.","focus":["いきません"]},{"tokens":["わたし","は","あまり","テレビ","を","みません"],"en":"I do not watch much television.","focus":["みません"]}],"rule":"Use <b>〜ません</b> for polite non-past negative. Time words and context tell you whether it means “do not” or “will not.”"},{"title":"Polite past","lead":"Make completed actions reliable: change the polite ending to 〜ました while leaving the rest of the sentence structure intact.","objective":"Use 〜ました in longer sentences with time, place, object, companion, and transport information.","focus":["よみました","みました","いきました","かいました"],"sections":[["Past positive uses 〜ました","A polite completed action ends in <b>〜ました</b>: <span class=\"jp\">よみます</span> → <span class=\"jp\">よみました</span>, <span class=\"jp\">かいます</span> → <span class=\"jp\">かいました</span>."],["Time words make the timeline easy to follow","Words such as きのう (yesterday) and せんしゅう (last week) often appear near the beginning. They establish the time frame, while the final verb confirms that the action is completed."],["Tense does not rewrite the particles","<span class=\"jp\">としょかん で ほん を よみます</span> and <span class=\"jp\">としょかん で ほん を よみました</span> use exactly the same で and を. Only the verb form changes."],["Past questions use the same form","Add か to ask about a completed action: <span class=\"jp\">きのう なに を たべました か</span> — “What did you eat yesterday?”"]],"examples":[{"tokens":["きのう","わたし","は","としょかん","で","ほん","を","よみました"],"en":"Yesterday I read a book at the library.","focus":["で","を","よみました"]},{"tokens":["せんしゅう","わたし","は","ともだち","と","えいが","を","みました"],"en":"Last week I watched a movie with a friend.","focus":["と","を","みました"]},{"tokens":["きのう","わたし","は","バス","で","がっこう","に","いきました"],"en":"Yesterday I went to school by bus.","focus":["で","に","いきました"]}],"rule":"Change <b>〜ます → 〜ました</b> for polite completed actions. The particles around the verb keep the same relationships."},{"title":"Polite past negative","lead":"Complete the four-form polite system with 〜ませんでした: the form for something that did not happen.","objective":"Recognize and produce polite past-negative action sentences.","focus":["のみませんでした","いきませんでした","よみませんでした","べんきょうしませんでした"],"sections":[["The form is 〜ませんでした","To say an action did not happen, use <b>〜ませんでした</b>: <span class=\"jp\">のみませんでした</span> — “did not drink,” <span class=\"jp\">いきませんでした</span> — “did not go.”"],["Contrast the two negative forms","<span class=\"jp\">いきません</span> is non-past negative: “do not / will not go.” <span class=\"jp\">いきませんでした</span> is past negative: “did not go.” The time distinction matters."],["Longer sentences still work normally","A past-negative sentence can keep time, place, object, and companion chunks exactly where you already know how to use them."],["Do not mix the positive-past and negative endings","Forms such as *いきましたません are not part of the system. Choose one complete ending that expresses both time and polarity."]],"examples":[{"tokens":["きのう","わたし","は","コーヒー","を","のみませんでした"],"en":"Yesterday I did not drink coffee.","focus":["のみませんでした"]},{"tokens":["せんしゅう","わたし","は","がっこう","に","いきませんでした"],"en":"Last week I did not go to school.","focus":["に","いきませんでした"]},{"tokens":["きのう","わたし","は","うち","で","べんきょうしませんでした"],"en":"Yesterday I did not study at home.","focus":["で","べんきょうしませんでした"]}],"rule":"Polite past negative = <b>〜ませんでした</b>. Compare いきません (do not / will not go) with いきませんでした (did not go)."},{"title":"Verb families","lead":"Learn why Japanese verbs are grouped by behavior. The point is prediction: a verb family tells you how that verb changes into other forms.","objective":"Sort familiar verbs into Group 1, Group 2, or irregular based on how their forms change.","focus":[],"sections":[["Why groups matter","If every new form had to be memorized for every verb, Japanese verbs would be exhausting. Instead, most verbs follow one of two large change patterns, plus two major irregular verbs. The standard names are <b>godan</b> (Group 1) and <b>ichidan</b> (Group 2)."],["Group 2 keeps a very stable stem","Common Group 2 verbs include <span class=\"jp\">たべる</span> (eat), <span class=\"jp\">みる</span> (see/watch), <span class=\"jp\">ねる</span> (sleep), and <span class=\"jp\">おきる</span> (wake up). Their polite forms attach ます to a stable stem: たべ→たべます, み→みます."],["Group 1 changes its final kana","Group 1 verbs include <span class=\"jp\">のむ</span>, <span class=\"jp\">よむ</span>, <span class=\"jp\">かく</span>, <span class=\"jp\">はなす</span>, <span class=\"jp\">まつ</span>, and <span class=\"jp\">かう</span>. Their final sound shifts when another form is built."],["Do not classify by appearance alone","Many verbs ending in -いる or -える are Group 2, but not all. <span class=\"jp\">かえる</span> (“return/go home”) is Group 1. Learn a new verb together with its behavior instead of relying on a single spelling shortcut."],["Two major irregular verbs","<span class=\"jp\">する</span> (“do”) and <span class=\"jp\">くる</span> (“come”) do not follow the ordinary Group 1 or Group 2 pattern. Lesson 7 gives them focused practice."]],"examples":[{"tokens":["わたし","は","パン","を","たべます"],"en":"たべる → たべます · Group 2 (ichidan).","focus":["たべます"]},{"tokens":["わたし","は","みず","を","のみます"],"en":"のむ → のみます · Group 1 (godan).","focus":["のみます"]},{"tokens":["わたし","は","にほんご","を","べんきょうします"],"en":"べんきょうする → べんきょうします · irregular する pattern.","focus":["べんきょうします"]}],"rule":"Verb groups are prediction tools: <b>Group 1 / godan</b>, <b>Group 2 / ichidan</b>, plus irregular <b>する</b> and <b>くる</b>."},{"title":"Dictionary form","lead":"Connect the polite verbs you already know to the form Japanese dictionaries list and many later grammar patterns build from.","objective":"Convert common 〜ます forms to their dictionary forms and recognize the pattern for each verb family.","focus":[],"sections":[["What dictionary form is","The <b>dictionary form</b> is the basic form used as a dictionary headword: <span class=\"jp\">たべる</span>, <span class=\"jp\">のむ</span>, <span class=\"jp\">いく</span>. It is also the form many later grammar constructions attach to."],["Group 2: return to the stable stem + る","For the Group 2 verbs here, remove ます and add る: <span class=\"jp\">たべます</span> → <span class=\"jp\">たべる</span>, <span class=\"jp\">みます</span> → <span class=\"jp\">みる</span>, <span class=\"jp\">おきます</span> → <span class=\"jp\">おきる</span>."],["Group 1: move the final i-row sound back to its u-row sound","Examples: <span class=\"jp\">のみます</span> → <span class=\"jp\">のむ</span>, <span class=\"jp\">よみます</span> → <span class=\"jp\">よむ</span>, <span class=\"jp\">かきます</span> → <span class=\"jp\">かく</span>, <span class=\"jp\">はなします</span> → <span class=\"jp\">はなす</span>, <span class=\"jp\">まちます</span> → <span class=\"jp\">まつ</span>, <span class=\"jp\">かいます</span> → <span class=\"jp\">かう</span>."],["Dictionary form is not simply 'bad manners'","Plain forms can sound too casual in some social situations, but dictionary form is fundamentally a grammar form—not a rude version of Japanese. You will use it inside many perfectly polite sentences later."],["Do not just replace ます with る","That works for the Group 2 examples above, but it fails for Group 1. *のみる is not the dictionary form of のみます; the correct form is <span class=\"jp\">のむ</span>."]],"examples":[{"tokens":["たべます"],"en":"たべます → たべる · eat","focus":["たべます"]},{"tokens":["のみます"],"en":"のみます → のむ · drink","focus":["のみます"]},{"tokens":["いきます"],"en":"いきます → いく · go","focus":["いきます"]}],"rule":"Dictionary form depends on the verb family: Group 2 returns to <b>stem + る</b>; Group 1 changes the final i-row kana back to its matching u-row kana."},{"title":"する and くる","lead":"Master the two major irregular verbs early. する builds countless activity verbs, and くる is one of the most common movement verbs.","objective":"Recognize and produce the polite forms and dictionary forms of する and くる.","focus":["べんきょうします","べんきょうしません","きます","きません"],"sections":[["する means 'do'","The core set is <span class=\"jp\">する</span> → <span class=\"jp\">します</span> → <span class=\"jp\">しません</span> → <span class=\"jp\">しました</span> → <span class=\"jp\">しませんでした</span>. These forms are irregular, so learn them as a family."],["Activity nouns + する","Many activity words combine with する to make verbs. <span class=\"jp\">べんきょうする</span> is “to study,” and <span class=\"jp\">りょうりする</span> is “to cook.” The する part carries the verb grammar: べんきょうしました, りょうりしません, and so on."],["くる means 'come'","The core set is <span class=\"jp\">くる</span> → <span class=\"jp\">きます</span> → <span class=\"jp\">きません</span> → <span class=\"jp\">きました</span> → <span class=\"jp\">きませんでした</span>. Notice that the sound change is not predictable from the ordinary group rules."],["Direction depends on the speaker's viewpoint","くる describes movement toward the speaker, the listener, or a relevant viewpoint. English sometimes chooses “come” or “go” differently, so pay attention to whose location is treated as the reference point."]],"examples":[{"tokens":["まいにち","わたし","は","にほんご","を","べんきょうします"],"en":"I study Japanese every day.","focus":["べんきょうします"]},{"tokens":["きのう","わたし","は","うち","で","りょうりしました"],"en":"Yesterday I cooked at home.","focus":["りょうりしました"]},{"tokens":["あした","ともだち","は","わたし","の","うち","に","きます"],"en":"Tomorrow my friend will come to my house.","focus":["に","きます"]}],"rule":"Irregular core forms: <b>する → します</b> and <b>くる → きます</b>. Their negative and past forms build from し- and き-."},{"title":"Build complete action sentences","lead":"Put the verb system to work in real sentences: combine time, topic, companion, place, means, object, and verb without copying English word order mechanically.","objective":"Build and interpret longer beginner action sentences while choosing the correct polite verb form from context.","focus":[],"sections":[["Think in particle-marked chunks","A useful beginner order is often <b>time → topic → place/companion → object → verb</b>, but this is a guide, not an iron law. Particles tell you what each chunk is doing, while the verb normally anchors the end."],["Choose the verb form after you know the message","Ask: What action? Past or non-past? Positive or negative? Then choose the form. “Yesterday + not study” points to べんきょうしませんでした; “tomorrow + go” points to いきます."],["More information does not mean more grammar","A longer sentence often just combines grammar you already know: <span class=\"jp\">きのう としょかん で にほんご の ほん を よみました</span>. Time, place, noun-linking の, object を, and the past verb all keep their familiar jobs."],["Japanese can omit obvious information","If everyone knows who is being discussed, the topic can disappear. <span class=\"jp\">きのう としょかん で ほん を よみました</span> can be a complete natural answer without わたし は."],["Do not force every English word into Japanese","Good sentence building is not substitution. Decide which information Japanese actually needs, mark the relationships with particles, and finish with the verb form that matches the time and meaning."]],"examples":[{"tokens":["きのう","わたし","は","としょかん","で","にほんご","の","ほん","を","よみました"],"en":"Yesterday I read a Japanese-language book at the library.","focus":["で","の","を","よみました"]},{"tokens":["まいにち","わたし","は","うち","で","にほんご","を","べんきょうします"],"en":"Every day I study Japanese at home.","focus":["で","を","べんきょうします"]},{"tokens":["せんしゅう","わたし","は","バス","で","とうきょう","に","いきました"],"en":"Last week I went to Tokyo by bus.","focus":["で","に","いきました"]}],"rule":"Build meaning in chunks, let particles label the relationships, and let the <b>final verb form</b> carry the action's time and positive/negative meaning."}];
+const unit3DeepDive=["<div class=\"deep-block\"><h2>Conjugation is not a separate vocabulary list</h2><p>A conjugation is a predictable change to a word's form. When のみます becomes のみません, you have not learned a new action; you have changed the grammar attached to “drink.” Thinking this way reduces memorization and prepares you for many later forms.</p></div><div class=\"deep-block\"><h2>The polite system is a useful anchor</h2><p>Later you will learn plain forms, て-forms, conditionals, and more. The four polite forms give you a stable first grid: non-past/past crossed with positive/negative. If you lose track of a sentence, ask which square of that grid the speaker chose.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> treating ます as if it means English “present tense.” It is a polite non-past ending, and context can make the sentence habitual or future.</div>","<div class=\"deep-block\"><h2>Japanese often leaves future meaning to context</h2><p>English frequently marks future time with “will” or “going to.” Japanese can simply use a non-past verb plus a future time expression: あした いきません. The word あした tells you when the non-past action is relevant.</p></div><div class=\"deep-block\"><h2>Negative does not disturb sentence structure</h2><p>This is worth exploiting in practice. First build the sentence you already know, then change only the verb ending. としょかん で ほん を よみます becomes としょかん で ほん を よみません.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> changing a particle because the sentence became negative. Particles describe noun relationships; positive/negative meaning belongs to the verb form here.</div>","<div class=\"deep-block\"><h2>Past is about the event, not every word</h2><p>Japanese does not need to mark every element of a sentence as past. The final verb can establish the event as completed while the noun and particle chunks stay unchanged.</p></div><div class=\"deep-block\"><h2>Context can make subjects unnecessary</h2><p>If someone asks きのう なに を たべました か, a natural answer can simply be ラーメン を たべました. Repeating わたし は is possible but often unnecessary because the speaker is already obvious.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> believing every Japanese sentence needs an explicit “I.” Japanese routinely omits a known subject or topic.</div>","<div class=\"deep-block\"><h2>One ending carries two pieces of grammar</h2><p>ませんでした tells you both that the action is negative and that it belongs to the past. That is more useful than thinking of it as several English words glued together.</p></div><div class=\"deep-block\"><h2>Compare all four forms side by side</h2><p>いきます: go/will go. いきません: do not/will not go. いきました: went. いきませんでした: did not go. Repeated contrast is the fastest way to make the system automatic.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> using ません when the time word is clearly past. きのう normally calls for a past form, so “did not go yesterday” needs いきませんでした.</div>","<div class=\"deep-block\"><h2>Why the labels godan and ichidan exist</h2><p>These traditional labels describe how the verb's stem behaves across conjugations. You do not need the historical linguistics behind the names, but recognizing them is useful because dictionaries and textbooks use them constantly.</p></div><div class=\"deep-block\"><h2>Learn verbs with one diagnostic partner form</h2><p>When a new verb ends in る and you are unsure of its family, learning one additional form—often its ます form or ない form—can reveal the pattern. This is more dependable than guessing from the final two kana alone.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> assuming every verb ending in る is Group 2. Many are, but common Group 1 verbs such as かえる exist.</div>","<div class=\"deep-block\"><h2>The dictionary form unlocks later grammar</h2><p>Japanese grammar frequently attaches expressions to a plain verb form. Learning dictionary form now is not mainly about speaking casually; it gives you the base form that future constructions will expect.</p></div><div class=\"deep-block\"><h2>Use the ます form as a clue, not a mechanical recipe</h2><p>For Group 1, the kana immediately before ます tells you which u-row ending to restore: み→む, き→く, し→す, ち→つ, い→う, and so on. For Group 2, the stem is stable and る returns.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> making *よみる from よみます. よむ is Group 1, so the final み shifts back to む.</div>","<div class=\"deep-block\"><h2>する makes Japanese vocabulary expandable</h2><p>Once you know する, many nouns describing activities can function as verbs. This makes する one of the highest-value verbs in the language: the grammar stays familiar while the activity noun supplies the meaning.</p></div><div class=\"deep-block\"><h2>くる changes more dramatically</h2><p>くる → きます is not a change you can predict from the ordinary Group 1 or Group 2 rules. That is exactly why it is worth isolating and drilling early.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> guessing *くります as the polite form of くる. The correct form is きます.</div>","<div class=\"deep-block\"><h2>Japanese word order is flexible, but not random</h2><p>Particles allow chunks to move more freely than in English, yet neutral beginner sentences still have strong tendencies: time often comes early, related noun chunks group naturally, and the main verb normally closes the clause. Learn the tendencies without turning them into brittle rules.</p></div><div class=\"deep-block\"><h2>Build from relationships, not English slots</h2><p>Instead of asking “What is the Japanese word for the fourth English word?”, ask what each Japanese chunk means: topic, destination, action location, companion, object, time. Then choose the verb form. That habit scales to much more complicated Japanese later.</p></div><div class=\"mistake\"><b>Common beginner trap:</b> adding every possible chunk to every sentence. Natural Japanese often prefers omission when the listener already knows the information.</div>"];
+const unit3Start=courseUnits[2].start;
+unit3LessonData.forEach((data,n)=>{
+  Object.assign(lessons[unit3Start+n],data,{roadmap:false});
+  lessonDeepDive[unit3Start+n]=unit3DeepDive[n];
+});
+courseUnits[2].implemented=true;
+
+const APP_VERSION="0.2 beta";
+const PUBLIC_UNIT_COUNT=3;
 const DEV_UNIT_COUNT=3;
 const PUBLIC_LAST_LESSON=courseUnits[PUBLIC_UNIT_COUNT-1].start+courseUnits[PUBLIC_UNIT_COUNT-1].count-1;
 const DEV_LAST_LESSON=courseUnits[DEV_UNIT_COUNT-1].start+courseUnits[DEV_UNIT_COUNT-1].count-1;
@@ -1687,20 +1752,18 @@ function unitFinalPassed(unitIndex){
   return (state.unitFinalScores[unitIndex]||0)>=80;
 }
 function unitFinalReady(unitIndex){
-  // Unit 3 is preview-only in dev mode; it does not yet have a final.
-  if(unitIndex===2)return false;
-  return unitIndex>=0&&unitIndex<PUBLIC_UNIT_COUNT&&unitUnlocked(unitIndex);
+  return unitIndex>=0&&unitIndex<PUBLIC_UNIT_COUNT&&courseUnits[unitIndex]?.implemented&&unitUnlocked(unitIndex);
 }
 function unitSkippedByPlacement(unitIndex){return !!state.unitSkipped[String(unitIndex)]}
 function unitComplete(unitIndex){
   if(unitIndex===0)return unitSkippedByPlacement(0)||(kanaRequirementMet(0)&&unitFinalPassed(0));
-  if(unitIndex===1)return unitFinalPassed(1);
+  if(unitIndex>0&&unitIndex<PUBLIC_UNIT_COUNT)return unitFinalPassed(unitIndex);
   return false;
 }
 function unitUnlocked(unitIndex){
   if(state.devMode&&unitIndex>=0&&unitIndex<DEV_UNIT_COUNT)return true;
   if(unitIndex===0)return true;
-  if(unitIndex===1)return unitComplete(0);
+  if(unitIndex>0&&unitIndex<PUBLIC_UNIT_COUNT)return unitComplete(unitIndex-1);
   return false;
 }
 function lessonUnlocked(index){
@@ -1749,13 +1812,10 @@ function nextCourseAction(){
       if(!lessonViewed(i))return {type:"lesson",index:i,unitIndex:ui};
     }
 
-    // Unit 3 is an unfinished dev preview and has no final yet.
-    if(ui===2&&state.devMode)return {type:"devPreviewComplete",unitIndex:2};
-
     // After browsing the unit, suggest the final. The final itself was available from the moment the unit unlocked.
     return {type:"final",unitIndex:ui};
   }
-  if(unitComplete(0)&&unitComplete(1))return {type:"complete"};
+  if(Array.from({length:PUBLIC_UNIT_COUNT},(_,ui)=>ui).every(unitComplete))return {type:"complete"};
 
   // Fallback for Unit 1 when its final is passed but kana is still outstanding.
   if(unitFinalPassed(0)&&!kanaRequirementMet(0))return {type:"kana",unitIndex:0};
@@ -1766,8 +1826,7 @@ function continueActionLabel(){
   const a=nextCourseAction();
   if(a.type==="kana")return "Continue: kana requirement →";
   if(a.type==="final")return `Take Unit ${a.unitIndex+1} final →`;
-  if(a.type==="devPreviewComplete")return "Unit 3 preview viewed ✓";
-  if(a.type==="complete")return "v0.1 complete ✓";
+    if(a.type==="complete")return "v0.2 complete ✓";
   return "Continue learning →";
 }
 function goContinueLearning(){
@@ -1780,7 +1839,6 @@ function goContinueLearning(){
     setTimeout(()=>document.querySelector(`[data-unit-final-card="${a.unitIndex}"]`)?.scrollIntoView({behavior:"smooth",block:"center"}),50);
     return;
   }
-  if(a.type==="devPreviewComplete"){showView("courseMap");return}
   if(a.type==="complete"){showView("courseMap");return}
   state.currentLesson=a.index;
   markLessonViewed(a.index);
@@ -1791,6 +1849,8 @@ function goContinueLearning(){
 const practiceBanks=[[{"type": "builder", "en": "I am a student.", "tokens": ["わたし", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "builder", "en": "My mother is a teacher.", "tokens": ["おかあさん", "は", "せんせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "Complete “My father is a teacher”: おとうさん ___ せんせい です。", "choices": ["は", "を", "に", "で"], "answer": "は"}, {"type": "choice", "prompt": "Which sentence means “I am a student”?", "choices": ["わたし は がくせい です", "わたし を がくせい です", "がくせい は わたし を"], "answer": "わたし は がくせい です"}, {"type": "builder", "en": "You are a student.", "tokens": ["あなた", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "You hear: おかあさん は せんせい です。 What does it mean?", "choices": ["My mother is a teacher.", "My teacher is a mother.", "My mother reads.", "I am a teacher."], "answer": "My mother is a teacher."}, {"type": "builder", "en": "My friend is a student.", "tokens": ["ともだち", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "Complete the Japanese for “You are a teacher”: あなた は せんせい ___。", "choices": ["です", "を", "に", "は"], "answer": "です"}, {"type": "builder", "en": "My father is a student.", "tokens": ["おとうさん", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "In わたし は がくせい です, which chunk tells us what the sentence is about?", "choices": ["わたし は", "がくせい", "です"], "answer": "わたし は"}], [{"type": "builder", "en": "I drink water.", "tokens": ["わたし", "は", "みず", "を", "のみます"], "focus": ["を"]}, {"type": "builder", "en": "My father reads a book.", "tokens": ["おとうさん", "は", "ほん", "を", "よみます"], "focus": ["を"]}, {"type": "choice", "prompt": "Complete “I drink tea”: わたし は おちゃ ___ のみます。", "choices": ["を", "に", "で", "が"], "answer": "を"}, {"type": "choice", "prompt": "Which sentence means “My friend watches a movie”?", "choices": ["ともだち は えいが を みます", "ともだち を えいが は みます", "えいが は ともだち に みます"], "answer": "ともだち は えいが を みます"}, {"type": "builder", "en": "My mother drinks coffee.", "tokens": ["おかあさん", "は", "コーヒー", "を", "のみます"], "focus": ["を"]}, {"type": "choice", "prompt": "You hear: ほん を よみます。 What is being read?", "choices": ["a book", "water", "a movie", "school"], "answer": "a book"}, {"type": "builder", "en": "I watch a movie.", "tokens": ["わたし", "は", "えいが", "を", "みます"], "focus": ["を"]}, {"type": "choice", "prompt": "Complete “My father eats bread”: おとうさん は パン ___ たべます。", "choices": ["を", "で", "に", "か"], "answer": "を"}, {"type": "builder", "en": "My friend reads a book.", "tokens": ["ともだち", "は", "ほん", "を", "よみます"], "focus": ["を"]}, {"type": "choice", "prompt": "Which sentence has the verb in the natural beginner position?", "choices": ["わたし は みず を のみます", "のみます わたし は みず を", "わたし のみます は みず を"], "answer": "わたし は みず を のみます"}], [{"type": "builder", "en": "I go to school.", "tokens": ["わたし", "は", "がっこう", "に", "いきます"], "focus": ["に"]}, {"type": "builder", "en": "My friend goes to the park.", "tokens": ["ともだち", "は", "こうえん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Complete “I go to the library”: わたし は としょかん ___ いきます。", "choices": ["に", "で", "を", "が"], "answer": "に"}, {"type": "choice", "prompt": "Which sentence means “My mother goes to the cafe”?", "choices": ["おかあさん は カフェ に いきます", "おかあさん は カフェ で いきます", "カフェ を おかあさん は いきます"], "answer": "おかあさん は カフェ に いきます"}, {"type": "builder", "en": "My father goes to the station.", "tokens": ["おとうさん", "は", "えき", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "You hear: にほん に いきます。 Where is the speaker going?", "choices": ["Japan", "school", "home", "the station"], "answer": "Japan"}, {"type": "builder", "en": "I go to Japan.", "tokens": ["わたし", "は", "にほん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Complete “The student goes to school”: がくせい は がっこう ___ いきます。", "choices": ["に", "を", "で", "は"], "answer": "に"}, {"type": "builder", "en": "My teacher goes to the library.", "tokens": ["せんせい", "は", "としょかん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Which chunk gives the destination in わたし は えき に いきます?", "choices": ["えき に", "わたし は", "いきます"], "answer": "えき に"}], [{"type": "builder", "en": "I read a book at the library.", "tokens": ["わたし", "は", "としょかん", "で", "ほん", "を", "よみます"], "focus": ["で", "を"]}, {"type": "builder", "en": "My mother drinks coffee at home.", "tokens": ["おかあさん", "は", "うち", "で", "コーヒー", "を", "のみます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "Complete “I watch a movie at home”: わたし は うち ___ えいが を みます。", "choices": ["で", "に", "を", "が"], "answer": "で"}, {"type": "choice", "prompt": "Which means “I go to the library” rather than “I read at the library”?", "choices": ["としょかん に いきます", "としょかん で よみます"], "answer": "としょかん に いきます"}, {"type": "builder", "en": "My father reads at home.", "tokens": ["おとうさん", "は", "うち", "で", "ほん", "を", "よみます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "You are already at the cafe and drink coffee there. Choose the missing particle: カフェ ___ コーヒー を のみます。", "choices": ["で", "に", "を", "は"], "answer": "で"}, {"type": "builder", "en": "My friend watches a movie at home.", "tokens": ["ともだち", "は", "うち", "で", "えいが", "を", "みます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "Which sentence says the action happens at school?", "choices": ["がっこう で べんきょうします", "がっこう に いきます"], "answer": "がっこう で べんきょうします"}, {"type": "builder", "en": "I study at the library.", "tokens": ["わたし", "は", "としょかん", "で", "べんきょうします"], "focus": ["で"]}, {"type": "choice", "prompt": "Choose the natural Japanese for “drink tea at the cafe.”", "choices": ["カフェ で おちゃ を のみます", "カフェ に おちゃ で のみます", "おちゃ に カフェ を のみます"], "answer": "カフェ で おちゃ を のみます"}], [{"type": "builder", "en": "Are you a student?", "tokens": ["あなた", "は", "がくせい", "です", "か"], "focus": ["か"]}, {"type": "builder", "en": "Where are you going?", "tokens": ["どこ", "に", "いきます", "か"], "focus": ["に", "か"]}, {"type": "choice", "prompt": "Turn this into a polite question: あなた は せんせい です ___", "choices": ["か", "を", "で", "に"], "answer": "か"}, {"type": "choice", "prompt": "You hear: どこ に いきます か。 What is the speaker asking?", "choices": ["Where are you going?", "What are you eating?", "Who is your teacher?", "When did you go?"], "answer": "Where are you going?"}, {"type": "builder", "en": "Do you drink coffee?", "tokens": ["あなた", "は", "コーヒー", "を", "のみます", "か"], "focus": ["を", "か"]}, {"type": "choice", "prompt": "Which question asks whether someone watches movies?", "choices": ["えいが を みます か", "えいが に いきます か", "えいが で です か"], "answer": "えいが を みます か"}, {"type": "builder", "en": "Are you a teacher?", "tokens": ["あなた", "は", "せんせい", "です", "か"], "focus": ["か"]}, {"type": "choice", "prompt": "If the answer is がっこう に いきます, which question fits best?", "choices": ["どこ に いきます か", "なに を のみます か", "だれ です か"], "answer": "どこ に いきます か"}, {"type": "builder", "en": "Do you read books?", "tokens": ["あなた", "は", "ほん", "を", "よみます", "か"], "focus": ["を", "か"]}, {"type": "choice", "prompt": "Which ending makes this a polite question? コーヒー を のみます ___", "choices": ["か", "です", "で", "に"], "answer": "か"}], [{"type": "builder", "en": "I do not drink coffee.", "tokens": ["わたし", "は", "コーヒー", "を", "のみません"], "focus": ["のみません"]}, {"type": "builder", "en": "I am not going to school today.", "tokens": ["きょう", "わたし", "は", "がっこう", "に", "いきません"], "focus": ["いきません"]}, {"type": "choice", "prompt": "Complete “I do not read books”: わたし は ほん を ___。", "choices": ["よみません", "よみます", "よみました"], "answer": "よみません"}, {"type": "choice", "prompt": "Which sentence means “My friend does not watch movies”?", "choices": ["ともだち は えいが を みません", "ともだち は えいが を みます", "ともだち は えいが を みました"], "answer": "ともだち は えいが を みません"}, {"type": "builder", "en": "My father does not drink tea.", "tokens": ["おとうさん", "は", "おちゃ", "を", "のみません"], "focus": ["のみません"]}, {"type": "choice", "prompt": "You hear: きょう は いきません。 Is the speaker going today?", "choices": ["No", "Yes"], "answer": "No"}, {"type": "builder", "en": "I do not watch movies.", "tokens": ["わたし", "は", "えいが", "を", "みません"], "focus": ["みません"]}, {"type": "choice", "prompt": "Change のみます to “do not drink.”", "choices": ["のみません", "のみました", "のみたいです"], "answer": "のみません"}, {"type": "builder", "en": "My mother does not eat bread.", "tokens": ["おかあさん", "は", "パン", "を", "たべません"], "focus": ["たべません"]}, {"type": "choice", "prompt": "Which sentence can mean “I will not go”?", "choices": ["いきません", "いきました", "いきます"], "answer": "いきません"}], [{"type": "builder", "en": "Yesterday I ate sushi.", "tokens": ["きのう", "わたし", "は", "すし", "を", "たべました"], "focus": ["たべました"]}, {"type": "builder", "en": "Yesterday my friend watched a movie.", "tokens": ["きのう", "ともだち", "は", "えいが", "を", "みました"], "focus": ["みました"]}, {"type": "choice", "prompt": "Complete “Yesterday I drank coffee”: きのう コーヒー を ___。", "choices": ["のみました", "のみます", "のみません"], "answer": "のみました"}, {"type": "choice", "prompt": "You hear: きのう ほん を よみました。 What happened?", "choices": ["A book was read yesterday.", "A book will be read tomorrow.", "The speaker does not read."], "answer": "A book was read yesterday."}, {"type": "builder", "en": "Yesterday my father ate ramen.", "tokens": ["きのう", "おとうさん", "は", "ラーメン", "を", "たべました"], "focus": ["たべました"]}, {"type": "choice", "prompt": "Change いきます to “went.”", "choices": ["いきました", "いきません", "いきたいです"], "answer": "いきました"}, {"type": "builder", "en": "Yesterday I went to the library.", "tokens": ["きのう", "わたし", "は", "としょかん", "に", "いきました"], "focus": ["いきました"]}, {"type": "choice", "prompt": "Which sentence is clearly about yesterday?", "choices": ["きのう えいが を みました", "あした えいが を みます", "まいにち えいが を みます"], "answer": "きのう えいが を みました"}, {"type": "builder", "en": "Yesterday my mother drank tea.", "tokens": ["きのう", "おかあさん", "は", "おちゃ", "を", "のみました"], "focus": ["のみました"]}, {"type": "choice", "prompt": "What changed between たべます and たべました?", "choices": ["The action became past/completed.", "The object became a destination.", "The sentence became a question."], "answer": "The action became past/completed."}], [{"type": "builder", "en": "There is a friend at the park.", "tokens": ["こうえん", "に", "ともだち", "が", "います"], "focus": ["に", "が"]}, {"type": "builder", "en": "There is a book at home.", "tokens": ["うち", "に", "ほん", "が", "あります"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Complete “There is a teacher at school”: がっこう に せんせい が ___。", "choices": ["います", "あります", "いきます"], "answer": "います"}, {"type": "choice", "prompt": "Complete “There is a phone at home”: うち に でんわ が ___。", "choices": ["あります", "います", "のみます"], "answer": "あります"}, {"type": "builder", "en": "There is a student at the library.", "tokens": ["としょかん", "に", "がくせい", "が", "います"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "You hear: こうえん に ともだち が います。 Who or what is at the park?", "choices": ["a friend", "a book", "a cafe", "a train"], "answer": "a friend"}, {"type": "builder", "en": "There is a bag at home.", "tokens": ["うち", "に", "かばん", "が", "あります"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Which sentence is about something existing, not an action happening?", "choices": ["うち に ほん が あります", "うち で ほん を よみます"], "answer": "うち に ほん が あります"}, {"type": "builder", "en": "There is a teacher at the library.", "tokens": ["としょかん", "に", "せんせい", "が", "います"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Choose the natural sentence for a non-living object.", "choices": ["へや に かばん が あります", "へや に かばん が います"], "answer": "へや に かばん が あります"}], [{"type": "builder", "en": "This book is interesting.", "tokens": ["この", "ほん", "は", "おもしろい", "です"], "focus": ["おもしろい"]}, {"type": "builder", "en": "This ramen is delicious.", "tokens": ["この", "ラーメン", "は", "おいしい", "です"], "focus": ["おいしい"]}, {"type": "choice", "prompt": "Complete “Japanese is difficult”: にほんご は ___ です。", "choices": ["むずかしい", "おいしい", "やすい"], "answer": "むずかしい"}, {"type": "choice", "prompt": "You hear: この えいが は おもしろい です。 What is being described?", "choices": ["a movie", "a book", "a teacher", "a station"], "answer": "a movie"}, {"type": "builder", "en": "This movie is fun.", "tokens": ["この", "えいが", "は", "たのしい", "です"], "focus": ["たのしい"]}, {"type": "choice", "prompt": "Which sentence says “This cafe is expensive”?", "choices": ["この カフェ は たかい です", "この カフェ は やすい です", "この カフェ を たかい です"], "answer": "この カフェ は たかい です"}, {"type": "builder", "en": "This cafe is expensive.", "tokens": ["この", "カフェ", "は", "たかい", "です"], "focus": ["たかい"]}, {"type": "choice", "prompt": "If something costs very little, which word fits?", "choices": ["やすい", "たかい", "むずかしい"], "answer": "やすい"}, {"type": "builder", "en": "This book is difficult.", "tokens": ["この", "ほん", "は", "むずかしい", "です"], "focus": ["むずかしい"]}, {"type": "choice", "prompt": "Which sentence reuses the old topic pattern correctly?", "choices": ["この ほん は おもしろい です", "この ほん を おもしろい です", "おもしろい に この ほん"], "answer": "この ほん は おもしろい です"}], [{"type": "builder", "en": "I want to eat sushi.", "tokens": ["わたし", "は", "すし", "を", "たべたいです"], "focus": ["たべたいです"]}, {"type": "builder", "en": "I want to go to Japan.", "tokens": ["わたし", "は", "にほん", "に", "いきたいです"], "focus": ["に", "いきたいです"]}, {"type": "choice", "prompt": "Complete “I want to drink coffee”: コーヒー を ___。", "choices": ["のみたいです", "のみません", "のみました"], "answer": "のみたいです"}, {"type": "choice", "prompt": "Which sentence means “I want to watch a movie”?", "choices": ["えいが を みたいです", "えいが に いきたいです", "えいが を みました"], "answer": "えいが を みたいです"}, {"type": "builder", "en": "I want to eat ramen.", "tokens": ["わたし", "は", "ラーメン", "を", "たべたいです"], "focus": ["たべたいです"]}, {"type": "choice", "prompt": "You want to go to the cafe. Which particle stays with the destination?", "choices": ["に", "を", "で", "が"], "answer": "に"}, {"type": "builder", "en": "I want to go to the cafe.", "tokens": ["わたし", "は", "カフェ", "に", "いきたいです"], "focus": ["に", "いきたいです"]}, {"type": "choice", "prompt": "Change いきます into “want to go.”", "choices": ["いきたいです", "いきません", "いきました"], "answer": "いきたいです"}, {"type": "builder", "en": "I want to drink tea.", "tokens": ["わたし", "は", "おちゃ", "を", "のみたいです"], "focus": ["のみたいです"]}, {"type": "choice", "prompt": "Which sentence keeps the object particle correctly?", "choices": ["すし を たべたいです", "すし に たべたいです", "すし で たべたいです"], "answer": "すし を たべたいです"}]];
 const unit2PracticeBanks=[[{"type":"choice","prompt":"Meaning: “I read a book at the library.” Which particle belongs after としょかん? としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is the setting where the reading happens, so it takes で.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I go to school.” Which particle belongs after がっこう? がっこう ___ いきます。","choices":["に","で","を","は"],"answer":"に","why":"School is the destination target, so it takes に.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I drink water.” Which particle belongs after みず? みず ___ のみます。","choices":["を","で","に","が"],"answer":"を","why":"Water is directly affected by the action 'drink', so it takes を.","particleKey":"を"},{"type":"builder","en":"I read a book at home.","tokens":["わたし","は","うち","で","ほん","を","よみます"],"focus":["は","で","を"],"why":"Each noun-plus-particle chunk has its own job."},{"type":"choice","prompt":"In わたし は うち で ほん を よみます, which chunk tells you where the action happens?","choices":["うち で","ほん を","わたし は","よみます"],"answer":"うち で","why":"うち で marks home as the setting of the action.","particleKey":"で"},{"type":"choice","prompt":"There is a friend at the park: こうえん ___ ともだち が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, に marks where the person exists.","particleKey":"に"},{"type":"builder","en":"There is a book at home.","tokens":["うち","に","ほん","が","あります"],"focus":["に","が"],"why":"The place takes に; the thing that exists takes が."},{"type":"choice","prompt":"Which statement about particles is most useful?","choices":["They mark relationships after words or phrases.","Each particle always equals one English word.","Particles are optional decoration.","A noun always uses the same particle."],"answer":"They mark relationships after words or phrases.","why":"Particles tell you what job the preceding chunk has."},{"type":"builder","en":"My friend watches a movie at home.","tokens":["ともだち","は","うち","で","えいが","を","みます"],"focus":["は","で","を"]},{"type":"choice","prompt":"Meaning: “My friend goes to the station.” えき ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The station is where the movement is aimed.","particleKey":"に"},{"type":"choice","prompt":"Which chunk marks the thing being read in せんせい は ほん を よみます?","choices":["ほん を","せんせい は","よみます"],"answer":"ほん を","why":"ほん を marks the book as what is being read.","particleKey":"を"},{"type":"builder","en":"I drink coffee at the cafe.","tokens":["わたし","は","カフェ","で","コーヒー","を","のみます"],"focus":["は","で","を"]}],[{"type":"choice","prompt":"Context: Someone asks, “Who is the student?” Complete the answer: ともだち ___ がくせい です。","choices":["が","は","を","に"],"answer":"が","why":"が identifies the friend as the person who answers 'who?'.","particleKey":"は vs が"},{"type":"choice","prompt":"Context: You are already talking about yourself. “As for me, I am a student.” わたし ___ がくせい です。","choices":["は","が","を","で"],"answer":"は","why":"は establishes 'me' as the topic.","particleKey":"は vs が"},{"type":"choice","prompt":"There is a cat at home: うち に ねこ ___ います。","choices":["が","は","を","で"],"answer":"が","why":"The cat is the thing being presented as existing, so it takes が.","particleKey":"が"},{"type":"builder","en":"There is a student at the library.","tokens":["としょかん","に","がくせい","が","います"],"focus":["に","が"]},{"type":"choice","prompt":"Question: だれ が せんせい です か。 Which answer most directly identifies the teacher?","choices":["おかあさん が せんせい です","おかあさん は せんせい です","せんせい を おかあさん です"],"answer":"おかあさん が せんせい です","why":"The question asks which person is the teacher, so が identifies that person.","particleKey":"は vs が"},{"type":"choice","prompt":"You introduce a new fact: “There is a book.” ほん ___ あります。","choices":["が","は","を","に"],"answer":"が","why":"が presents the thing that exists.","particleKey":"が"},{"type":"builder","en":"As for my mother, she is a teacher.","tokens":["おかあさん","は","せんせい","です"],"focus":["は"]},{"type":"choice","prompt":"Which explanation is better?","choices":["は sets a topic; が often identifies or presents the subject.","は and が are just formal and casual versions of the same particle.","が always means 'is'.","は always marks the grammatical subject."],"answer":"は sets a topic; が often identifies or presents the subject.","why":"The difference is about how information is presented, not formality.","particleKey":"は vs が"},{"type":"choice","prompt":"Context: Your friend is already the topic. You add: “My friend is a student.”","choices":["ともだち は がくせい です","ともだち を がくせい です","ともだち に がくせい です"],"answer":"ともだち は がくせい です","why":"When the friend is the established topic, は is natural.","particleKey":"は vs が"},{"type":"choice","prompt":"Which sentence naturally introduces a cat as existing at the park?","choices":["こうえん に ねこ が います","こうえん で ねこ は います","ねこ を こうえん に います"],"answer":"こうえん に ねこ が います","why":"Existence uses place に + thing が.","particleKey":"が"},{"type":"builder","en":"There is a friend at home.","tokens":["うち","に","ともだち","が","います"],"focus":["に","が"]},{"type":"choice","prompt":"Context: “Who went to school?” Answer: わたし ___ がっこう に いきました。","choices":["が","は","を","で"],"answer":"が","why":"The speaker identifies 'I' as the answer to who went.","particleKey":"は vs が"}],[{"type":"choice","prompt":"Meaning: “I drink tea.” おちゃ ___ のみます。","choices":["を","に","で","が"],"answer":"を","why":"Tea is what is directly being drunk.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “My father reads a book.” ほん ___ よみます。","choices":["を","で","に","は"],"answer":"を","why":"The book is the thing being read.","particleKey":"を"},{"type":"builder","en":"My friend watches a movie.","tokens":["ともだち","は","えいが","を","みます"],"focus":["は","を"]},{"type":"choice","prompt":"Which sentence uses を for a route rather than a direct object?","choices":["みち を あるきます","ほん を よみます","みず を のみます"],"answer":"みち を あるきます","why":"The road is the space being moved through.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I walk along the road.” みち ___ あるきます。","choices":["を","に","で","が"],"answer":"を","why":"With this movement verb, を marks the route being traversed.","particleKey":"を"},{"type":"builder","en":"I read a magazine.","tokens":["わたし","は","ざっし","を","よみます"],"focus":["は","を"]},{"type":"choice","prompt":"Which chunk is directly affected in パン を たべます?","choices":["パン を","たべます","no noun is affected"],"answer":"パン を","why":"Bread is what gets eaten.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I watch television.” テレビ ___ みます。","choices":["を","に","で","は"],"answer":"を","why":"Television is what is watched.","particleKey":"を"},{"type":"builder","en":"My mother drinks water.","tokens":["おかあさん","は","みず","を","のみます"],"focus":["は","を"]},{"type":"choice","prompt":"Which is wrong for the meaning “I read a book at home”?","choices":["うち で ほん を よみます","うち で ほん に よみます"],"answer":"うち で ほん に よみます","why":"The book is the thing being read, so it needs を, not に.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I listen to music.” おんがく ___ ききます。","choices":["を","で","に","が"],"answer":"を","why":"Music is the thing being listened to in this beginner pattern.","particleKey":"を"},{"type":"builder","en":"I write a letter.","tokens":["わたし","は","てがみ","を","かきます"],"focus":["は","を"]}],[{"type":"choice","prompt":"Meaning: “I go to the station.” えき ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The station is the destination target.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I get up at seven.” しちじ ___ おきます。","choices":["に","で","を","が"],"answer":"に","why":"Seven o'clock is the specific time point for the action.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “There is a teacher at school.” がっこう ___ せんせい が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, に marks the place where the teacher exists.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I give a book to a friend.” ともだち ___ ほん を あげます。","choices":["に","で","を","と"],"answer":"に","why":"The friend is the recipient/target of the giving.","particleKey":"に"},{"type":"builder","en":"I go to the library.","tokens":["わたし","は","としょかん","に","いきます"],"focus":["は","に"]},{"type":"builder","en":"There is a phone at home.","tokens":["うち","に","でんわ","が","あります"],"focus":["に","が"]},{"type":"builder","en":"I give water to my friend.","tokens":["わたし","は","ともだち","に","みず","を","あげます"],"focus":["は","に","を"]},{"type":"choice","prompt":"Which sentence uses に as a time point?","choices":["はちじ に ねます","うち に ねこ が います","えき に いきます"],"answer":"はちじ に ねます","why":"Here に attaches the action to the specific clock time eight o'clock.","particleKey":"に"},{"type":"choice","prompt":"Which sentence uses に as an existence location?","choices":["こうえん に ともだち が います","こうえん で あるきます","こうえん を あるきます"],"answer":"こうえん に ともだち が います","why":"The friend exists at the park, so the park takes に.","particleKey":"に"},{"type":"choice","prompt":"Which sentence uses に as a recipient?","choices":["せんせい に てがみ を あげます","せんせい で てがみ を かきます","せんせい を みます"],"answer":"せんせい に てがみ を あげます","why":"The teacher is the person receiving the letter.","particleKey":"に"},{"type":"builder","en":"I get up at seven.","tokens":["しちじ","に","おきます"],"focus":["に"]},{"type":"choice","prompt":"Which time expression usually does NOT need に in a basic sentence?","choices":["きょう","しちじ","くじ"],"answer":"きょう","why":"Broad relative time words such as 'today' commonly stand without に; specific clock times commonly take it.","particleKey":"に"}],[{"type":"choice","prompt":"Meaning: “I read at the library.” としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is where the action is carried out.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I go to school by bus.” バス ___ がっこう に いきます。","choices":["で","に","を","と"],"answer":"で","why":"The bus is the means of travel.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I write my name with a pen.” ペン ___ なまえ を かきます。","choices":["で","に","を","が"],"answer":"で","why":"The pen is the tool used for the action.","particleKey":"で"},{"type":"builder","en":"I drink coffee at the cafe.","tokens":["わたし","は","カフェ","で","コーヒー","を","のみます"],"focus":["は","で","を"]},{"type":"builder","en":"I go to the station by train.","tokens":["わたし","は","でんしゃ","で","えき","に","いきます"],"focus":["は","で","に"]},{"type":"choice","prompt":"Which で marks an action location?","choices":["がっこう で べんきょうします","バス で いきます","ペン で かきます"],"answer":"がっこう で べんきょうします","why":"The school is the place where studying happens.","particleKey":"で"},{"type":"choice","prompt":"Which で marks a tool?","choices":["ペン で かきます","うち で よみます","でんしゃ で いきます"],"answer":"ペン で かきます","why":"The pen is the tool used to write.","particleKey":"で"},{"type":"choice","prompt":"Which で marks means of transport?","choices":["バス で いきます","カフェ で のみます","ペン で かきます"],"answer":"バス で いきます","why":"The bus is the means through which the travel happens.","particleKey":"で"},{"type":"builder","en":"My friend studies at home.","tokens":["ともだち","は","うち","で","べんきょうします"],"focus":["は","で"]},{"type":"choice","prompt":"Meaning: “I watch television at home.” うち ___ テレビ を みます。","choices":["で","に","を","は"],"answer":"で","why":"Watching happens at home, so home is the action setting.","particleKey":"で"},{"type":"choice","prompt":"Which sentence correctly keeps different particle jobs separate?","choices":["バス で がっこう に いきます","バス に がっこう で いきます","バス を がっこう に いきます"],"answer":"バス で がっこう に いきます","why":"で marks transport; に marks destination.","particleKey":"で vs に"},{"type":"builder","en":"I write a letter with a pen.","tokens":["わたし","は","ペン","で","てがみ","を","かきます"],"focus":["は","で","を"]}],[{"type":"choice","prompt":"Meaning: “I go to the library.” としょかん ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The library is the destination.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “I read at the library.” としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is where reading happens.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “There is a friend at the park.” こうえん ___ ともだち が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, the park is the existence location.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “I walk in the park.” こうえん ___ あるきます。","choices":["で","に","が","は"],"answer":"で","why":"Here the park is the setting where the action happens.","particleKey":"に vs で"},{"type":"builder","en":"I go to school and study there.","tokens":["わたし","は","がっこう","に","いきます"],"focus":["は","に"],"why":"This sentence only expresses the movement; the destination takes に."},{"type":"builder","en":"I study at school.","tokens":["わたし","は","がっこう","で","べんきょうします"],"focus":["は","で"]},{"type":"choice","prompt":"Same place, different verb. Which pair is correct?","choices":["えき に いきます / えき で まちます","えき で いきます / えき に まちます","えき を いきます / えき が まちます"],"answer":"えき に いきます / えき で まちます","why":"Going targets the station; waiting happens at the station.","particleKey":"に vs で"},{"type":"choice","prompt":"Which sentence means a book exists at home?","choices":["うち に ほん が あります","うち で ほん が あります","うち を ほん が あります"],"answer":"うち に ほん が あります","why":"Existence location takes に.","particleKey":"に vs で"},{"type":"choice","prompt":"Which sentence means you read the book at home?","choices":["うち で ほん を よみます","うち に ほん を よみます","うち が ほん を よみます"],"answer":"うち で ほん を よみます","why":"The reading action happens at home, so use で.","particleKey":"に vs で"},{"type":"builder","en":"There is a teacher at school.","tokens":["がっこう","に","せんせい","が","います"],"focus":["に","が"]},{"type":"builder","en":"My teacher reads at school.","tokens":["せんせい","は","がっこう","で","ほん","を","よみます"],"focus":["は","で","を"]},{"type":"choice","prompt":"A place follows which particle when it is the setting of an ordinary action?","choices":["で","に","が","を"],"answer":"で","why":"で marks the action setting; に covers destination/existence targets.","particleKey":"に vs で"}],[{"type":"choice","prompt":"As a particle, how is へ pronounced?","choices":["e","he","wa","o"],"answer":"e","why":"Particle へ is pronounced e.","particleKey":"へ"},{"type":"choice","prompt":"Meaning: “I head toward Tokyo.” とうきょう ___ いきます。","choices":["へ","で","を","と"],"answer":"へ","why":"へ marks the direction of movement.","particleKey":"へ"},{"type":"builder","en":"I go toward Japan.","tokens":["わたし","は","にほん","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which sentence emphasizes direction toward the station?","choices":["えき へ いきます","えき で いきます","えき を いきます"],"answer":"えき へ いきます","why":"へ is the directional movement particle.","particleKey":"へ"},{"type":"choice","prompt":"With an ordinary movement destination, which statement is true?","choices":["に and へ can often both work, with へ more directional.","に and へ are always identical in every grammar use.","へ marks the place where an action happens.","へ is pronounced he as a particle."],"answer":"に and へ can often both work, with へ more directional.","why":"The two overlap for movement, but に has many other target uses.","particleKey":"に vs へ"},{"type":"choice","prompt":"Which sentence cannot normally replace に with へ?","choices":["うち に ねこ が います","にほん に いきます","えき に いきます"],"answer":"うち に ねこ が います","why":"へ is directional; it does not replace existence-location に.","particleKey":"に vs へ"},{"type":"builder","en":"My friend heads toward school.","tokens":["ともだち","は","がっこう","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which particle reading pair is correct?","choices":["は = wa, を = o, へ = e","は = ha, を = wo, へ = he","は = wa, を = wo, へ = he"],"answer":"は = wa, を = o, へ = e","why":"These three have special particle pronunciations.","particleKey":"へ"},{"type":"choice","prompt":"Meaning: “I go to Japan.” Which is also natural in a simple movement sentence?","choices":["にほん へ いきます","にほん で いきます","にほん を いきます"],"answer":"にほん へ いきます","why":"へ can mark movement toward Japan.","particleKey":"へ"},{"type":"builder","en":"I head toward the station.","tokens":["わたし","は","えき","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which description best captures へ?","choices":["It marks movement toward a direction.","It marks direct objects.","It marks action locations.","It marks possession."],"answer":"It marks movement toward a direction.","why":"Direction is the core beginner use of へ.","particleKey":"へ"},{"type":"choice","prompt":"Which particle is broader and can also mark time points and recipients?","choices":["に","へ","を","と"],"answer":"に","why":"に is a general target marker; へ is specifically directional.","particleKey":"に vs へ"}],[{"type":"choice","prompt":"Meaning: “I watch a movie with a friend.” ともだち ___ えいが を みます。","choices":["と","の","で","も"],"answer":"と","why":"The friend is the companion doing the action with you.","particleKey":"と"},{"type":"builder","en":"I go to school with my friend.","tokens":["わたし","は","ともだち","と","がっこう","に","いきます"],"focus":["は","と","に"]},{"type":"choice","prompt":"Which phrase means “bread and water” as a complete list?","choices":["パン と みず","パン の みず","パン も みず"],"answer":"パン と みず","why":"と joins the two nouns as a complete list.","particleKey":"と"},{"type":"choice","prompt":"In はい と いいます, what is と doing?","choices":["Marking the quoted word “yes”","Marking a destination","Marking an action location","Marking possession"],"answer":"Marking the quoted word “yes”","why":"と packages はい as what is said.","particleKey":"と"},{"type":"builder","en":"I watch television with my mother.","tokens":["わたし","は","おかあさん","と","テレビ","を","みます"],"focus":["は","と","を"]},{"type":"choice","prompt":"Which sentence uses と as “with”?","choices":["ともだち と いきます","パン と みず","はい と いいます"],"answer":"ともだち と いきます","why":"The friend is the companion for the action.","particleKey":"と"},{"type":"choice","prompt":"Which expression uses と to join nouns?","choices":["コーヒー と パン","ともだち と いきます","はい と いいます"],"answer":"コーヒー と パン","why":"Two nouns are connected as a list.","particleKey":"と"},{"type":"choice","prompt":"Which expression uses と as a quotation marker?","choices":["いいえ と いいます","ともだち と みます","ほん と ざっし"],"answer":"いいえ と いいます","why":"いいえ is the content being said.","particleKey":"と"},{"type":"builder","en":"My father drinks coffee with my mother.","tokens":["おとうさん","は","おかあさん","と","コーヒー","を","のみます"],"focus":["は","と","を"]},{"type":"choice","prompt":"Meaning: “I go with my teacher.” せんせい ___ いきます。","choices":["と","の","で","を"],"answer":"と","why":"The teacher is your companion.","particleKey":"と"},{"type":"choice","prompt":"What is the best beginner rule for と?","choices":["Use context to decide whether it joins a companion, a noun list, or quoted content.","Translate every と as 'and'.","Use と after every person.","Use と for destinations."],"answer":"Use context to decide whether it joins a companion, a noun list, or quoted content.","why":"The surrounding structure determines which common use is active.","particleKey":"と"},{"type":"builder","en":"I buy bread and water.","tokens":["わたし","は","パン","と","みず","を","かいます"],"focus":["は","と","を"]}],[{"type":"choice","prompt":"Meaning: “my mother's book.” おかあさん ___ ほん","choices":["の","と","も","を"],"answer":"の","why":"の links mother to the book as a noun-to-noun relationship.","particleKey":"の"},{"type":"choice","prompt":"Meaning: “a Japanese-language book.” にほんご ___ ほん","choices":["の","と","を","で"],"answer":"の","why":"Japanese describes what kind of book it is.","particleKey":"の"},{"type":"builder","en":"This is my friend's bag.","tokens":["これ","は","ともだち","の","かばん","です"],"focus":["は","の"]},{"type":"choice","prompt":"Meaning: “I am also a student.” わたし ___ がくせい です。","choices":["も","は","の","を"],"answer":"も","why":"も adds 'also/too' and replaces the simple は slot here.","particleKey":"も"},{"type":"choice","prompt":"Which is natural for “I am also a teacher”?","choices":["わたし も せんせい です","わたし は も せんせい です","わたし の せんせい です"],"answer":"わたし も せんせい です","why":"In this basic pattern, use も instead of は.","particleKey":"も"},{"type":"builder","en":"My friend is also a student.","tokens":["ともだち","も","がくせい","です"],"focus":["も"]},{"type":"choice","prompt":"Which phrase means “the teacher's book”?","choices":["せんせい の ほん","せんせい と ほん","せんせい も ほん"],"answer":"せんせい の ほん","why":"の links the teacher and the book.","particleKey":"の"},{"type":"choice","prompt":"In にほん の えいが, what is the main noun?","choices":["えいが","にほん","の"],"answer":"えいが","why":"The noun after の is the main noun: a movie associated with Japan.","particleKey":"の"},{"type":"choice","prompt":"Which explanation of の is better?","choices":["It links one noun to another; possession is only one common use.","It always means English apostrophe-s and nothing else.","It means 'also'.","It marks a destination."],"answer":"It links one noun to another; possession is only one common use.","why":"の is a broad noun-linking particle.","particleKey":"の"},{"type":"builder","en":"My mother's name is ...","tokens":["おかあさん","の","なまえ"],"focus":["の"]},{"type":"choice","prompt":"Meaning: “My father is also a teacher.” おとうさん ___ せんせい です。","choices":["も","の","を","で"],"answer":"も","why":"The same statement is also true of the father.","particleKey":"も"},{"type":"choice","prompt":"Which pair is correct?","choices":["の links nouns; も adds also/too","の means with; も marks objects","の marks action places; も marks destinations"],"answer":"の links nouns; も adds also/too","why":"These are the core beginner jobs of の and も.","particleKey":"の vs も"}],[{"type":"choice","prompt":"Meaning: “from home.” うち ___","choices":["から","まで","に","で"],"answer":"から","why":"から marks the starting point.","particleKey":"から"},{"type":"choice","prompt":"Meaning: “as far as school.” がっこう ___","choices":["まで","から","を","で"],"answer":"まで","why":"まで marks the end boundary.","particleKey":"まで"},{"type":"builder","en":"I go from home to school.","tokens":["わたし","は","うち","から","がっこう","まで","いきます"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Meaning: “from nine to five.” くじ ___ ごじ ___","choices":["から / まで","まで / から","に / で","で / に"],"answer":"から / まで","why":"Nine is the start; five is the endpoint.","particleKey":"から vs まで"},{"type":"builder","en":"I study from nine to five.","tokens":["わたし","は","くじ","から","ごじ","まで","べんきょうします"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Which phrase marks only a starting point?","choices":["えき から","えき まで","えき に","えき で"],"answer":"えき から","why":"から marks where the range or movement begins.","particleKey":"から"},{"type":"choice","prompt":"Which phrase marks only an end boundary?","choices":["えき まで","えき から","えき で","えき を"],"answer":"えき まで","why":"まで means as far as / until the endpoint.","particleKey":"まで"},{"type":"choice","prompt":"Which sentence emphasizes an endpoint rather than simply a destination target?","choices":["がっこう まで いきます","がっこう に いきます"],"answer":"がっこう まで いきます","why":"まで highlights the boundary reached: as far as school.","particleKey":"まで"},{"type":"builder","en":"I go from the station to home.","tokens":["わたし","は","えき","から","うち","まで","いきます"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Which pair can describe both place ranges and time ranges?","choices":["から / まで","は / が","を / で","に / へ"],"answer":"から / まで","why":"The start/end idea works for both space and time.","particleKey":"から vs まで"},{"type":"choice","prompt":"Meaning: “I work until five.” ごじ ___ はたらきます。","choices":["まで","から","に","で"],"answer":"まで","why":"Five o'clock is the end boundary of the working period.","particleKey":"まで"},{"type":"builder","en":"I go as far as the station.","tokens":["わたし","は","えき","まで","いきます"],"focus":["は","まで"]}]];
 unit2PracticeBanks.forEach(bank=>practiceBanks.push(bank));
+const unit3PracticeBanks=[[{"type":"choice","prompt":"Which polite form means “drink” in non-past positive Japanese?","choices":["のみます","のみません","のみました","のみませんでした"],"answer":"のみます","why":"〜ます is the polite non-past positive form."},{"type":"choice","prompt":"Which form means “did not drink”?","choices":["のみませんでした","のみません","のみました","のみます"],"answer":"のみませんでした","why":"〜ませんでした combines past time with negative meaning."},{"type":"choice","prompt":"What changes between よみます and よみました?","choices":["The action changes from non-past to past.","The sentence becomes negative.","The object particle changes."],"answer":"The action changes from non-past to past.","why":"ました marks a completed/past polite action."},{"type":"choice","prompt":"あした えき に いきます。 What does context make this most naturally mean?","choices":["I will go to the station tomorrow.","I went to the station yesterday.","I will not go to the station."],"answer":"I will go to the station tomorrow.","why":"The non-past form いきます can express future action when あした makes the time clear."},{"type":"builder","en":"Yesterday I did not drink water.","tokens":["きのう","わたし","は","みず","を","のみませんでした"],"focus":["のみませんでした"]},{"type":"builder","en":"I read books.","tokens":["わたし","は","ほん","を","よみます"],"focus":["よみます"]},{"type":"choice","prompt":"Which pair has the same action but opposite positive/negative meaning?","choices":["いきます / いきません","いきます / よみます","いきました / のみました"],"answer":"いきます / いきません","why":"Both forms are 'go'; only positive versus negative changes."},{"type":"choice","prompt":"Which form is past positive?","choices":["みました","みません","みます","みませんでした"],"answer":"みました","why":"〜ました is the polite past positive ending."},{"type":"builder","en":"Yesterday my friend watched a movie.","tokens":["きのう","ともだち","は","えいが","を","みました"],"focus":["みました"]},{"type":"choice","prompt":"Which statement about 〜ます is best?","choices":["It is a polite non-past verb ending.","It always means English present tense only.","It marks the object of the verb."],"answer":"It is a polite non-past verb ending.","why":"Non-past can describe habits or future actions depending on context."},{"type":"choice","prompt":"Complete the four-form grid: いきます / いきません / いきました / ___","choices":["いきませんでした","いきますでした","いきましたません"],"answer":"いきませんでした","why":"The missing square is past negative."},{"type":"builder","en":"Tomorrow I will go to school.","tokens":["あした","わたし","は","がっこう","に","いきます"],"focus":["に","いきます"]}],[{"type":"builder","en":"I do not drink coffee.","tokens":["わたし","は","コーヒー","を","のみません"],"focus":["のみません"]},{"type":"builder","en":"Tomorrow I will not go to school.","tokens":["あした","わたし","は","がっこう","に","いきません"],"focus":["に","いきません"]},{"type":"choice","prompt":"Polite non-past negative of よみます?","choices":["よみません","よみました","よみませんでした","よむ"],"answer":"よみません","why":"Change 〜ます to 〜ません for the polite non-past negative."},{"type":"choice","prompt":"まいにち テレビ を みません。 Which interpretation fits best?","choices":["I do not watch television every day.","I did not watch television yesterday.","I watched television every day."],"answer":"I do not watch television every day.","why":"まいにち gives a habitual context, so みません is a routine negative."},{"type":"choice","prompt":"あした いきません。 Which English meaning fits?","choices":["I will not go tomorrow.","I did not go tomorrow.","I went tomorrow."],"answer":"I will not go tomorrow.","why":"A future time word can combine with the Japanese non-past negative."},{"type":"builder","en":"I do not watch much television.","tokens":["わたし","は","あまり","テレビ","を","みません"],"focus":["みません"]},{"type":"choice","prompt":"Which sentence keeps the object particle correct when the verb becomes negative?","choices":["ほん を よみません","ほん に よみません","ほん で よみません"],"answer":"ほん を よみません","why":"Negating the verb does not change ほん's role as the object."},{"type":"choice","prompt":"Polite negative of べんきょうします?","choices":["べんきょうしません","べんきょうません","べんきょうしました"],"answer":"べんきょうしません","why":"The する pattern changes します to しません."},{"type":"builder","en":"My friend does not read books at home.","tokens":["ともだち","は","うち","で","ほん","を","よみません"],"focus":["で","を","よみません"]},{"type":"choice","prompt":"Which sentence means “I will not drink coffee tomorrow”?","choices":["あした コーヒー を のみません","きのう コーヒー を のみませんでした","あした コーヒー を のみました"],"answer":"あした コーヒー を のみません","why":"あした supplies future context; のみません supplies negative meaning."},{"type":"choice","prompt":"What happens to particles when いきます becomes いきません?","choices":["They normally keep the same jobs.","All に particles become で.","All を particles disappear."],"answer":"They normally keep the same jobs.","why":"The verb's polarity changes; noun relationships do not automatically change."},{"type":"builder","en":"I do not study Japanese every day.","tokens":["まいにち","わたし","は","にほんご","を","べんきょうしません"],"focus":["を","べんきょうしません"]}],[{"type":"builder","en":"Yesterday I read a book at the library.","tokens":["きのう","わたし","は","としょかん","で","ほん","を","よみました"],"focus":["で","を","よみました"]},{"type":"builder","en":"Last week I watched a movie with a friend.","tokens":["せんしゅう","わたし","は","ともだち","と","えいが","を","みました"],"focus":["と","を","みました"]},{"type":"choice","prompt":"Polite past of かいます?","choices":["かいました","かいません","かう","かいませんでした"],"answer":"かいました","why":"〜ました marks the polite past positive."},{"type":"choice","prompt":"きのう なに を たべました か。 What is being asked?","choices":["What did you eat yesterday?","What will you eat tomorrow?","Where did you go yesterday?"],"answer":"What did you eat yesterday?","why":"なに fills the object slot, and たべました makes the question past."},{"type":"builder","en":"Yesterday I went to school by bus.","tokens":["きのう","わたし","は","バス","で","がっこう","に","いきました"],"focus":["で","に","いきました"]},{"type":"choice","prompt":"Which sentence is past positive?","choices":["せんしゅう ほん を よみました","あした ほん を よみます","まいにち ほん を よみません"],"answer":"せんしゅう ほん を よみました","why":"せんしゅう plus ました clearly describes a completed action."},{"type":"choice","prompt":"Change のみます to polite past.","choices":["のみました","のみません","のみませんでした","のむ"],"answer":"のみました","why":"Replace the polite non-past positive ending with ました."},{"type":"builder","en":"Yesterday my mother bought bread.","tokens":["きのう","おかあさん","は","パン","を","かいました"],"focus":["を","かいました"]},{"type":"choice","prompt":"What changed in としょかん で ほん を よみます → としょかん で ほん を よみました?","choices":["Only the verb became past.","で changed into a destination particle.","ほん stopped being the object."],"answer":"Only the verb became past.","why":"The particles keep their old relationships."},{"type":"builder","en":"Last week I studied Japanese at home.","tokens":["せんしゅう","わたし","は","うち","で","にほんご","を","べんきょうしました"],"focus":["で","を","べんきょうしました"]},{"type":"choice","prompt":"Which answer naturally fits きのう なに を たべました か?","choices":["ラーメン を たべました","がっこう に いきます","コーヒー を のみません"],"answer":"ラーメン を たべました","why":"The answer fills the unknown object and keeps the past form."},{"type":"choice","prompt":"Why can わたし は be omitted from an answer such as ラーメン を たべました?","choices":["The speaker is often already obvious from context.","Japanese verbs cannot have topics.","Past verbs delete subjects by rule."],"answer":"The speaker is often already obvious from context.","why":"Japanese commonly omits information the listener can recover from context."}],[{"type":"builder","en":"Yesterday I did not drink coffee.","tokens":["きのう","わたし","は","コーヒー","を","のみませんでした"],"focus":["のみませんでした"]},{"type":"builder","en":"Last week I did not go to school.","tokens":["せんしゅう","わたし","は","がっこう","に","いきませんでした"],"focus":["に","いきませんでした"]},{"type":"choice","prompt":"Which form means “did not read”?","choices":["よみませんでした","よみません","よみました","よむ"],"answer":"よみませんでした","why":"〜ませんでした is polite past negative."},{"type":"choice","prompt":"Which form means “will not go” rather than “did not go”?","choices":["いきません","いきませんでした","いきました"],"answer":"いきません","why":"いきません is non-past negative; future context can make it 'will not go'."},{"type":"builder","en":"Yesterday I did not study at home.","tokens":["きのう","わたし","は","うち","で","べんきょうしませんでした"],"focus":["で","べんきょうしませんでした"]},{"type":"choice","prompt":"Complete: きのう ほん を ___。 “I did not read a book yesterday.”","choices":["よみませんでした","よみません","よみました"],"answer":"よみませんでした","why":"きのう establishes past time and the meaning is negative."},{"type":"choice","prompt":"Which four-form sequence is correct for みます?","choices":["みます / みません / みました / みませんでした","みます / みないです / みました / みましたません","みます / みません / みる / みませんる"],"answer":"みます / みません / みました / みませんでした","why":"These are the four polite forms introduced in this unit."},{"type":"builder","en":"Yesterday my friend did not watch a movie.","tokens":["きのう","ともだち","は","えいが","を","みませんでした"],"focus":["を","みませんでした"]},{"type":"choice","prompt":"What is wrong with *いきましたません?","choices":["It mixes two complete polite endings instead of choosing the past-negative form.","いく cannot be negative.","The destination particle must be を."],"answer":"It mixes two complete polite endings instead of choosing the past-negative form.","why":"Use the single past-negative form いきませんでした."},{"type":"choice","prompt":"きのう としょかん で ほん を よみませんでした。 What remained unchanged from the positive sentence?","choices":["The で and を relationships.","The sentence became future.","The library became a destination."],"answer":"The で and を relationships.","why":"Only the verb form needs to change for past-negative meaning."},{"type":"builder","en":"Last week I did not buy a book.","tokens":["せんしゅう","わたし","は","ほん","を","かいませんでした"],"focus":["を","かいませんでした"]},{"type":"choice","prompt":"Which ending fills the past-negative square of the polite system?","choices":["ませんでした","ません","ました","ます"],"answer":"ませんでした","why":"It combines negative meaning with past time."}],[{"type":"choice","prompt":"Which verb is Group 2 (ichidan)?","choices":["たべる","のむ","かく","まつ"],"answer":"たべる","why":"たべる uses the stable Group 2 stem たべ-."},{"type":"choice","prompt":"Which verb is Group 1 (godan)?","choices":["のむ","みる","ねる","おきる"],"answer":"のむ","why":"のむ changes its final kana across forms and belongs to Group 1."},{"type":"choice","prompt":"Which pair is irregular?","choices":["する / くる","たべる / みる","のむ / よむ"],"answer":"する / くる","why":"する and くる are the two major irregular verbs taught here."},{"type":"choice","prompt":"Why are verb groups useful?","choices":["They let you predict how verbs change into other forms.","They tell you which particle every noun uses.","They tell you whether a sentence is polite by themselves."],"answer":"They let you predict how verbs change into other forms.","why":"Verb families reduce memorization by grouping predictable conjugation behavior."},{"type":"choice","prompt":"Which statement is safest?","choices":["Many -いる/-える verbs are Group 2, but there are exceptions.","Every verb ending in る is Group 2.","Every verb ending in る is irregular."],"answer":"Many -いる/-える verbs are Group 2, but there are exceptions.","why":"Common verbs such as かえる are Group 1 despite ending in -える."},{"type":"choice","prompt":"かえる (return/go home) is taught here as which family?","choices":["Group 1 / godan","Group 2 / ichidan","Irregular"],"answer":"Group 1 / godan","why":"かえる is an important reminder not to classify only by appearance."},{"type":"choice","prompt":"たべる → たべます shows which pattern?","choices":["A stable Group 2 stem plus ます.","A Group 1 final-kana shift.","An irregular くる change."],"answer":"A stable Group 2 stem plus ます.","why":"The stem たべ- stays stable."},{"type":"choice","prompt":"のむ → のみます shows which pattern?","choices":["Group 1 changes the final sound before ます.","Group 2 simply deletes る.","Irregular する behavior."],"answer":"Group 1 changes the final sound before ます.","why":"む shifts to the corresponding i-row sound み before ます."},{"type":"builder","en":"I eat bread.","tokens":["わたし","は","パン","を","たべます"],"focus":["たべます"]},{"type":"builder","en":"I drink water.","tokens":["わたし","は","みず","を","のみます"],"focus":["のみます"]},{"type":"choice","prompt":"Which verb belongs with たべる and みる in the stable-stem group?","choices":["ねる","よむ","かく","かう"],"answer":"ねる","why":"ねる is a common Group 2 verb."},{"type":"choice","prompt":"Which verb belongs with のむ and よむ in Group 1?","choices":["かく","みる","ねる","する"],"answer":"かく","why":"かく follows the Group 1/godan pattern."}],[{"type":"choice","prompt":"Dictionary form of たべます?","choices":["たべる","たべまする","たべむ","たべた"],"answer":"たべる","why":"Group 2 returns to the stable stem plus る."},{"type":"choice","prompt":"Dictionary form of みます?","choices":["みる","みむ","みく","みまする"],"answer":"みる","why":"みる is Group 2."},{"type":"choice","prompt":"Dictionary form of のみます?","choices":["のむ","のみる","のます","のん"],"answer":"のむ","why":"Group 1 み shifts back to む."},{"type":"choice","prompt":"Dictionary form of よみます?","choices":["よむ","よみる","よく","よる"],"answer":"よむ","why":"Group 1 み shifts back to む."},{"type":"choice","prompt":"Dictionary form of かきます?","choices":["かく","かきる","かう","かす"],"answer":"かく","why":"Group 1 き shifts back to く."},{"type":"choice","prompt":"Dictionary form of はなします?","choices":["はなす","はなしる","はなむ","はなつ"],"answer":"はなす","why":"Group 1 し shifts back to す."},{"type":"choice","prompt":"Dictionary form of まちます?","choices":["まつ","まちる","まう","まく"],"answer":"まつ","why":"Group 1 ち shifts back to つ."},{"type":"choice","prompt":"Dictionary form of かいます?","choices":["かう","かいる","かむ","かく"],"answer":"かう","why":"Group 1 い shifts back to う."},{"type":"choice","prompt":"Dictionary form of いきます?","choices":["いく","いきる","いう","いす"],"answer":"いく","why":"Group 1 き shifts back to く."},{"type":"choice","prompt":"Dictionary form of おきます (wake up)?","choices":["おきる","おく","おきう","おきまする"],"answer":"おきる","why":"おきる is Group 2 in this meaning."},{"type":"choice","prompt":"Why is *のみる wrong for のみます?","choices":["のむ is Group 1, so its dictionary ending is む.","All drink verbs must end in す.","Dictionary forms cannot end in る."],"answer":"のむ is Group 1, so its dictionary ending is む.","why":"Replacing ます with る is not a universal rule."},{"type":"choice","prompt":"What is the dictionary form mainly useful for at this stage?","choices":["It is the basic form listed in dictionaries and used by many later grammar patterns.","It is only a rude way to speak.","It replaces particles in casual Japanese."],"answer":"It is the basic form listed in dictionaries and used by many later grammar patterns.","why":"Plain/dictionary form is a core grammar base, not merely a politeness label."}],[{"type":"choice","prompt":"Polite form of する?","choices":["します","すります","するます","きます"],"answer":"します","why":"する is irregular: する → します."},{"type":"choice","prompt":"Polite negative of する?","choices":["しません","すりません","しませんでした","しないました"],"answer":"しません","why":"The polite non-past negative uses しません."},{"type":"choice","prompt":"Polite past of する?","choices":["しました","しません","しましたでした","すりました"],"answer":"しました","why":"The polite past uses しました."},{"type":"choice","prompt":"Polite past negative of する?","choices":["しませんでした","しましたません","すりませんでした","しません"],"answer":"しませんでした","why":"This is the regular polite negative-past ending attached to the irregular し- base."},{"type":"choice","prompt":"Polite form of くる?","choices":["きます","くります","くるます","します"],"answer":"きます","why":"くる is irregular: くる → きます."},{"type":"choice","prompt":"Dictionary form corresponding to きます?","choices":["くる","きる","くります","く"],"answer":"くる","why":"The polite き- forms belong to dictionary-form くる."},{"type":"builder","en":"I study Japanese every day.","tokens":["まいにち","わたし","は","にほんご","を","べんきょうします"],"focus":["を","べんきょうします"]},{"type":"builder","en":"Yesterday I studied at home.","tokens":["きのう","わたし","は","うち","で","べんきょうしました"],"focus":["で","べんきょうしました"]},{"type":"builder","en":"Tomorrow my friend will come to my house.","tokens":["あした","ともだち","は","わたし","の","うち","に","きます"],"focus":["の","に","きます"]},{"type":"choice","prompt":"Which activity verb is built with する?","choices":["べんきょうする","べんきょうくる","べんきょうのむ"],"answer":"べんきょうする","why":"べんきょう + する means 'to study'."},{"type":"choice","prompt":"Which form means “did not come”?","choices":["きませんでした","きません","きました","くりませんでした"],"answer":"きませんでした","why":"くる uses the irregular き- base in polite forms."},{"type":"builder","en":"Yesterday I cooked at home.","tokens":["きのう","わたし","は","うち","で","りょうりしました"],"focus":["で","りょうりしました"]}],[{"type":"builder","en":"Yesterday I read a Japanese-language book at the library.","tokens":["きのう","わたし","は","としょかん","で","にほんご","の","ほん","を","よみました"],"focus":["で","の","を","よみました"]},{"type":"builder","en":"Every day I study Japanese at home.","tokens":["まいにち","わたし","は","うち","で","にほんご","を","べんきょうします"],"focus":["で","を","べんきょうします"]},{"type":"builder","en":"Last week I went to Tokyo by bus.","tokens":["せんしゅう","わたし","は","バス","で","とうきょう","に","いきました"],"focus":["で","に","いきました"]},{"type":"builder","en":"Tomorrow I will not go to the library.","tokens":["あした","わたし","は","としょかん","に","いきません"],"focus":["に","いきません"]},{"type":"builder","en":"Yesterday I did not watch a movie with my friend.","tokens":["きのう","わたし","は","ともだち","と","えいが","を","みませんでした"],"focus":["と","を","みませんでした"]},{"type":"choice","prompt":"You want to say: “Yesterday I did not study.” Which final verb fits?","choices":["べんきょうしませんでした","べんきょうしません","べんきょうしました","べんきょうします"],"answer":"べんきょうしませんでした","why":"Yesterday requires past time and the message is negative."},{"type":"choice","prompt":"Which sentence uses particles to show transport, destination, and a past action correctly?","choices":["きのう バス で がっこう に いきました","きのう バス に がっこう で いきました","きのう バス を がっこう と いきました"],"answer":"きのう バス で がっこう に いきました","why":"で marks the means, に the destination, and ました the completed action."},{"type":"choice","prompt":"Which chunk can often be omitted when the speaker is already obvious?","choices":["わたし は","ほん を","としょかん で","よみました"],"answer":"わたし は","why":"Japanese often omits an already understood topic/subject."},{"type":"choice","prompt":"What is the best way to build a longer Japanese sentence?","choices":["Decide each chunk's relationship, mark it with a particle, and finish with the appropriate verb form.","Translate English one word at a time in the same order.","Add every possible particle to every noun."],"answer":"Decide each chunk's relationship, mark it with a particle, and finish with the appropriate verb form.","why":"Meaning and particle relationships are more reliable than copying English order."},{"type":"builder","en":"Last week my friend did not come to my house.","tokens":["せんしゅう","ともだち","は","わたし","の","うち","に","きませんでした"],"focus":["の","に","きませんでした"]},{"type":"choice","prompt":"Which sentence can naturally answer きのう なに を よみました か without repeating the topic?","choices":["ほん を よみました","わたし は がくせい です","あした ほん を よみます"],"answer":"ほん を よみました","why":"The question already establishes the speaker/context; the answer can supply only the needed object and past action."},{"type":"builder","en":"Tomorrow my friend will come to the station by bus.","tokens":["あした","ともだち","は","バス","で","えき","に","きます"],"focus":["で","に","きます"]}]];
+unit3PracticeBanks.forEach(bank=>practiceBanks.push(bank));
 
 
 
@@ -1834,6 +1894,13 @@ state.weak=state.weak||{};
 state.vocabMastery=state.vocabMastery||{};
 state.vocabProgress=state.vocabProgress||{};
 state.kanjiMastery=state.kanjiMastery||{};
+state.kanjiWriting=state.kanjiWriting||{};
+state.kanjiTracePrefs=state.kanjiTracePrefs||{guide:true,grid:true,brush:18,orderGuide:true,strokeNumbers:true};
+if(typeof state.kanjiTracePrefs.guide!=="boolean")state.kanjiTracePrefs.guide=true;
+if(typeof state.kanjiTracePrefs.grid!=="boolean")state.kanjiTracePrefs.grid=true;
+if(typeof state.kanjiTracePrefs.orderGuide!=="boolean")state.kanjiTracePrefs.orderGuide=true;
+if(typeof state.kanjiTracePrefs.strokeNumbers!=="boolean")state.kanjiTracePrefs.strokeNumbers=true;
+state.kanjiTracePrefs.brush=Math.max(8,Math.min(34,+state.kanjiTracePrefs.brush||18));
 state.kanjiPack=state.kanjiPack||"3";
 Object.entries(state.vocabMastery).forEach(([word,old])=>{
   if(state.vocabProgress[word])return;
@@ -1960,7 +2027,10 @@ const grammarGlossary={
 "verb stem":"The part of a verb used as the base for building some other verb forms.",
 "verb":"A word for an action or state, such as eat, go, or exist.",
 "noun":"A word for a person, place, thing, or idea.",
-"adjective":"A word that describes what something is like."
+"adjective":"A word that describes what something is like.",
+"dictionary form":"The basic plain verb form used as a dictionary headword and as the base for many grammar patterns.",
+"godan":"The standard name for Group 1 verbs, whose final kana shifts across conjugations.",
+"ichidan":"The standard name for Group 2 verbs, which usually keep a stable stem across many conjugations."
 };
 function decorateGrammarTerms(root){
   const terms=Object.keys(grammarGlossary).sort((a,b)=>b.length-a.length);
@@ -1982,16 +2052,18 @@ function decorateGrammarTerms(root){
     frag.append(document.createTextNode(text.slice(last)));node.replaceWith(frag);
   });
 }
-function particlePracticeUnlocked(){return unitComplete(1)}
+function particlePracticeUnlocked(){return state.devMode||unitComplete(1)}
 function applyReleaseAccessUI(){
   const p=$("#particleNav");
   if(p){
     const open=particlePracticeUnlocked();
     p.disabled=!open;
     p.textContent=open?"Particle Practice":"Particle Practice 🔒";
-    p.title=open?"Focused particle practice":"Complete Unit 2 and pass its final to unlock Particle Practice.";
+    p.title=open?(state.devMode&&!unitComplete(1)?"Focused particle practice · Developer mode access":"Focused particle practice"):"Complete Unit 2 and pass its final to unlock Particle Practice.";
+    const note=$("#particleAccessNote");
+    if(note)note.innerHTML=state.devMode&&!unitComplete(1)?`<b>Developer mode:</b> Particle Practice is temporarily available for testing. In the normal course it unlocks after Unit 2.`:`<b>Unlocked:</b> Particle Practice becomes available after you complete Unit 2 and pass its final.`;
   }
-  if($("#kanjiNav"))$("#kanjiNav").classList.toggle("hidden",!state.devMode);
+  if($("#kanjiNav"))$("#kanjiNav").classList.toggle("hidden",!(state.devMode||unitUnlocked(2)));
   if($("#devSidebarBadge"))$("#devSidebarBadge").classList.toggle("hidden",!state.devMode);
   if($("#exitDevMode"))$("#exitDevMode").onclick=()=>setDevMode(false);
 }
@@ -2019,7 +2091,7 @@ function setDevMode(on){
   applyReleaseAccessUI();
   renderCourseMap();
   renderLesson();
-  if(leavingDev&&($("#kanji")?.classList.contains("active")||$("#kanjiChallenge")?.classList.contains("active"))){
+  if(leavingDev&&!unitUnlocked(2)&&($("#kanji")?.classList.contains("active")||$("#kanjiChallenge")?.classList.contains("active")||$("#kanjiTrace")?.classList.contains("active"))){
     showView("courseMap");
   }
 }
@@ -2033,7 +2105,7 @@ function enterDevMode(){
 function showApp(view="lessons"){ $("#welcome").classList.add("hidden");$("#appShell").classList.remove("hidden");showView(view)}
 function showView(id){
   if(id==="particlePractice"&&!particlePracticeUnlocked())id="courseMap";
-  if((id==="kanji"||id==="kanjiChallenge")&&!state.devMode)id="courseMap";
+  if((id==="kanji"||id==="kanjiChallenge"||id==="kanjiTrace")&&!(state.devMode||unitUnlocked(2)))id="courseMap";
   $$(".view").forEach(v=>v.classList.toggle("active",v.id===id));
   $$(".nav button[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
   if(id==="lessons"){markLessonViewed(state.currentLesson);renderLesson();}
@@ -2044,6 +2116,7 @@ function showView(id){
   if(id==="vocabChallenge")renderVocabChallengeSummary();
   if(id==="kanji")renderKanjiPage();
   if(id==="kanjiChallenge")renderKanjiChallengeSummary();
+  if(id==="kanjiTrace")renderKanjiTrace();
   if(id==="assessments"){
     renderAssessmentSelect();renderUnitFinalCards();
     if($("#startPlacementFromAssessments"))$("#startPlacementFromAssessments").onclick=()=>startUnitPlacement(0);
@@ -2087,7 +2160,6 @@ $("#startLearning").onclick=()=>{
 }
 $("#explore").onclick=()=>showApp("courseMap");
 $("#devModeStart").onclick=enterDevMode;
-$("#testOutUnitOne").onclick=()=>{showApp("assessments");startUnitPlacement(0)};
 if(!storageAvailable&&$("#mobileStorageNote")){
   $("#mobileStorageNote").style.display="block";
   $("#mobileStorageNote").textContent="This browser is blocking persistent storage for the local file. The app will still work, but progress may reset when this tab closes.";
@@ -2117,7 +2189,7 @@ function renderLesson(){
     return `<option value="${j}" ${j===ui?"selected":""} ${locked?"disabled":""}>${locked?"🔒 ":""}Unit ${j+1} — ${unit.title} (${unit.count})</option>`;
   }).join("");
   const unitViewed=unitViewedCount(ui);
-  const finalStatus=ui===2&&state.devMode?"developer preview · no final yet":unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:"final available now";
+  const finalStatus=unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:unitFinalReady(ui)?"final available now":"final not available";
   $("#unitContext").innerHTML=`${u.description}<br><b>${unitViewed}/${u.count} lessons viewed</b> · ${unitComplete(ui)?"Unit complete":finalStatus}`;
   $("#unitSelect").onchange=e=>{
     const targetUi=+e.target.value;
@@ -2138,17 +2210,18 @@ function renderLesson(){
   });
 
   $("#lessonContent").innerHTML=`
-    ${l.roadmap?`<div class="lesson-roadmap-note"><b>${ui===2&&state.devMode?"Developer preview":"Roadmap lesson"}.</b> ${ui===2&&state.devMode?"Unit 3 is exposed for testing. Its lesson structure and teaching outline are present, but the full exercise banks and final are not built yet.":"The teaching outline is in place, but its full exercise bank has not been written yet."}</div>`:""}
+    ${l.roadmap?`<div class="lesson-roadmap-note"><b>Roadmap lesson.</b> The teaching outline is in place, but its full exercise bank has not been written yet.</div>`:""}
     <div class="rule"><b>Goal:</b> ${l.objective}</div>
     ${l.sections.map(s=>`<h2>${s[0]}</h2><p>${s[1]}</p>`).join("")}
     ${l.examples&&l.examples.length?`<h2>Examples</h2>${l.examples.map(ex=>`<div class="example-line">${sentenceHTML(ex.tokens,ex.focus)}<div class="english-line">${ex.en}</div></div>`).join("")}`:""}
     ${lessonDeepDive[i]||""}
-    ${i===0?`<div id="lessonKanaGoal"></div>`:""}
+    ${i===0?`<div id="lessonKanaGoal"></div>`:""}${i===courseUnits[2].start?`<div id="unit3KanjiIntro"></div>`:""}
     <div class="rule"><b>Keep this:</b> ${l.rule}</div>
   `;
   enhanceJapanese($("#lessonContent"));
   decorateGrammarTerms($("#lessonContent"));
   if(i===0)renderLessonKanaGoal();
+  if(i===courseUnits[2].start)renderUnit3KanjiIntro();
   applyRomajiLockUI();
 
   const bank=practiceBanks[i];
@@ -2296,7 +2369,10 @@ const freeBuilderPool=[
 {en:"I read a book at the library.",tokens:["わたし","は","としょかん","で","ほん","を","よみます"],focus:["で","を"]},
 {en:"I go to school.",tokens:["わたし","は","がっこう","に","いきます"],focus:["に"]},
 {en:"Yesterday I watched a movie.",tokens:["きのう","わたし","は","えいが","を","みました"],focus:["みました"]},
-{en:"I want to go to Japan.",tokens:["わたし","は","にほん","に","いきたいです"],focus:["に","いきたいです"]}
+{en:"I want to go to Japan.",tokens:["わたし","は","にほん","に","いきたいです"],focus:["に","いきたいです"]},
+{en:"Yesterday I did not study at home.",tokens:["きのう","わたし","は","うち","で","べんきょうしませんでした"],focus:["で","べんきょうしませんでした"]},
+{en:"Last week I went to Tokyo by bus.",tokens:["せんしゅう","わたし","は","バス","で","とうきょう","に","いきました"],focus:["で","に","いきました"]},
+{en:"Tomorrow my friend will come to my house.",tokens:["あした","ともだち","は","わたし","の","うち","に","きます"],focus:["の","に","きます"]}
 ];
 function renderFree(){
   state.showRomaji=romajiLocked()?false:$("#freeRomaji").checked;state.showEnglish=$("#freeEnglish").checked;save();applyRomajiLockUI();
@@ -2305,7 +2381,9 @@ function renderFree(){
   if(mode==="builder"){
     const q=pick(freeBuilderPool);activePractice={answered:false};renderExercise({type:"builder",...q},c,ok=>{activePractice.answered=true;markWeak("sentence",q.tokens.join(" "),ok)},renderFree);
   } else if(mode==="verb"){
-    const q=pick([{prompt:"Polite negative of のみます?",choices:["のみません","のみました","のんで","のみたいです"],answer:"のみません"},{prompt:"Polite past of いきます?",choices:["いきました","いきません","いって","いきたいです"],answer:"いきました"}]);
+    const verbQs=[{prompt:"Polite negative of のみます?",choices:["のみません","のみました","のんで","のみたいです"],answer:"のみません"},{prompt:"Polite past of いきます?",choices:["いきました","いきません","いって","いきたいです"],answer:"いきました"}];
+    if(unitUnlocked(2))verbQs.push({prompt:"Polite past negative of よみます?",choices:["よみませんでした","よみません","よみました","よむ"],answer:"よみませんでした"},{prompt:"Dictionary form of かきます?",choices:["かく","かきる","かう","かす"],answer:"かく"},{prompt:"Polite form of くる?",choices:["きます","くります","くるます","します"],answer:"きます"});
+    const q=pick(verbQs);
     activePractice={answered:false};renderExercise({type:"choice",...q},c,ok=>{activePractice.answered=true;markWeak("verb",q.answer,ok)},renderFree);
   } else {
     const seen=introducedVocab(),pool=seen.length?seen:vocab.slice(0,20);
@@ -2515,7 +2593,7 @@ function renderCourseMap(){
   const viewedLessons=state.viewedLessons.filter(i=>i<=availableLastLesson()).length;
   const releasedLessonTotal=releasedUnits.reduce((n,u)=>n+u.count,0);
   $("#courseProgressSummary").innerHTML=`
-    <span class="course-progress-chip"><b>${completedUnits}/${availableUnitCount()}</b> beta units complete</span>
+    <span class="course-progress-chip"><b>${completedUnits}/${PUBLIC_UNIT_COUNT}</b> released units complete</span>
     <span class="course-progress-chip"><b>${viewedLessons}/${releasedLessonTotal}</b> released lessons viewed</span>
     <span class="course-progress-chip"><b>Unit ${highestUnlockedUnit()+1}</b> currently unlocked</span>
     <span class="course-progress-chip"><b>Finals</b> prove unit progression</span>`;
@@ -2549,13 +2627,12 @@ function renderCourseMap(){
 
     const viewed=unitViewedCount(ui);
     const complete=unitComplete(ui),unlocked=unitUnlocked(ui);
-    const devPreview=ui===2&&state.devMode;
-    const finalText=devPreview?"DEV PREVIEW":unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:unlocked?"final available":"locked";
-    const cls=devPreview?"dev-preview":complete?"completed":unlocked?"unlocked":"locked";
+    const finalText=unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:unlocked&&courseUnits[ui].implemented?"final available":"locked";
+    const cls=complete?"completed":unlocked?"unlocked":"locked";
     return `<details class="course-unit ${cls}" ${ui===unitIndexForLesson(state.currentLesson)&&unlocked?"open":""}>
       <summary data-unit-summary="${ui}">
         <div class="course-unit-number">Unit ${ui+1}</div>
-        <div><div class="course-unit-title">${u.title}${devPreview?` <span class="dev-tag">DEV</span>`:""}</div><div class="course-unit-sub">${u.description}</div></div>
+        <div><div class="course-unit-title">${u.title}</div><div class="course-unit-sub">${u.description}</div></div>
         <div class="course-unit-count">${viewed}/${u.count} viewed · ${complete?"complete":finalText}</div>
       </summary>
       <div class="course-lessons">
@@ -2569,7 +2646,8 @@ function renderCourseMap(){
           </button>`;
         }).join("")}
         <div class="coming-soon-body">
-          <b>${devPreview?"Developer status":"Unit final"}:</b> ${devPreview?`outline exposed · no final or complete practice banks yet · <button class="btn secondary" id="openUnit3Kanji" style="margin-top:8px">Open Unit 3 kanji</button>`:unitFinalPassed(ui)?`passed · ${state.unitFinalScores[ui]}%`:unlocked?"available now — lesson practice is optional":"locked until the previous unit is complete"}
+          <b>Unit final:</b> ${unitFinalPassed(ui)?`passed · ${state.unitFinalScores[ui]}%`:unlocked?"available now — lesson practice is optional":"locked until the previous unit is complete"}
+          ${ui===2&&unlocked?`<br><button class="btn secondary" id="openUnit3Kanji" style="margin-top:8px">Open Unit 3 kanji</button>`:""}
           ${ui===0?`<br><b>Kana requirement:</b> ${unitSkippedByPlacement(0)?"skipped by placement · romaji scaffolding removed":kanaRequirementSkipped(0)?"waived · romaji removed for Unit 1 set":`${unit1MasteredCount()}/10 mastered · 9 required for Unit completion`}`:""}
         </div>
       </div>
@@ -2980,6 +3058,11 @@ function kanjiMeaningCorrect(input,meaning){return englishAliases(meaning).inclu
 function kanjiReadingCorrect(input,e){const v=normalizeAnswer(input).replace(/\s/g,"");return v===normalizeAnswer(e.kana).replace(/\s/g,"")||v===normalizeAnswer(romanizeKana(e.kana)).replace(/\s/g,"")}
 function kanjiWordMeaningCorrect(input,e){return englishRecallCorrect(input,e.en)}
 function kanjiCourseVocab(e){return vocab.some(v=>v[1]===e.kana)}
+function kanjiWritingRecord(k){
+  if(!state.kanjiWriting[k])state.kanjiWriting[k]={traces:0,lastPracticed:0};
+  const r=state.kanjiWriting[k];r.traces=+r.traces||0;r.lastPracticed=+r.lastPracticed||0;return r
+}
+function recordKanjiTrace(k){const r=kanjiWritingRecord(k);r.traces++;r.lastPracticed=Date.now();save()}
 
 function renderKanjiSummary(target="#kanjiSummary"){
   const el=$(target);if(!el)return;const c=kanjiStageCounts();
@@ -2996,8 +3079,9 @@ function renderKanjiPackSelect(){
 function renderKanjiPage(){
   if(!$("#kanjiGrid"))return;renderKanjiSummary();renderKanjiPackSelect();
   const pool=selectedKanjiPool(),note=$("#kanjiPackNote");
-  note.textContent=state.kanjiPack==="all"?`${pool.length} kanji currently available. Developer mode exposes all 100 for testing.`:`Unit ${state.kanjiPack} adds 10 kanji: ${kanjiPackNames[+state.kanjiPack]}. In learner mode this pack appears when Unit ${state.kanjiPack} is reached.`;
-  $("#kanjiGrid").innerHTML=pool.length?pool.map(e=>{const s=kanjiStats(e.k);return `<div class="kanji-entry"><div class="kanji-entry-top"><div class="kanji-char">${e.k}</div><span class="kanji-stage ${s.level}">${s.level}</span></div><div class="kanji-core">${esc(e.meaning)}</div><div class="kanji-word">${e.word}</div><div class="kanji-reading">${e.kana}</div><div class="kanji-word-en">${esc(e.en)}</div><div class="kanji-vocab-link">${kanjiCourseVocab(e)?"course vocabulary word":"example word"}</div></div>`}).join(""):`<div class="simple-section"><b>This kanji pack is locked.</b><p>Reach its course unit to unlock it, or use Developer mode while developing the course.</p></div>`;
+  note.textContent=state.kanjiPack==="all"?`${pool.length} kanji currently available.${state.devMode?" Developer mode exposes all 100 for testing.":" New packs unlock with their course units."}`:`Unit ${state.kanjiPack} adds 10 kanji: ${kanjiPackNames[+state.kanjiPack]}. In learner mode this pack appears when Unit ${state.kanjiPack} is reached.`;
+  $("#kanjiGrid").innerHTML=pool.length?pool.map(e=>{const s=kanjiStats(e.k),w=kanjiWritingRecord(e.k);return `<div class="kanji-entry"><div class="kanji-entry-top"><div class="kanji-char">${e.k}</div><span class="kanji-stage ${s.level}">${s.level}</span></div><div class="kanji-core">${esc(e.meaning)}</div><div class="kanji-word">${e.word}</div><div class="kanji-reading">${e.kana}</div><div class="kanji-word-en">${esc(e.en)}</div><div class="kanji-vocab-link">${kanjiCourseVocab(e)?"course vocabulary word":"example word"}</div><div class="kanji-entry-actions"><span class="trace-count">${w.traces?w.traces+" trace"+(w.traces===1?"":"s"):"not traced yet"}</span><button class="kanji-trace-link" data-trace-kanji="${e.k}" aria-label="Trace ${e.k}">Trace</button></div></div>`}).join(""):`<div class="simple-section"><b>This kanji pack is locked.</b><p>Reach its course unit to unlock it, or use Developer mode while developing the course.</p></div>`;
+  $$(".kanji-trace-link").forEach(b=>b.onclick=()=>openKanjiTrace(b.dataset.traceKanji));
 }
 
 let kanjiDrillState=null;
@@ -3026,6 +3110,250 @@ function renderKanjiDrillQuestion(){
   c.querySelectorAll(".kanji-answer").forEach(b=>b.onclick=()=>{if(d.answered)return;d.answered=true;const ok=b.dataset.a===answer;if(ok)d.correct++;updateKanjiRecognition(e.k,ok);save();c.querySelectorAll(".kanji-answer").forEach(x=>{x.disabled=true;if(x.dataset.a===answer)x.classList.add("correct")});if(!ok)b.classList.add("wrong");const f=c.querySelector(".kanji-feedback"),s=kanjiStats(e.k);f.className=`kanji-feedback ${ok?"good":"bad"}`;f.innerHTML=`<b>${ok?"Correct.":"Not quite."}</b><span class="detail">${e.k} · ${esc(e.meaning)} · ${e.word} (${e.kana}) = ${esc(e.en)} · ${s.level}</span>`;const next=document.createElement("button");next.className="btn particle-next";next.textContent="Next · Enter";next.onclick=()=>{d.index++;renderKanjiDrillQuestion()};f.after(next);next.focus();c.onkeydown=ev=>{if(ev.key==="Enter"&&d.answered){ev.preventDefault();d.index++;renderKanjiDrillQuestion()}}})
 }
 
+const KANJIVG_RAW_BASE="https://raw.githubusercontent.com/KanjiVG/kanjivg/master/kanji/";
+const kanjiStrokeCache=new Map();
+let kanjiTraceState={
+  pool:[],index:0,strokes:[],drawing:false,currentStroke:null,recorded:false,
+  strokeData:null,strokeLoading:false,strokeError:"",strokeFocus:0,strokeTimer:null,strokeLoadToken:0
+};
+function traceSelectedEntry(){return kanjiTraceState.pool[kanjiTraceState.index]||null}
+function stopStrokeOrderAnimation(){
+  if(kanjiTraceState.strokeTimer){clearInterval(kanjiTraceState.strokeTimer);kanjiTraceState.strokeTimer=null}
+}
+function resetTraceCharacterState(){
+  stopStrokeOrderAnimation();
+  kanjiTraceState.strokes=[];kanjiTraceState.currentStroke=null;kanjiTraceState.drawing=false;kanjiTraceState.recorded=false;
+  kanjiTraceState.strokeData=null;kanjiTraceState.strokeLoading=false;kanjiTraceState.strokeError="";kanjiTraceState.strokeFocus=0;
+  kanjiTraceState.strokeLoadToken++;
+}
+function openKanjiTrace(startK=null){
+  const pool=selectedKanjiPool();if(!pool.length)return;
+  kanjiTraceState.pool=pool;
+  const found=startK?pool.findIndex(e=>e.k===startK):-1;
+  kanjiTraceState.index=found>=0?found:Math.min(kanjiTraceState.index,pool.length-1);
+  resetTraceCharacterState();
+  showView("kanjiTrace");
+}
+function setKanjiTraceIndex(index){
+  const pool=kanjiTraceState.pool.length?kanjiTraceState.pool:selectedKanjiPool();
+  if(!pool.length)return;
+  kanjiTraceState.pool=pool;kanjiTraceState.index=(index+pool.length)%pool.length;
+  resetTraceCharacterState();
+  renderKanjiTrace();
+}
+function kanjiVGFilename(k){return k.codePointAt(0).toString(16).padStart(5,"0")+".svg"}
+function parseKanjiVGStart(d){
+  const m=(d||"").match(/^\s*[Mm]\s*([-+]?(?:\d+\.?\d*|\.\d+))[\s,]+([-+]?(?:\d+\.?\d*|\.\d+))/);
+  return m?{x:+m[1],y:+m[2]}:null
+}
+function parseKanjiVGNumberPosition(el){
+  const nums=(el?.getAttribute("transform")||"").match(/[-+]?(?:\d+\.?\d*|\.\d+)(?:e[-+]?\d+)?/gi);
+  if(!nums||nums.length<6)return null;
+  return {x:+nums[4],y:+nums[5]}
+}
+function parseKanjiVG(svgText,k){
+  const doc=new DOMParser().parseFromString(svgText,"image/svg+xml");
+  if(doc.querySelector("parsererror"))throw new Error("KanjiVG SVG could not be parsed.");
+  const pathEls=[...doc.querySelectorAll('g[id^="kvg:StrokePaths_"] path')];
+  const numberEls=[...doc.querySelectorAll('g[id^="kvg:StrokeNumbers_"] text')];
+  if(!pathEls.length)throw new Error("No stroke paths found.");
+  const paths=pathEls.map((el,i)=>{
+    const d=el.getAttribute("d")||"";
+    return {d,start:parseKanjiVGStart(d),numberPos:parseKanjiVGNumberPosition(numberEls[i]),number:i+1}
+  });
+  return {k,paths,count:paths.length,filename:kanjiVGFilename(k)}
+}
+function loadKanjiStrokeData(k){
+  if(kanjiStrokeCache.has(k))return kanjiStrokeCache.get(k);
+  const promise=fetch(KANJIVG_RAW_BASE+kanjiVGFilename(k),{cache:"force-cache"})
+    .then(r=>{if(!r.ok)throw new Error("Stroke-order file unavailable.");return r.text()})
+    .then(svg=>parseKanjiVG(svg,k))
+    .catch(err=>{kanjiStrokeCache.delete(k);throw err});
+  kanjiStrokeCache.set(k,promise);return promise
+}
+function requestKanjiStrokeData(k){
+  const token=++kanjiTraceState.strokeLoadToken;
+  kanjiTraceState.strokeLoading=true;kanjiTraceState.strokeError="";
+  updateStrokeOrderUI();
+  loadKanjiStrokeData(k).then(data=>{
+    if(token!==kanjiTraceState.strokeLoadToken||traceSelectedEntry()?.k!==k)return;
+    kanjiTraceState.strokeData=data;kanjiTraceState.strokeLoading=false;kanjiTraceState.strokeError="";kanjiTraceState.strokeFocus=0;
+    drawTraceCanvas();updateStrokeOrderUI();
+  }).catch(()=>{
+    if(token!==kanjiTraceState.strokeLoadToken||traceSelectedEntry()?.k!==k)return;
+    kanjiTraceState.strokeData=null;kanjiTraceState.strokeLoading=false;
+    kanjiTraceState.strokeError="Stroke-order data could not load. The normal tracing guide still works.";
+    drawTraceCanvas();updateStrokeOrderUI();
+  })
+}
+function traceCanvasPoint(ev,canvas){
+  const r=canvas.getBoundingClientRect();
+  return {x:(ev.clientX-r.left)*canvas.width/r.width,y:(ev.clientY-r.top)*canvas.height/r.height};
+}
+function drawKanjiVGGuide(ctx,data,w,h){
+  if(!data?.paths?.length||typeof Path2D==="undefined")return false;
+  const scale=w/109,focus=kanjiTraceState.strokeFocus,prefs=state.kanjiTracePrefs;
+  ctx.save();ctx.scale(scale,scale);ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=3;
+  data.paths.forEach((stroke,i)=>{
+    let alpha=.16,colour=`rgba(22,33,45,${alpha})`;
+    if(focus){
+      if(i+1<focus)colour="rgba(53,111,168,.30)";
+      else if(i+1===focus)colour="rgba(227,154,75,.82)";
+      else colour="rgba(22,33,45,.075)";
+    }
+    ctx.strokeStyle=colour;
+    try{ctx.stroke(new Path2D(stroke.d))}catch(_){}
+  });
+  ctx.restore();
+
+  if(prefs.strokeNumbers){
+    ctx.save();ctx.textAlign="center";ctx.textBaseline="middle";ctx.font="800 16px system-ui,-apple-system,sans-serif";
+    data.paths.forEach((stroke,i)=>{
+      const p=stroke.numberPos||stroke.start;if(!p)return;
+      const x=p.x*scale,y=p.y*scale,current=focus===i+1;
+      ctx.beginPath();ctx.fillStyle=current?"rgba(227,154,75,.96)":"rgba(255,255,255,.92)";
+      ctx.strokeStyle=current?"rgba(174,105,36,.9)":"rgba(83,101,117,.42)";ctx.lineWidth=1.5;
+      ctx.arc(x,y,12,0,Math.PI*2);ctx.fill();ctx.stroke();
+      ctx.fillStyle=current?"#2E261B":"#42515E";ctx.fillText(String(i+1),x,y+.5);
+    });
+    ctx.restore();
+  }
+  if(focus&&data.paths[focus-1]?.start){
+    const p=data.paths[focus-1].start,x=p.x*scale,y=p.y*scale;
+    ctx.save();ctx.beginPath();ctx.fillStyle="#E39A4B";ctx.arc(x,y,7,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle="#fff";ctx.lineWidth=2;ctx.stroke();ctx.restore();
+  }
+  return true
+}
+function drawTraceCanvas(){
+  const canvas=$("#kanjiTraceCanvas"),e=traceSelectedEntry();if(!canvas||!e)return;
+  const ctx=canvas.getContext("2d"),w=canvas.width,h=canvas.height;
+  ctx.clearRect(0,0,w,h);ctx.fillStyle="#FFFFFF";ctx.fillRect(0,0,w,h);
+  if(state.kanjiTracePrefs.grid){
+    ctx.save();ctx.strokeStyle="rgba(53,111,168,.16)";ctx.lineWidth=2;ctx.setLineDash([10,10]);
+    ctx.beginPath();ctx.moveTo(w/2,30);ctx.lineTo(w/2,h-30);ctx.moveTo(30,h/2);ctx.lineTo(w-30,h/2);ctx.stroke();
+    ctx.setLineDash([]);ctx.strokeStyle="rgba(53,111,168,.08)";ctx.lineWidth=1.5;ctx.strokeRect(30,30,w-60,h-60);ctx.restore();
+  }
+  if(state.kanjiTracePrefs.guide){
+    let usedVector=false;
+    if(state.kanjiTracePrefs.orderGuide&&kanjiTraceState.strokeData)usedVector=drawKanjiVGGuide(ctx,kanjiTraceState.strokeData,w,h);
+    if(!usedVector){
+      ctx.save();ctx.fillStyle="rgba(22,33,45,.14)";ctx.textAlign="center";ctx.textBaseline="middle";
+      ctx.font='520px "Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif CJK JP","Noto Serif JP",serif';
+      ctx.fillText(e.k,w/2,h/2+16);ctx.restore();
+    }
+  }
+  ctx.save();ctx.strokeStyle="#16212D";ctx.fillStyle="#16212D";ctx.lineCap="round";ctx.lineJoin="round";ctx.lineWidth=state.kanjiTracePrefs.brush;
+  kanjiTraceState.strokes.forEach(stroke=>{
+    if(!stroke.length)return;
+    if(stroke.length===1){ctx.beginPath();ctx.arc(stroke[0].x,stroke[0].y,ctx.lineWidth/2,0,Math.PI*2);ctx.fill();return}
+    ctx.beginPath();ctx.moveTo(stroke[0].x,stroke[0].y);for(let i=1;i<stroke.length;i++)ctx.lineTo(stroke[i].x,stroke[i].y);ctx.stroke();
+  });ctx.restore();
+}
+function bindKanjiTraceCanvas(){
+  const canvas=$("#kanjiTraceCanvas");if(!canvas)return;
+  canvas.onpointerdown=ev=>{
+    if(ev.button!==undefined&&ev.button!==0&&ev.pointerType==="mouse")return;
+    ev.preventDefault();canvas.setPointerCapture?.(ev.pointerId);
+    const p=traceCanvasPoint(ev,canvas);const stroke=[p];kanjiTraceState.strokes.push(stroke);kanjiTraceState.currentStroke=stroke;kanjiTraceState.drawing=true;kanjiTraceState.recorded=false;drawTraceCanvas();
+  };
+  canvas.onpointermove=ev=>{
+    if(!kanjiTraceState.drawing||!kanjiTraceState.currentStroke)return;ev.preventDefault();
+    const p=traceCanvasPoint(ev,canvas),last=kanjiTraceState.currentStroke.at(-1);
+    if(!last||Math.hypot(p.x-last.x,p.y-last.y)>=2.5){kanjiTraceState.currentStroke.push(p);drawTraceCanvas()}
+  };
+  const stop=ev=>{if(!kanjiTraceState.drawing)return;ev?.preventDefault?.();kanjiTraceState.drawing=false;kanjiTraceState.currentStroke=null};
+  canvas.onpointerup=stop;canvas.onpointercancel=stop;canvas.onpointerleave=ev=>{if(ev.pointerType==="mouse")stop(ev)};
+}
+function traceStrokePointCount(){return kanjiTraceState.strokes.reduce((n,s)=>n+s.length,0)}
+function updateStrokeOrderUI(){
+  const status=$("#kanjiStrokeOrderStatus"),data=kanjiTraceState.strokeData,prefs=state.kanjiTracePrefs;
+  if(status){
+    if(!prefs.guide)status.textContent="Guide hidden. Show it to see stroke order.";
+    else if(!prefs.orderGuide)status.textContent="Plain shape guide selected.";
+    else if(kanjiTraceState.strokeLoading)status.textContent="Loading Japanese stroke-order guide…";
+    else if(kanjiTraceState.strokeError)status.textContent=kanjiTraceState.strokeError;
+    else if(data)status.textContent=kanjiTraceState.strokeFocus?`Stroke ${kanjiTraceState.strokeFocus} of ${data.count} · orange dot marks the stroke start`:`${data.count} strokes · showing the complete numbered order`;
+    else status.textContent="Preparing stroke-order guide…";
+  }
+  const ready=!!data&&!kanjiTraceState.strokeLoading;
+  ["kanjiStrokePrev","kanjiStrokeNext","kanjiStrokePlay","kanjiStrokeAll"].forEach(id=>{const b=$("#"+id);if(b)b.disabled=!ready});
+  const order=$("#kanjiOrderGuideToggle");if(order)order.textContent=prefs.orderGuide?"Use plain shape":"Use stroke order";
+  const numbers=$("#kanjiStrokeNumbersToggle");if(numbers)numbers.textContent=prefs.strokeNumbers?"Hide numbers":"Show numbers";
+  const play=$("#kanjiStrokePlay");if(play)play.textContent=kanjiTraceState.strokeTimer?"Stop":"Play";
+}
+function setStrokeFocus(n){
+  stopStrokeOrderAnimation();
+  const data=kanjiTraceState.strokeData;if(!data)return;
+  state.kanjiTracePrefs.guide=true;state.kanjiTracePrefs.orderGuide=true;
+  kanjiTraceState.strokeFocus=Math.max(1,Math.min(data.count,n));
+  save();drawTraceCanvas();updateStrokeOrderUI();
+}
+function playKanjiStrokeOrder(){
+  const data=kanjiTraceState.strokeData;if(!data)return;
+  if(kanjiTraceState.strokeTimer){stopStrokeOrderAnimation();updateStrokeOrderUI();return}
+  state.kanjiTracePrefs.guide=true;state.kanjiTracePrefs.orderGuide=true;save();
+  kanjiTraceState.strokeFocus=1;drawTraceCanvas();updateStrokeOrderUI();
+  kanjiTraceState.strokeTimer=setInterval(()=>{
+    if(!kanjiTraceState.strokeData||kanjiTraceState.strokeFocus>=kanjiTraceState.strokeData.count){
+      stopStrokeOrderAnimation();updateStrokeOrderUI();return
+    }
+    kanjiTraceState.strokeFocus++;drawTraceCanvas();updateStrokeOrderUI();
+  },800);
+  updateStrokeOrderUI();
+}
+function renderKanjiTrace(){
+  const area=$("#kanjiTraceArea");if(!area)return;
+  if(!kanjiTraceState.pool.length)kanjiTraceState.pool=selectedKanjiPool();
+  if(!kanjiTraceState.pool.length){area.innerHTML=`<div class="simple-section"><b>No kanji available to trace.</b><p>Choose an unlocked kanji pack first.</p></div>`;return}
+  kanjiTraceState.index=Math.max(0,Math.min(kanjiTraceState.index,kanjiTraceState.pool.length-1));
+  const e=traceSelectedEntry(),w=kanjiWritingRecord(e.k),prefs=state.kanjiTracePrefs;
+  area.innerHTML=`<div class="kanji-trace-card">
+    <div class="kanji-trace-top"><div><div class="eyebrow">Unit ${e.unit} · ${esc(e.meaning)}</div><div class="kanji-trace-word">${e.word}</div><div class="kanji-trace-reading">${e.kana}</div><div class="kanji-trace-en">${esc(e.en)}</div><div class="kanji-trace-meta"><span>${w.traces} recorded trace${w.traces===1?"":"s"}</span><span>writing does not affect mastery</span></div></div><div class="kanji-trace-counter">${kanjiTraceState.index+1} / ${kanjiTraceState.pool.length}</div></div>
+    <div class="kanji-trace-workspace">
+      <div><div class="kanji-trace-canvas-wrap"><canvas id="kanjiTraceCanvas" width="640" height="640" aria-label="Tracing canvas for kanji ${e.k}"></canvas></div><div class="kanji-trace-status" id="kanjiTraceStatus"></div><div class="kanji-trace-hint">Tip: the numbered guide shows standard Japanese stroke order when available. Use <b>Play</b> or step through strokes, then trace at your own pace. Hide the guide when you want to try the character from memory.</div></div>
+      <div class="kanji-trace-side">
+        <div class="kanji-stroke-order-panel">
+          <div class="kanji-stroke-order-head"><b>Stroke order</b><span class="kanji-stroke-order-badge">optional</span></div>
+          <div class="kanji-stroke-order-status" id="kanjiStrokeOrderStatus">Preparing stroke-order guide…</div>
+          <div class="kanji-stroke-order-actions"><button id="kanjiStrokePrev" title="Previous stroke">←</button><button id="kanjiStrokePlay">Play</button><button id="kanjiStrokeNext" title="Next stroke">→</button><button id="kanjiStrokeAll">All</button></div>
+          <div class="kanji-stroke-order-options"><button id="kanjiOrderGuideToggle">${prefs.orderGuide?"Use plain shape":"Use stroke order"}</button><button id="kanjiStrokeNumbersToggle">${prefs.strokeNumbers?"Hide numbers":"Show numbers"}</button></div>
+          <div class="kanji-stroke-order-source">Stroke-order data: <a href="https://kanjivg.tagaini.net/" target="_blank" rel="noopener">KanjiVG</a> © Ulrich Apel, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.</div>
+        </div>
+        <button class="btn secondary" id="kanjiTraceUndo">Undo last stroke</button>
+        <button class="btn secondary" id="kanjiTraceClear">Clear</button>
+        <button class="btn secondary" id="kanjiTraceGuide">${prefs.guide?"Hide guide":"Show guide"}</button>
+        <button class="btn secondary" id="kanjiTraceGrid">${prefs.grid?"Hide grid":"Show grid"}</button>
+        <div class="kanji-trace-brush"><label for="kanjiTraceBrush">Pen size</label><input id="kanjiTraceBrush" type="range" min="8" max="34" step="2" value="${prefs.brush}"></div>
+        <button class="btn secondary" id="kanjiTracePrev">← Previous kanji</button>
+        <button class="btn" id="kanjiTraceDone">Done & next →</button>
+        <div class="kanji-trace-side-note"><b>Stroke order is guidance, not a gate.</b><br>The app can show and animate the standard order, but it does not grade your handwriting or require a correct stroke sequence for mastery.</div>
+      </div>
+    </div>
+  </div>`;
+  bindKanjiTraceCanvas();drawTraceCanvas();updateStrokeOrderUI();
+  if(!kanjiTraceState.strokeData&&!kanjiTraceState.strokeLoading&&!kanjiTraceState.strokeError)requestKanjiStrokeData(e.k);
+  $("#kanjiTraceUndo").onclick=()=>{kanjiTraceState.strokes.pop();kanjiTraceState.recorded=false;drawTraceCanvas();$("#kanjiTraceStatus").textContent=""};
+  $("#kanjiTraceClear").onclick=()=>{kanjiTraceState.strokes=[];kanjiTraceState.recorded=false;drawTraceCanvas();$("#kanjiTraceStatus").textContent=""};
+  $("#kanjiTraceGuide").onclick=()=>{prefs.guide=!prefs.guide;save();drawTraceCanvas();$("#kanjiTraceGuide").textContent=prefs.guide?"Hide guide":"Show guide";updateStrokeOrderUI()};
+  $("#kanjiTraceGrid").onclick=()=>{prefs.grid=!prefs.grid;save();drawTraceCanvas();$("#kanjiTraceGrid").textContent=prefs.grid?"Hide grid":"Show grid"};
+  $("#kanjiTraceBrush").oninput=ev=>{prefs.brush=+ev.target.value;drawTraceCanvas()};
+  $("#kanjiTraceBrush").onchange=()=>save();
+  $("#kanjiTracePrev").onclick=()=>setKanjiTraceIndex(kanjiTraceState.index-1);
+  $("#kanjiOrderGuideToggle").onclick=()=>{prefs.orderGuide=!prefs.orderGuide;if(prefs.orderGuide)prefs.guide=true;save();drawTraceCanvas();updateStrokeOrderUI();$("#kanjiTraceGuide").textContent=prefs.guide?"Hide guide":"Show guide"};
+  $("#kanjiStrokeNumbersToggle").onclick=()=>{prefs.strokeNumbers=!prefs.strokeNumbers;save();drawTraceCanvas();updateStrokeOrderUI()};
+  $("#kanjiStrokePrev").onclick=()=>{const d=kanjiTraceState.strokeData;if(!d)return;setStrokeFocus(kanjiTraceState.strokeFocus>1?kanjiTraceState.strokeFocus-1:d.count)};
+  $("#kanjiStrokeNext").onclick=()=>{const d=kanjiTraceState.strokeData;if(!d)return;setStrokeFocus(kanjiTraceState.strokeFocus&&kanjiTraceState.strokeFocus<d.count?kanjiTraceState.strokeFocus+1:1)};
+  $("#kanjiStrokeAll").onclick=()=>{stopStrokeOrderAnimation();kanjiTraceState.strokeFocus=0;drawTraceCanvas();updateStrokeOrderUI()};
+  $("#kanjiStrokePlay").onclick=playKanjiStrokeOrder;
+  $("#kanjiTraceDone").onclick=()=>{
+    const status=$("#kanjiTraceStatus");
+    if(traceStrokePointCount()<4){status.textContent="Draw at least one stroke before recording this trace.";return}
+    if(!kanjiTraceState.recorded){recordKanjiTrace(e.k);kanjiTraceState.recorded=true}
+    setKanjiTraceIndex(kanjiTraceState.index+1);
+  };
+}
+
 let kanjiChallengeMode="meaning",kanjiChallengePrevious=null,kanjiChallengeAnswered=false;
 function kanjiMasteryEligible(){return selectedKanjiPool().filter(e=>["familiar","learned","mastered"].includes(kanjiStats(e.k).level))}
 function kanjiChallengePick(mode){const pool=kanjiMasteryEligible();if(!pool.length)return null;let p=pool;if(kanjiChallengePrevious&&pool.length>1)p=pool.filter(e=>e.k!==kanjiChallengePrevious);const weighted=[];p.forEach(e=>{const s=kanjiStats(e.k);let need=1;if(mode==="meaning")need=s.meaningPass<1?5:s.level==="familiar"?3:1;if(mode==="reading")need=s.readingPass<2?5:s.level==="familiar"?3:1;if(mode==="wordMeaning")need=s.wordMeaningPass<1?5:s.level==="learned"?4:1;for(let i=0;i<need;i++)weighted.push(e)});const e=pick(weighted.length?weighted:p);kanjiChallengePrevious=e.k;return e}
@@ -3042,7 +3370,7 @@ function nextKanjiChallenge(){
   const submit=()=>{if(kanjiChallengeAnswered){nextKanjiChallenge();return}const input=$("#kanjiChallengeInput").value;if(!input.trim())return;let ok=false;if(kanjiChallengeMode==="meaning"){ok=kanjiMeaningCorrect(input,e.meaning);updateKanjiMeaning(e.k,ok)}else if(kanjiChallengeMode==="reading"){ok=kanjiReadingCorrect(input,e);updateKanjiReading(e.k,ok)}else{ok=kanjiWordMeaningCorrect(input,e);updateKanjiWordMeaning(e.k,ok)}kanjiChallengeAnswered=true;save();const after=kanjiStats(e.k),f=$("#kanjiChallengeFeedback");f.className=`kanji-feedback ${ok?"good":"bad"}`;f.innerHTML=`<b>${ok?"Correct.":"Not quite."}</b><span class="detail">${e.k} · ${esc(e.meaning)} · ${e.word} (${e.kana}) = ${esc(e.en)} · <b>${after.level}</b></span>`;const btn=$("#kanjiChallengeCheck");btn.textContent="Next · Enter";btn.onclick=nextKanjiChallenge;$("#kanjiChallengeInput").focus()};
   $("#kanjiChallengeCheck").onclick=submit;$("#kanjiChallengeInput").onkeydown=ev=>{if(ev.key==="Enter"){ev.preventDefault();kanjiChallengeAnswered?nextKanjiChallenge():submit()}};$("#kanjiChallengeInput").focus()
 }
-$("#startKanjiDrill").onclick=startKanjiDrill;$("#startKanjiMastery").onclick=openKanjiChallenge;$("#backToKanji").onclick=()=>{showView("kanji");renderKanjiPage()};
+$("#startKanjiDrill").onclick=startKanjiDrill;$("#startKanjiTrace").onclick=()=>openKanjiTrace();$("#startKanjiMastery").onclick=openKanjiChallenge;$("#backToKanji").onclick=()=>{showView("kanji");renderKanjiPage()};$("#backFromKanjiTrace").onclick=()=>{showView("kanji");renderKanjiPage()};
 $("#kanjiMeaningMode").onclick=()=>{kanjiChallengeMode="meaning";kanjiChallengePrevious=null;$("#kanjiMeaningMode").className="btn";$("#kanjiReadingMode").className="btn secondary";$("#kanjiWordMeaningMode").className="btn secondary";nextKanjiChallenge()};
 $("#kanjiReadingMode").onclick=()=>{kanjiChallengeMode="reading";kanjiChallengePrevious=null;$("#kanjiReadingMode").className="btn";$("#kanjiMeaningMode").className="btn secondary";$("#kanjiWordMeaningMode").className="btn secondary";nextKanjiChallenge()};
 $("#kanjiWordMeaningMode").onclick=()=>{kanjiChallengeMode="wordMeaning";kanjiChallengePrevious=null;$("#kanjiWordMeaningMode").className="btn";$("#kanjiMeaningMode").className="btn secondary";$("#kanjiReadingMode").className="btn secondary";nextKanjiChallenge()};
@@ -3207,6 +3535,13 @@ function renderKanaUI(){
   renderKanaSkipPanel();
   applyRomajiLockUI();
 }
+function renderUnit3KanjiIntro(){
+  const el=$("#unit3KanjiIntro");if(!el)return;
+  const pool=kanjiData.filter(e=>e.unit===3);
+  el.innerHTML=`<div class="kana-course-card"><div class="kana-course-head"><div><div class="eyebrow">Unit 3 reading track</div><h2>First 10 kanji</h2><p class="small">Learn these through their useful example words. Kanji mastery is not a unit-completion gate, but the Unit 3 final can include basic meaning and example-word reading checks.</p></div><button class="btn secondary" id="openUnit3KanjiFromLesson">Open kanji practice →</button></div><div class="kana-course-grid">${pool.map(e=>{const s=kanjiStats(e.k);return `<div class="kana-mastery-cell ${s.level}"><div class="kc">${e.k}</div><div class="kr">${e.kana}</div><div class="ks">${s.level}</div></div>`}).join("")}</div></div>`;
+  $("#openUnit3KanjiFromLesson").onclick=()=>{state.kanjiPack="3";save();showView("kanji");renderKanjiPage()};
+}
+
 function renderLessonKanaGoal(){
   const el=$("#lessonKanaGoal");if(!el)return;
   const familiar=unit1FamiliarCount(),learned=unit1LearnedCount(),mastered=unit1MasteredCount(),practice=state.practiceScores[0];
@@ -3573,8 +3908,9 @@ function reviewGrammarItems(){
 
 
 function reviewKanjiItems(){
-  if(!state.devMode)return [];
-  return kanjiData.map(e=>{
+  const available=new Set(availableKanji().map(e=>e.k));
+  if(!available.size)return [];
+  return kanjiData.filter(e=>available.has(e.k)).map(e=>{
     const s=kanjiStats(e.k),r=reviewRecord(`kanji::${e.k}`);
     let priority=0,reason="";
     if(s.level==="learning"){priority=4;reason="recognition still developing";}
@@ -3620,7 +3956,7 @@ function renderReviewLists(items){
     const s=kanaStats(ch);
     if(s.level==="mastered"&&!needs.some(x=>x.key===`kana::${ch}`))strong.push({name:ch,sub:"kana · mastered"});
   });
-  if(state.devMode)kanjiData.forEach(e=>{
+  availableKanji().forEach(e=>{
     const s=kanjiStats(e.k);
     if(s.level==="mastered"&&!needs.some(x=>x.key===`kanji::${e.k}`))strong.push({name:e.k,sub:`kanji · ${e.word} (${e.kana}) · mastered`});
   });
@@ -3646,12 +3982,12 @@ function renderReview(){
   if($("#weakTable"))$("#weakTable").innerHTML=rows.length?rows.map(([k,v])=>{const [type,...rest]=k.split("::");return `<tr><td>${esc(rest.join(" · "))}</td><td>${esc(type)}</td><td><b>${v}</b></td></tr>`}).join(""):`<tr><td colspan="3" style="color:var(--muted)">No weak items yet.</td></tr>`;
 
   const c=reviewCounts();
-  if($("#reviewDueSummary"))$("#reviewDueSummary").innerHTML=["kana","vocab","particle","grammar"].map(type=>`
+  if($("#reviewDueSummary")){const reviewTypes=(state.devMode||unitUnlocked(2))?["kana","kanji","vocab","particle","grammar"]:["kana","vocab","particle","grammar"];$("#reviewDueSummary").innerHTML=reviewTypes.map(type=>`
     <div class="review-due-card">
       <div class="rd-label">${reviewLabel(type)}</div>
       <div class="rd-number">${c[type]}</div>
       <div class="rd-note">${reviewDueNote(type)}</div>
-    </div>`).join("");
+    </div>`).join("");}
   renderReviewLists(c.all);
 
   if($("#startDailyReview")){
@@ -3687,7 +4023,7 @@ function maintenanceReviewItems(){
     const s=kanaStats(ch);
     if(["familiar","learned","mastered"].includes(s.level))items.push({type:"kana",key:`kana::${ch}`,name:ch,sub:s.level,priority:1,char:ch,romaji:romanizeToken(ch)});
   });
-  if(state.devMode)kanjiData.filter(e=>["familiar","learned","mastered"].includes(kanjiStats(e.k).level)).forEach(e=>items.push({type:"kanji",key:`kanji::${e.k}`,name:e.k,sub:`${e.word} (${e.kana}) · ${kanjiStats(e.k).level}`,priority:1,e}));
+  availableKanji().filter(e=>["familiar","learned","mastered"].includes(kanjiStats(e.k).level)).forEach(e=>items.push({type:"kanji",key:`kanji::${e.k}`,name:e.k,sub:`${e.word} (${e.kana}) · ${kanjiStats(e.k).level}`,priority:1,e}));
   introducedVocab().forEach(row=>items.push({type:"vocab",key:`vocab::${row[1]}`,name:row[1],sub:`${row[3]} · ${vocabStats(row[1]).level}`,priority:1,row}));
   Object.keys(state.particleStats||{}).forEach(k=>items.push({type:"particle",key:`particle::${k}`,name:k,sub:"particle",priority:1,particleKey:k}));
   state.viewedLessons.filter(i=>practiceBanks[i]?.length).forEach(i=>{
@@ -3904,10 +4240,11 @@ let resetArmed=false;
 function renderAbout(){
   const el=$("#aboutProgress");if(!el)return;
   const u1Done=unitViewedCount(0);
-  const u2Done=unitViewedCount(1);
+  const u2Done=unitViewedCount(1),u3Done=unitViewedCount(2);
   el.innerHTML=`<div class="about-progress-grid">
     <div class="about-progress-card"><b>${u1Done}/10 lessons viewed</b>Unit 1 · final ${unitFinalPassed(0)?`passed (${state.unitFinalScores[0]}%)`:"not passed"} · ${kanaRequirementSkipped(0)?"kana requirement waived":`${unit1MasteredCount()}/10 kana mastered`}</div>
     <div class="about-progress-card"><b>${u2Done}/10 lessons viewed</b>Unit 2 · final ${unitFinalPassed(1)?`passed (${state.unitFinalScores[1]}%)`:"not passed"} · ${unitComplete(1)?"complete":"in progress"}</div>
+    <div class="about-progress-card"><b>${u3Done}/8 lessons viewed</b>Unit 3 · final ${unitFinalPassed(2)?`passed (${state.unitFinalScores[2]}%)`:"not passed"} · ${unitComplete(2)?"complete":unitUnlocked(2)?"in progress":"locked"}</div>
   </div>`;
   if($("#aboutDevToggle")){
     $("#aboutDevToggle").textContent=state.devMode?"Exit developer mode":"Enter developer mode";
@@ -3941,6 +4278,17 @@ function kanaFinalQuestions(count=4){
     return {type:"choice",prompt:`What is the reading of ${ch}?`,choices:shuffle([correct,...distractors]),answer:correct};
   });
 }
+function kanjiFinalQuestions(unit,count=4){
+  const pack=kanjiData.filter(e=>e.unit===unit),selected=shuffle([...pack]).slice(0,count);
+  return selected.map((e,i)=>{
+    if(i%2===0){
+      const distractors=shuffle(pack.filter(x=>x.k!==e.k).map(x=>x.meaning)).slice(0,3);
+      return {type:"choice",prompt:`Unit ${unit} kanji: what is the core meaning of ${e.k}?`,choices:shuffle([e.meaning,...distractors]),answer:e.meaning,why:`${e.k} appears in the Unit ${unit} example ${e.word} (${e.kana}).`};
+    }
+    const distractors=shuffle(pack.filter(x=>x.k!==e.k).map(x=>x.kana)).filter((x,j,a)=>a.indexOf(x)===j).slice(0,3);
+    return {type:"choice",prompt:`Unit ${unit} kanji: how is the example word ${e.word} read?`,choices:shuffle([e.kana,...distractors]),answer:e.kana,why:`This unit teaches ${e.k} through ${e.word} (${e.kana}) = ${e.en}.`};
+  });
+}
 function uniqueQuestions(pool,count,exclude=new Set()){
   const out=[];
   for(const q of shuffle(pool)){
@@ -3966,6 +4314,13 @@ function buildUnitFinalQuestions(unitIndex){
     const older=uniqueQuestions(practiceBanks.slice(0,10).flat(),2,new Set());
     return shuffle([...base,...extras,...older,...kanaFinalQuestions(2)]);
   }
+  if(unitIndex===2){
+    const u=courseUnits[2],banks=practiceBanks.slice(u.start,u.start+u.count),used=new Set(),base=[];
+    banks.forEach(bank=>{const q=pick(bank);used.add(questionSignature(q));base.push(q)});
+    const extras=uniqueQuestions(banks.flat(),6,used);
+    const older=uniqueQuestions(practiceBanks.slice(courseUnits[1].start,courseUnits[1].start+courseUnits[1].count).flat(),2,new Set());
+    return shuffle([...base,...extras,...older,...kanjiFinalQuestions(3,4)]);
+  }
   return [];
 }
 function unitFinalRequirementRows(unitIndex){
@@ -3979,11 +4334,12 @@ function unitFinalRequirementRows(unitIndex){
       ?"Kana completion requirement: waived · romaji removed for Unit 1 set"
       :`Kana completion requirement: ${unit1MasteredCount()}/10 mastered · 9 required to finish Unit 1, but not to take this final`
   });
+  if(unitIndex===2)rows.push({done:true,text:"Unit 3 kanji: 10 introduced · mastery is optional, but this final includes basic kanji recognition"});
   return rows;
 }
 function renderUnitFinalCards(){
   const el=$("#unitFinalCards");if(!el)return;
-  el.innerHTML=[0,1].map(ui=>{
+  el.innerHTML=Array.from({length:PUBLIC_UNIT_COUNT},(_,ui)=>ui).map(ui=>{
     const score=state.unitFinalScores[ui]||0,passed=unitFinalPassed(ui),ready=unitFinalReady(ui),reqs=unitFinalRequirementRows(ui);
     const status=passed?`Passed · ${score}%`:ready?`Available now · best score ${score||"—"}`:`Locked · best score ${score||"—"}`;
     return `<div class="unit-final-card ${passed?"passed":ready?"ready":""}" data-unit-final-card="${ui}">
@@ -4049,7 +4405,11 @@ function assessmentResultMessage(a,score){
   }
   if(a.unitFinal===1){
     if(score<80)return "80% is required. Review the particle contrasts and take a new randomized Unit 2 final.";
-    return unitComplete(1)?"Unit 2 is complete. Particle Practice is now unlocked. You have finished all content in v0.1.":"The final passed. Finish the remaining Unit 2 requirements to complete the unit.";
+    return unitComplete(1)?"Unit 2 is complete. Particle Practice is unlocked, and Unit 3 — Everyday verbs — is now available.":"The final passed. Finish the remaining Unit 2 requirements to complete the unit.";
+  }
+  if(a.unitFinal===2){
+    if(score<80)return "80% is required. Review the verb-form contrasts, dictionary-form patterns, irregular verbs, and Unit 3 kanji, then take a new randomized final.";
+    return unitComplete(2)?"Unit 3 is complete. You have finished all released course content in v0.2. Keep building kanji mastery and using Review while later units are developed.":"The final passed. Finish any remaining Unit 3 requirements to complete the unit.";
   }
   return score>=80?"Passed.":"Review the weak areas and try again.";
 }
@@ -4070,7 +4430,8 @@ function renderAssessmentQ(){
       ${a.placement&&score<80?`<button class="btn" id="retakePlacement">Retake placement test</button> <button class="btn secondary" id="startCourseInstead">Begin Unit 1</button>`:""}
       ${!a.placement&&a.unitFinal!==null&&score<80?`<button class="btn" id="retakeUnitFinal">Retake with new questions</button>`:""}
       ${!a.placement&&a.unitFinal===0&&unitComplete(0)?`<button class="btn orange" id="continueAfterFinal">Continue to Unit 2</button>`:""}
-      ${a.unitFinal===1&&unitComplete(1)?`<div class="beta-complete-note"><b>v0.1 complete.</b> Units 1 and 2 are finished. Keep using Review and Particle Practice while later units are built.</div><button class="btn orange" id="openParticlesAfterFinal">Open Particle Practice</button>`:""}
+      ${!a.placement&&a.unitFinal===1&&unitComplete(1)?`<button class="btn orange" id="continueAfterFinal">Continue to Unit 3</button> <button class="btn secondary" id="openParticlesAfterFinal">Open Particle Practice</button>`:""}
+      ${a.unitFinal===2&&unitComplete(2)?`<div class="beta-complete-note"><b>v0.2 complete.</b> Units 1–3 are finished. Keep using Review, Kanji, and optional practice while later units are built.</div><button class="btn orange" id="openKanjiAfterFinal">Open Unit 3 kanji</button>`:""}
     </div>`;
     if($("#acceptPlacementSkip"))$("#acceptPlacementSkip").onclick=()=>acceptPlacementSkip(0);
     if($("#studyUnitOneAnyway"))$("#studyUnitOneAnyway").onclick=()=>{state.currentLesson=courseUnits[0].start;save();showView("lessons");renderLesson()};
@@ -4079,6 +4440,7 @@ function renderAssessmentQ(){
     if($("#retakeUnitFinal"))$("#retakeUnitFinal").onclick=()=>startUnitFinal(a.unitFinal);
     if($("#continueAfterFinal"))$("#continueAfterFinal").onclick=goContinueLearning;
     if($("#openParticlesAfterFinal"))$("#openParticlesAfterFinal").onclick=()=>showView("particlePractice");
+    if($("#openKanjiAfterFinal"))$("#openKanjiAfterFinal").onclick=()=>{state.kanjiPack="3";save();showView("kanji")};
     renderUnitFinalCards();renderCourseMap();renderAssessmentSelect();applyReleaseAccessUI();return;
   }
   const q=a.qs[a.index];
