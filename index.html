@@ -642,6 +642,129 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
   .unit-final-grid,.about-grid,.about-progress-grid{grid-template-columns:1fr}
 }
 
+
+.kana-skip-panel{
+  margin:12px 0 18px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fff;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap
+}
+.kana-skip-panel .skip-copy{max-width:690px;color:#53616D;font-size:.79rem;line-height:1.5}
+.kana-skip-panel .skip-copy b{color:#334553}
+.kana-skip-panel.skipped{background:#FFF8EE;border-color:#E7C998}
+.btn.warning{background:#fff;color:#8A5A20;border:1px solid #D8AE72}
+.btn.warning:hover{background:#FFF7EA}
+
+
+.intro-page{width:min(980px,calc(100% - 48px))}
+.intro-topline{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+.intro-topline .page-title{margin-bottom:0}
+.intro-callout{
+  margin:22px 0 8px;padding:16px 18px;border-radius:12px;background:var(--blue-soft);
+  border:1px solid #C5D8E8;color:#405361;line-height:1.6
+}
+.intro-section{
+  display:grid;grid-template-columns:48px 1fr;gap:18px;padding:34px 0;border-bottom:1px solid var(--line)
+}
+.intro-section h2{font-size:1.55rem;margin:0 0 11px;letter-spacing:-.025em}
+.intro-section p{color:#4B5A67;line-height:1.68;margin:9px 0}
+.intro-number{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#fff;
+  border:1px solid #BFD1E1;color:var(--blue);font-weight:950;font-size:1.05rem
+}
+.script-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0}
+.script-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.script-card h3{margin:11px 0 5px}
+.script-card p{font-size:.83rem;line-height:1.55;margin:0}
+.script-sample{font-size:2rem;font-weight:900;letter-spacing:.08em}
+.script-example{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+.script-example b{font-size:1.2rem;color:var(--ink);margin-right:5px}
+.intro-note{
+  margin:14px 0;padding:12px 14px;border-left:4px solid var(--blue);background:#F5F8FA;
+  border-radius:0 9px 9px 0;color:#4B5A67;line-height:1.55
+}
+.intro-example-line{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:16px 0;padding:16px;
+  border:1px solid var(--line);background:#fff;border-radius:12px
+}
+.intro-jp{font-size:1.7rem;font-weight:900}.intro-arrow{color:#8C99A4;font-weight:900}.intro-arrow.big{font-size:1.5rem;align-self:center}
+.grammar-key{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}
+.grammar-key span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:.76rem;color:#4D5C68}
+.word-order-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.order-card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.order-language{font-size:.72rem;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px}
+.order-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.order-slot{text-align:center;border-radius:9px;padding:10px 6px;background:#F7F9FB;min-width:0}
+.order-slot span{display:block;font-size:.65rem;font-weight:950;color:var(--blue)}
+.order-slot b{display:block;margin:4px 0;font-size:.96rem;word-break:break-word}
+.order-slot small{display:block;color:var(--muted);font-size:.62rem;line-height:1.35}
+.order-formula{text-align:center;margin-top:12px;font-weight:850;font-size:.77rem;color:#53616D}
+.intro-warning{
+  margin:15px 0;padding:14px 15px;border-radius:10px;background:#FFF8EE;border:1px solid #E7C998;
+  color:#5C5144;line-height:1.58
+}
+.particle-intro-sentence{
+  display:flex;gap:7px;flex-wrap:wrap;margin:18px 0
+}
+.particle-intro-sentence>div{
+  min-width:105px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:11px;text-align:center
+}
+.particle-intro-sentence b{font-size:1.25rem;display:block;margin-bottom:5px}
+.particle-intro-sentence span{font-size:.66rem;color:var(--muted);line-height:1.45}
+.particle-intro-sentence .particle-chip{background:var(--orange-soft);border-color:#E8BF87}
+.term-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}
+.term-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:13px}
+.term-card b{display:block;margin-bottom:4px}.term-card span{font-size:.78rem;color:#586672;line-height:1.5}
+.omit-example{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin:17px 0}
+.omit-example>div:not(.intro-arrow){background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px}
+.omit-example b{display:block;font-size:1.08rem;margin:7px 0}.omit-example small{display:block;color:var(--muted);line-height:1.4}
+.omit-label{font-size:.65rem;font-weight:900;color:var(--blue);text-transform:uppercase;letter-spacing:.06em}
+.dont-worry-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.dont-worry-grid div{background:#fff;border:1px solid var(--line);border-radius:9px;padding:11px 12px;color:#52616D;font-size:.78rem;line-height:1.5}
+.learning-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0}
+.learning-flow span{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid #BED0E0;font-size:.75rem;font-weight:850;color:#405A71}
+.learning-flow b{color:#8B99A5}
+.intro-finish{
+  display:flex;justify-content:space-between;gap:20px;align-items:center;margin:32px 0 4px;
+  padding:22px;border-radius:14px;background:#fff;border:1px solid #AFC8DC;box-shadow:var(--shadow)
+}
+.intro-finish h2{margin:5px 0}.intro-finish p{margin:5px 0;color:#586672;line-height:1.5}
+.intro-finish-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;min-width:270px}
+.intro-seen-pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#EFF8F2;color:#3F7957;font-size:.66rem;font-weight:900}
+@media(max-width:760px){
+  .script-cards,.word-order-compare,.term-grid,.dont-worry-grid{grid-template-columns:1fr}
+  .intro-section{grid-template-columns:1fr}.intro-number{width:36px;height:36px}
+  .intro-topline,.intro-finish{display:block}.intro-topline .btn{margin-top:14px}
+  .intro-finish-actions{justify-content:flex-start;min-width:0;margin-top:16px}
+  .omit-example{grid-template-columns:1fr}.omit-example .intro-arrow{transform:rotate(90deg);justify-self:center}
+  .particle-intro-sentence>div{min-width:85px;flex:1}
+}
+
+
+.welcome-testing-actions{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.welcome-testing-note{max-width:570px;margin:8px auto 0;color:#8B97A2;font-size:.72rem;line-height:1.45}
+.dev-start-btn{font-size:.78rem}
+.dev-sidebar-badge{
+  margin-bottom:10px;padding:8px;border-radius:9px;background:#FFF3D9;border:1px solid #E2BE74;
+  color:#73541F;display:flex;align-items:center;justify-content:space-between;gap:8px
+}
+.dev-sidebar-badge b{font-size:.65rem;letter-spacing:.08em}
+.dev-sidebar-badge button{border:0;background:transparent;color:#73541F;font-size:.68rem;font-weight:850;padding:2px 4px}
+.dev-banner{
+  margin:12px 0 20px;padding:12px 14px;border-radius:10px;background:#FFF7E7;border:1px solid #E1BE78;
+  color:#66512E;line-height:1.5
+}
+.course-unit.dev-preview{border-color:#D7B76E;background:#FFFCF4}
+.course-unit.dev-preview .course-unit-number{color:#99701B}
+.dev-tag{
+  display:inline-block;margin-left:6px;padding:2px 6px;border-radius:999px;background:#FFF0C7;color:#815D16;
+  font-size:.6rem;font-weight:950;letter-spacing:.05em;vertical-align:middle
+}
+.placement-callout{
+  margin:14px 0;padding:14px 16px;border-radius:11px;background:#F6FAFD;border:1px solid #B8CEE0;color:#465A69;line-height:1.55
+}
+.placement-success{
+  margin:14px 0;padding:15px;border-radius:11px;background:#FFF8E9;border:1px solid #E5C47C;color:#5F5135;line-height:1.55
+}
+
 @media(max-width:850px){
   .app-shell{grid-template-columns:1fr}
   .sidebar{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line);padding:10px}
@@ -664,6 +787,11 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
       <button class="btn" id="startLearning" type="button">Start learning</button>
       <button class="btn secondary" id="explore" type="button">Explore course →</button>
     </div>
+    <div class="welcome-testing-actions">
+      <button class="btn secondary" id="testOutUnitOne" type="button">Test out of Unit 1</button>
+      <button class="btn text dev-start-btn" id="devModeStart" type="button">Developer mode</button>
+    </div>
+    <div class="welcome-testing-note">Already know beginner Japanese? Pass the Unit 1 placement final to skip ahead. Developer mode exposes unfinished Unit 3 and kanji tools for testing.</div>
     <div id="mobileStorageNote" style="display:none;margin-top:14px;color:var(--muted);font-size:.75rem;line-height:1.45"></div>
   </div>
 </section>
@@ -678,6 +806,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
       <button data-view="particlePractice" id="particleNav">Particle Practice 🔒</button>
       <button data-view="assessments">Assessments</button>
       <div class="section-label">Reference</div>
+      <button data-view="intro">Introduction to Japanese</button>
       <button data-view="structures">Sentence Guide</button>
       <button data-view="vocabulary">Vocabulary</button>
       <button data-view="kana">Kana</button>
@@ -686,10 +815,217 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
       <div class="section-label">App</div>
       <button data-view="about">About / Settings</button>
     </div>
-    <div class="sidebar-bottom">Structured lessons first.<br>Free practice whenever you want it.</div>
+    <div class="sidebar-bottom">
+      <div id="devSidebarBadge" class="dev-sidebar-badge hidden"><b>DEV MODE</b><button id="exitDevMode">Exit</button></div>
+      Structured lessons first.<br>Free practice whenever you want it.
+    </div>
   </aside>
 
   <main class="main">
+
+    <section id="intro" class="view">
+      <div class="page intro-page">
+        <div class="intro-topline">
+          <div>
+            <div class="eyebrow">Before Unit 1 · optional orientation</div>
+            <h1 class="page-title">Introduction to Japanese</h1>
+          </div>
+          <button class="btn secondary" id="skipIntroTop">I know this already — skip →</button>
+        </div>
+
+        <p class="lead">If Japanese is completely new to you, this page explains what you are looking at before the first real lesson. There is no test, and nothing here is a progression requirement.</p>
+
+        <div class="intro-callout">
+          <b>The big picture:</b> Japanese has its own writing systems, its usual sentence order differs from English, and small words called <b>particles</b> help show what each part of a sentence is doing. You will learn all of this gradually.
+        </div>
+
+        <section class="intro-section">
+          <div class="intro-number">1</div>
+          <div>
+            <h2>Japanese uses three writing systems</h2>
+            <p>Normal Japanese writing mixes <b>hiragana</b>, <b>katakana</b>, and <b>kanji</b>. You do not choose one system and write everything with it.</p>
+
+            <div class="script-cards">
+              <div class="script-card">
+                <div class="script-sample">あ か し</div>
+                <h3>Hiragana</h3>
+                <p>A phonetic script: the characters mainly represent sounds. Hiragana is used constantly for grammar and many ordinary words.</p>
+                <div class="script-example"><b>か</b> = <span>ka</span></div>
+              </div>
+              <div class="script-card">
+                <div class="script-sample">ア カ シ</div>
+                <h3>Katakana</h3>
+                <p>Another phonetic script representing the same basic sounds. It is commonly used for foreign words, foreign names, sound effects, and emphasis.</p>
+                <div class="script-example"><b>カ</b> = <span>ka</span></div>
+              </div>
+              <div class="script-card">
+                <div class="script-sample">日 本 人</div>
+                <h3>Kanji</h3>
+                <p>Meaning-bearing characters used inside normal Japanese words. A kanji may have different readings depending on the word it appears in.</p>
+                <div class="script-example"><b>日本</b> = <span>Japan</span></div>
+              </div>
+            </div>
+
+            <div class="intro-note"><b>Kana</b> is the collective name for <b>hiragana + katakana</b>. So when Nihongo Step says “kana,” it means those phonetic characters.</div>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">2</div>
+          <div>
+            <h2>Romaji is a temporary reading aid</h2>
+            <p><b>Romaji</b> means writing Japanese sounds with the Latin alphabet—the letters used in English. For example:</p>
+            <div class="intro-example-line">
+              <span class="intro-jp">みず</span>
+              <span class="intro-arrow">→</span>
+              <span><b>mizu</b></span>
+              <span class="intro-arrow">→</span>
+              <span>water</span>
+            </div>
+            <p>Nihongo Step uses romaji at the beginning so you are not forced to learn grammar and a new alphabet at exactly the same moment. It is scaffolding, not the final goal. As you prove that you know kana, the course removes that help.</p>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">3</div>
+          <div>
+            <h2>English is commonly SVO. Japanese is commonly SOV.</h2>
+            <p>These abbreviations describe the usual order of three basic sentence parts:</p>
+
+            <div class="grammar-key">
+              <span><b>S</b> = Subject — who or what performs/is responsible for the action</span>
+              <span><b>V</b> = Verb — the action or state</span>
+              <span><b>O</b> = Object — the thing directly affected by the action</span>
+            </div>
+
+            <div class="word-order-compare">
+              <div class="order-card">
+                <div class="order-language">English · SVO</div>
+                <div class="order-slots">
+                  <div class="order-slot subject"><span>S</span><b>I</b><small>subject</small></div>
+                  <div class="order-slot verb"><span>V</span><b>drink</b><small>verb</small></div>
+                  <div class="order-slot object"><span>O</span><b>water</b><small>object</small></div>
+                </div>
+                <div class="order-formula">Subject → Verb → Object</div>
+              </div>
+
+              <div class="order-card">
+                <div class="order-language">Japanese · commonly SOV</div>
+                <div class="order-slots">
+                  <div class="order-slot subject"><span>S</span><b>わたし は</b><small>watashi wa · I / as for me</small></div>
+                  <div class="order-slot object"><span>O</span><b>みず を</b><small>mizu o · water</small></div>
+                  <div class="order-slot verb"><span>V</span><b>のみます</b><small>nomimasu · drink</small></div>
+                </div>
+                <div class="order-formula">Subject/topic → Object → Verb</div>
+              </div>
+            </div>
+
+            <div class="intro-warning">
+              <b>Do not turn this into a rigid translation trick.</b> Japanese is not simply “English with the verb moved to the end.” Subjects are often omitted when they are obvious, topic and subject are not always the same thing, and particle-marked chunks can sometimes move around. The important beginner habit is: <b>expect the main verb toward the end.</b>
+            </div>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">4</div>
+          <div>
+            <h2>Particles label relationships</h2>
+            <p>Japanese uses short grammatical markers called <b>particles</b>. They usually come immediately after the word or phrase whose job they are marking.</p>
+
+            <div class="particle-intro-sentence">
+              <div><b>わたし</b><span>watashi<br>I</span></div>
+              <div class="particle-chip"><b>は</b><span>wa<br>topic</span></div>
+              <div><b>みず</b><span>mizu<br>water</span></div>
+              <div class="particle-chip"><b>を</b><span>o<br>object</span></div>
+              <div><b>のみます</b><span>nomimasu<br>drink</span></div>
+            </div>
+
+            <p><b>は (wa)</b> tells us what the sentence is about. <b>を (o)</b> marks water as the thing affected by “drink.” Unit 1 will teach these properly; you do <em>not</em> need to memorize them from this page.</p>
+
+            <div class="intro-note"><b>One unusual detail:</b> some particles have special pronunciations. The particle は is written <i>ha</i> but pronounced <b>wa</b>; を is normally pronounced <b>o</b>; and later you will meet へ, pronounced <b>e</b> as a particle.</div>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">5</div>
+          <div>
+            <h2>A few grammar words are worth knowing</h2>
+            <p>You do not need a linguistics background. These are simply names for things the course will point out:</p>
+            <div class="term-grid">
+              <div class="term-card"><b>Subject</b><span>The person or thing associated with the verb. Japanese often leaves it unstated when context makes it obvious.</span></div>
+              <div class="term-card"><b>Object</b><span>The person or thing directly affected by an action, such as “water” in “I drink water.”</span></div>
+              <div class="term-card"><b>Verb</b><span>An action or state, such as go, drink, read, or exist.</span></div>
+              <div class="term-card"><b>Particle</b><span>A short marker after a word or phrase that helps show its relationship to the sentence.</span></div>
+              <div class="term-card"><b>Tense</b><span>Grammar that helps place something in time, such as past versus non-past.</span></div>
+              <div class="term-card"><b>Conjugation</b><span>Changing a word's form to express things such as past, negative, politeness, or other meanings.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">6</div>
+          <div>
+            <h2>Japanese often leaves obvious information unstated</h2>
+            <p>English usually makes us say things like “<b>I</b> drink water.” Japanese can omit “I” when everyone already knows who is being discussed.</p>
+
+            <div class="omit-example">
+              <div>
+                <span class="omit-label">Full beginner-friendly version</span>
+                <b>わたし は みず を のみます。</b>
+                <small>watashi wa mizu o nomimasu · I drink water.</small>
+              </div>
+              <div class="intro-arrow big">→</div>
+              <div>
+                <span class="omit-label">When “I” is obvious</span>
+                <b>みず を のみます。</b>
+                <small>mizu o nomimasu · [I] drink water.</small>
+              </div>
+            </div>
+
+            <p>This is one reason Japanese can feel very different from English. Nihongo Step will initially use fuller sentences so you can see the grammar clearly, then gradually expose you to more natural omission.</p>
+          </div>
+        </section>
+
+        <section class="intro-section">
+          <div class="intro-number">7</div>
+          <div>
+            <h2>You are not expected to learn everything at once</h2>
+            <div class="dont-worry-grid">
+              <div>✓ You do not need to memorize hundreds of kanji before making sentences.</div>
+              <div>✓ You do not need to understand every grammar term before beginning.</div>
+              <div>✓ You do not need to master kana before seeing your first sentence.</div>
+              <div>✓ If you already know something, mastery practice lets you prove it instead of relearning it.</div>
+              <div>✓ Romaji support is temporary and can disappear as kana knowledge is proven or deliberately waived.</div>
+              <div>✓ Later units will add kanji, more natural grammar, listening, and eventually conversation skills.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="intro-section intro-how">
+          <div class="intro-number">8</div>
+          <div>
+            <h2>How Nihongo Step teaches</h2>
+            <div class="learning-flow">
+              <span>Explain</span><b>→</b><span>Recognize</span><b>→</b><span>Build sentences</span><b>→</b><span>Recall without help</span><b>→</b><span>Review later</span>
+            </div>
+            <p>The course teaches new material, the mastery systems determine what you can actually recall, and Review keeps older material alive.</p>
+          </div>
+        </section>
+
+        <div class="intro-finish">
+          <div>
+            <div class="eyebrow">Ready when you are</div>
+            <h2>Start with one real Japanese sentence.</h2>
+            <p>Unit 1 begins with <b>A は (wa) B です</b>. You will build from there rather than trying to memorize Japanese all at once.</p>
+          </div>
+          <div class="intro-finish-actions">
+            <button class="btn orange" id="beginUnitOne">Begin Unit 1 →</button>
+            <button class="btn secondary" id="skipIntroBottom">Skip introduction</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="lessons" class="view active">
       <div class="page">
         <div class="eyebrow" id="lessonEyebrow">Structured course</div>
@@ -728,7 +1064,8 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
           </div>
           <button class="btn orange" id="continueLearning">Continue learning →</button>
         </div>
-        <div class="beta-release-note"><b>v0.1 course:</b> Units 1 and 2 are available now. Later units stay visible as the roadmap but cannot be opened yet.</div>
+        <div class="beta-release-note"><b>v0.1 course:</b> Units 1 and 2 are available now. Within an unlocked unit, every lesson is open. Read in order, take notes first, practice heavily, or test your prior knowledge—the <b>unit final</b> is the progression gate.</div>
+        <div id="courseDevBanner" class="dev-banner hidden"><b>Developer mode:</b> Unit 3 and the Kanji section are exposed for testing. Unit 3 is still an outline and does not yet have full practice banks or a final.</div>
         <div id="courseProgressSummary" class="course-progress-summary"></div>
         <div id="courseMapList" class="course-map-list"></div>
       </div>
@@ -749,6 +1086,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
             <option value="vocab">Vocabulary</option>
           </select>
           <button class="btn" id="newFreeQuestion">New question</button>
+          <span class="small" style="align-self:center">After answering: press Enter for the next question.</span>
         </div>
         <div id="freePracticeArea"></div>
       </div>
@@ -790,9 +1128,15 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
         <h1 class="page-title">Assessments</h1>
         <p class="lead">Tests use fresh randomized questions and avoid teaching during the attempt. Unit finals are required for course progression; cumulative checks measure retention across older material.</p>
         <div class="simple-section">
+          <div class="eyebrow">Placement</div>
+          <h2>Already know Unit 1?</h2>
+          <p>Take the same comprehensive Unit 1 final as a placement test. Score 80% or higher and you can choose to skip Unit 1 and unlock Unit 2.</p>
+          <button class="btn secondary" id="startPlacementFromAssessments">Test out of Unit 1</button>
+        </div>
+        <div class="simple-section">
           <div class="eyebrow">Required progression checks</div>
           <h2>Unit finals</h2>
-          <p>Each final mixes material from across the whole unit. A score of 80% is required. Unit 2 also includes cumulative material from Unit 1.</p>
+          <p>Each final mixes material from across the whole unit. A score of 80% is required. Finals are available as soon as a unit unlocks—reading every lesson and doing lesson practice are recommended study tools, not prerequisites.</p>
           <div id="unitFinalCards" class="unit-final-grid"></div>
         </div>
         <div class="simple-section">
@@ -875,13 +1219,13 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
       <div class="page">
         <div class="eyebrow">Writing system</div>
         <h1 class="page-title">Kana mastery</h1>
-        <p class="lead">Kana is learned a little at a time. The drill remembers each character you know, brings weak ones back more often, and still checks mastered characters occasionally.</p>
+        <p class="lead">Kana can be learned from scratch or tested immediately if you already know it. The app remembers each character you know, brings weak ones back more often, and still checks mastered characters occasionally.</p>
 
         <div class="kana-course-card">
           <div class="kana-course-head">
             <div>
               <h2>Unit 1 goal: your first 10 hiragana</h2>
-              <div style="color:var(--muted);line-height:1.55">Master at least 9 of these 10 before Unit 1 is fully complete. That is roughly 20% of the basic hiragana set.</div>
+              <div style="color:var(--muted);line-height:1.55">Master at least 9 of these 10 before Unit 1 is fully complete, or deliberately waive the kana requirement if you already know them another way. Waiving removes their romaji support.</div>
             </div>
             <div class="romaji-lock-note" id="romajiLockStatus">Romaji available during Unit 1</div>
           </div>
@@ -896,15 +1240,18 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
             <option value="katakana">All basic katakana</option>
           </select>
           <span class="romaji-lock-note">Mastery: new → learning → familiar → learned → mastered</span>
-          <button class="btn orange" id="startKanaMastery">No-help mastery practice →</button>
+          <button class="btn" id="startKanaMastery">Single recall</button>
+          <button class="btn orange" id="startKanaTriple">Three at a time →</button>
         </div>
+
+        <div id="kanaSkipPanel" class="kana-skip-panel"></div>
 
         <div class="kana-stage">
           <div>
             <div class="kana-card" id="kanaChar">あ</div>
             <div class="input-row"><input id="kanaInput" autocomplete="off" placeholder="Type the romaji"><button class="btn" id="kanaCheck">Check</button></div>
             <div id="kanaFeedback" class="feedback"></div>
-            <div class="small" id="kanaDrillNote">Weak and new kana appear more often.</div>
+            <div class="small" id="kanaDrillNote">Optional learning mode: every kana appears once per cycle; weaker/newer kana are moved earlier.</div>
           </div>
           <div class="kana-grid" id="kanaGrid"></div>
         </div>
@@ -916,7 +1263,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
       <div class="page">
         <div class="eyebrow">No-help kana practice</div>
         <h1 class="page-title">Prove you know it</h1>
-        <p class="lead">There are no romaji hints and no reference chart on this screen. Familiar kana become <b>learned</b> after two correct single recalls. A kana becomes <b>mastered</b> once it also has three correct appearances in three-at-a-time recall. Both drills keep cycling kana after those milestones.</p>
+        <p class="lead">There are no romaji hints and no reference chart on this screen. Both modes are independent entry points. Single recall is an easier bridge; <b>three correct appearances in Three at a time can master a kana by themselves</b>, so experienced learners can skip Single recall completely.</p>
 
         <div class="settings-row">
           <button class="btn secondary" id="backToKana">← Back to kana</button>
@@ -1023,6 +1370,7 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
         <div class="about-grid">
           <div class="about-card">
             <h2>What is in v0.1</h2>
+            <p><b>Introduction:</b> optional zero-knowledge orientation covering the writing systems, romaji, SVO/SOV word order, particles, and basic grammar vocabulary.</p>
             <p><b>Unit 1:</b> first Japanese sentences, basic verb forms, existence, adjectives, wants, and the first ten hiragana.</p>
             <p><b>Unit 2:</b> a full core-particle unit covering は, が, を, に, で, へ, と, の, も, から, and まで.</p>
             <p>Vocabulary mastery, kana mastery, adaptive review, lesson checks, and required unit finals are included.</p>
@@ -1047,6 +1395,12 @@ button{cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:rgba
           <p>Erase all Nihongo Step progress saved in this browser and return to a fresh course.</p>
           <button class="btn danger" id="resetProgress">Reset saved progress</button>
           <div id="resetNote" class="small"></div>
+        </div>
+
+        <div class="simple-section">
+          <h2>Developer testing</h2>
+          <p>Developer mode exposes Unit 3's lesson outline and all kanji packs without changing normal public-beta progression.</p>
+          <button class="btn secondary" id="aboutDevToggle">Toggle developer mode</button>
         </div>
 
         <div class="simple-section">
@@ -1292,8 +1646,12 @@ unit2LessonData.forEach((data,n)=>{
 courseUnits[1].implemented=true;
 
 const APP_VERSION="0.1 beta";
-const RELEASED_UNIT_COUNT=2;
-const RELEASED_LAST_LESSON=courseUnits[RELEASED_UNIT_COUNT-1].start+courseUnits[RELEASED_UNIT_COUNT-1].count-1;
+const PUBLIC_UNIT_COUNT=2;
+const DEV_UNIT_COUNT=3;
+const PUBLIC_LAST_LESSON=courseUnits[PUBLIC_UNIT_COUNT-1].start+courseUnits[PUBLIC_UNIT_COUNT-1].count-1;
+const DEV_LAST_LESSON=courseUnits[DEV_UNIT_COUNT-1].start+courseUnits[DEV_UNIT_COUNT-1].count-1;
+function availableUnitCount(){return state?.devMode?DEV_UNIT_COUNT:PUBLIC_UNIT_COUNT}
+function availableLastLesson(){return state?.devMode?DEV_LAST_LESSON:PUBLIC_LAST_LESSON}
 
 function unitForLesson(index){
   return courseUnits.find((u,ui)=>index>=u.start&&index<u.start+u.count)||courseUnits[0];
@@ -1312,74 +1670,103 @@ function unitLessonIndexes(unitIndex){
   const u=courseUnits[unitIndex];
   return Array.from({length:u.count},(_,n)=>u.start+n);
 }
-function unitLessonsComplete(unitIndex){
-  if(unitIndex<0||unitIndex>=RELEASED_UNIT_COUNT)return false;
-  return unitLessonIndexes(unitIndex).every(i=>state.completedLessons.includes(i));
+function lessonViewed(index){
+  return state.viewedLessons.includes(index);
+}
+function markLessonViewed(index){
+  if(index<0||index>availableLastLesson())return;
+  if(!state.viewedLessons.includes(index)){
+    state.viewedLessons.push(index);
+    storageSet("nihongoStructured",JSON.stringify(state));
+  }
+}
+function unitViewedCount(unitIndex){
+  return unitLessonIndexes(unitIndex).filter(lessonViewed).length;
 }
 function unitFinalPassed(unitIndex){
   return (state.unitFinalScores[unitIndex]||0)>=80;
 }
 function unitFinalReady(unitIndex){
-  if(unitIndex===0)return unitLessonsComplete(0)&&unit1MasteredCount()>=9;
-  if(unitIndex===1)return unitComplete(0)&&unitLessonsComplete(1);
-  return false;
+  // Unit 3 is preview-only in dev mode; it does not yet have a final.
+  if(unitIndex===2)return false;
+  return unitIndex>=0&&unitIndex<PUBLIC_UNIT_COUNT&&unitUnlocked(unitIndex);
 }
+function unitSkippedByPlacement(unitIndex){return !!state.unitSkipped[String(unitIndex)]}
 function unitComplete(unitIndex){
-  if(unitIndex<0||unitIndex>=RELEASED_UNIT_COUNT)return false;
-  if(unitIndex===0)return unitLessonsComplete(0)&&unit1MasteredCount()>=9&&unitFinalPassed(0);
-  if(unitIndex===1)return unitLessonsComplete(1)&&unitFinalPassed(1);
+  if(unitIndex===0)return unitSkippedByPlacement(0)||(kanaRequirementMet(0)&&unitFinalPassed(0));
+  if(unitIndex===1)return unitFinalPassed(1);
   return false;
 }
 function unitUnlocked(unitIndex){
+  if(state.devMode&&unitIndex>=0&&unitIndex<DEV_UNIT_COUNT)return true;
   if(unitIndex===0)return true;
   if(unitIndex===1)return unitComplete(0);
   return false;
 }
 function lessonUnlocked(index){
-  if(index<0||index>RELEASED_LAST_LESSON)return false;
-  const ui=unitIndexForLesson(index);
-  if(!unitUnlocked(ui))return false;
-  const u=courseUnits[ui],local=index-u.start;
-  if(local===0)return true;
-  return state.completedLessons.includes(index-1);
+  if(index<0||index>availableLastLesson())return false;
+  return unitUnlocked(unitIndexForLesson(index));
 }
 function highestUnlockedUnit(){
+  if(state.devMode)return DEV_UNIT_COUNT-1;
   let high=0;
-  for(let i=0;i<RELEASED_UNIT_COUNT;i++){
+  for(let i=0;i<PUBLIC_UNIT_COUNT;i++){
     if(unitUnlocked(i))high=i;else break;
   }
   return high;
 }
 function nextLearningLesson(){
-  for(let ui=0;ui<RELEASED_UNIT_COUNT;ui++){
+  // Continue Learning uses lesson viewing as a guide, never as a gate.
+  for(let ui=0;ui<availableUnitCount();ui++){
     if(!unitUnlocked(ui))break;
+    if(unitComplete(ui))continue;
     const u=courseUnits[ui];
     for(let n=0;n<u.count;n++){
       const i=u.start+n;
-      if(!lessonUnlocked(i))break;
-      if(!state.completedLessons.includes(i))return i;
+      if(!lessonViewed(i))return i;
     }
   }
-  return Math.min(state.currentLesson||0,RELEASED_LAST_LESSON);
+  // If every lesson in the current unfinished unit has been viewed, stay near the learner's current position.
+  return Math.min(state.currentLesson||0,availableLastLesson());
 }
 function nextCourseAction(){
-  for(let ui=0;ui<RELEASED_UNIT_COUNT;ui++){
+  for(let ui=0;ui<availableUnitCount();ui++){
     if(!unitUnlocked(ui))break;
+
+    // Once the unit is proven, move forward; unviewed lessons remain available for reference.
+    if(unitComplete(ui))continue;
+
+    // If the final was already passed, only a separate completion requirement can remain.
+    if(unitFinalPassed(ui)){
+      if(ui===0&&!kanaRequirementMet(0))return {type:"kana",unitIndex:0};
+      continue;
+    }
+
+    // Guide learners through material they have not viewed yet, but never require it.
     const u=courseUnits[ui];
     for(let n=0;n<u.count;n++){
       const i=u.start+n;
-      if(lessonUnlocked(i)&&!state.completedLessons.includes(i))return {type:"lesson",index:i,unitIndex:ui};
+      if(!lessonViewed(i))return {type:"lesson",index:i,unitIndex:ui};
     }
-    if(ui===0&&unitLessonsComplete(0)&&unit1MasteredCount()<9)return {type:"kana",unitIndex:0};
-    if(unitFinalReady(ui)&&!unitFinalPassed(ui))return {type:"final",unitIndex:ui};
+
+    // Unit 3 is an unfinished dev preview and has no final yet.
+    if(ui===2&&state.devMode)return {type:"devPreviewComplete",unitIndex:2};
+
+    // After browsing the unit, suggest the final. The final itself was available from the moment the unit unlocked.
+    return {type:"final",unitIndex:ui};
   }
   if(unitComplete(0)&&unitComplete(1))return {type:"complete"};
+
+  // Fallback for Unit 1 when its final is passed but kana is still outstanding.
+  if(unitFinalPassed(0)&&!kanaRequirementMet(0))return {type:"kana",unitIndex:0};
+
   return {type:"lesson",index:nextLearningLesson(),unitIndex:unitIndexForLesson(nextLearningLesson())};
 }
 function continueActionLabel(){
   const a=nextCourseAction();
-  if(a.type==="kana")return "Continue: kana mastery →";
+  if(a.type==="kana")return "Continue: kana requirement →";
   if(a.type==="final")return `Take Unit ${a.unitIndex+1} final →`;
+  if(a.type==="devPreviewComplete")return "Unit 3 preview viewed ✓";
   if(a.type==="complete")return "v0.1 complete ✓";
   return "Continue learning →";
 }
@@ -1393,10 +1780,13 @@ function goContinueLearning(){
     setTimeout(()=>document.querySelector(`[data-unit-final-card="${a.unitIndex}"]`)?.scrollIntoView({behavior:"smooth",block:"center"}),50);
     return;
   }
+  if(a.type==="devPreviewComplete"){showView("courseMap");return}
   if(a.type==="complete"){showView("courseMap");return}
-  state.currentLesson=a.index;save();showView("lessons");renderLesson();
+  state.currentLesson=a.index;
+  markLessonViewed(a.index);
+  storageSet("nihongoStructured",JSON.stringify(state));
+  showView("lessons");renderLesson();
 }
-
 
 const practiceBanks=[[{"type": "builder", "en": "I am a student.", "tokens": ["わたし", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "builder", "en": "My mother is a teacher.", "tokens": ["おかあさん", "は", "せんせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "Complete “My father is a teacher”: おとうさん ___ せんせい です。", "choices": ["は", "を", "に", "で"], "answer": "は"}, {"type": "choice", "prompt": "Which sentence means “I am a student”?", "choices": ["わたし は がくせい です", "わたし を がくせい です", "がくせい は わたし を"], "answer": "わたし は がくせい です"}, {"type": "builder", "en": "You are a student.", "tokens": ["あなた", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "You hear: おかあさん は せんせい です。 What does it mean?", "choices": ["My mother is a teacher.", "My teacher is a mother.", "My mother reads.", "I am a teacher."], "answer": "My mother is a teacher."}, {"type": "builder", "en": "My friend is a student.", "tokens": ["ともだち", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "Complete the Japanese for “You are a teacher”: あなた は せんせい ___。", "choices": ["です", "を", "に", "は"], "answer": "です"}, {"type": "builder", "en": "My father is a student.", "tokens": ["おとうさん", "は", "がくせい", "です"], "focus": ["は", "です"]}, {"type": "choice", "prompt": "In わたし は がくせい です, which chunk tells us what the sentence is about?", "choices": ["わたし は", "がくせい", "です"], "answer": "わたし は"}], [{"type": "builder", "en": "I drink water.", "tokens": ["わたし", "は", "みず", "を", "のみます"], "focus": ["を"]}, {"type": "builder", "en": "My father reads a book.", "tokens": ["おとうさん", "は", "ほん", "を", "よみます"], "focus": ["を"]}, {"type": "choice", "prompt": "Complete “I drink tea”: わたし は おちゃ ___ のみます。", "choices": ["を", "に", "で", "が"], "answer": "を"}, {"type": "choice", "prompt": "Which sentence means “My friend watches a movie”?", "choices": ["ともだち は えいが を みます", "ともだち を えいが は みます", "えいが は ともだち に みます"], "answer": "ともだち は えいが を みます"}, {"type": "builder", "en": "My mother drinks coffee.", "tokens": ["おかあさん", "は", "コーヒー", "を", "のみます"], "focus": ["を"]}, {"type": "choice", "prompt": "You hear: ほん を よみます。 What is being read?", "choices": ["a book", "water", "a movie", "school"], "answer": "a book"}, {"type": "builder", "en": "I watch a movie.", "tokens": ["わたし", "は", "えいが", "を", "みます"], "focus": ["を"]}, {"type": "choice", "prompt": "Complete “My father eats bread”: おとうさん は パン ___ たべます。", "choices": ["を", "で", "に", "か"], "answer": "を"}, {"type": "builder", "en": "My friend reads a book.", "tokens": ["ともだち", "は", "ほん", "を", "よみます"], "focus": ["を"]}, {"type": "choice", "prompt": "Which sentence has the verb in the natural beginner position?", "choices": ["わたし は みず を のみます", "のみます わたし は みず を", "わたし のみます は みず を"], "answer": "わたし は みず を のみます"}], [{"type": "builder", "en": "I go to school.", "tokens": ["わたし", "は", "がっこう", "に", "いきます"], "focus": ["に"]}, {"type": "builder", "en": "My friend goes to the park.", "tokens": ["ともだち", "は", "こうえん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Complete “I go to the library”: わたし は としょかん ___ いきます。", "choices": ["に", "で", "を", "が"], "answer": "に"}, {"type": "choice", "prompt": "Which sentence means “My mother goes to the cafe”?", "choices": ["おかあさん は カフェ に いきます", "おかあさん は カフェ で いきます", "カフェ を おかあさん は いきます"], "answer": "おかあさん は カフェ に いきます"}, {"type": "builder", "en": "My father goes to the station.", "tokens": ["おとうさん", "は", "えき", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "You hear: にほん に いきます。 Where is the speaker going?", "choices": ["Japan", "school", "home", "the station"], "answer": "Japan"}, {"type": "builder", "en": "I go to Japan.", "tokens": ["わたし", "は", "にほん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Complete “The student goes to school”: がくせい は がっこう ___ いきます。", "choices": ["に", "を", "で", "は"], "answer": "に"}, {"type": "builder", "en": "My teacher goes to the library.", "tokens": ["せんせい", "は", "としょかん", "に", "いきます"], "focus": ["に"]}, {"type": "choice", "prompt": "Which chunk gives the destination in わたし は えき に いきます?", "choices": ["えき に", "わたし は", "いきます"], "answer": "えき に"}], [{"type": "builder", "en": "I read a book at the library.", "tokens": ["わたし", "は", "としょかん", "で", "ほん", "を", "よみます"], "focus": ["で", "を"]}, {"type": "builder", "en": "My mother drinks coffee at home.", "tokens": ["おかあさん", "は", "うち", "で", "コーヒー", "を", "のみます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "Complete “I watch a movie at home”: わたし は うち ___ えいが を みます。", "choices": ["で", "に", "を", "が"], "answer": "で"}, {"type": "choice", "prompt": "Which means “I go to the library” rather than “I read at the library”?", "choices": ["としょかん に いきます", "としょかん で よみます"], "answer": "としょかん に いきます"}, {"type": "builder", "en": "My father reads at home.", "tokens": ["おとうさん", "は", "うち", "で", "ほん", "を", "よみます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "You are already at the cafe and drink coffee there. Choose the missing particle: カフェ ___ コーヒー を のみます。", "choices": ["で", "に", "を", "は"], "answer": "で"}, {"type": "builder", "en": "My friend watches a movie at home.", "tokens": ["ともだち", "は", "うち", "で", "えいが", "を", "みます"], "focus": ["で", "を"]}, {"type": "choice", "prompt": "Which sentence says the action happens at school?", "choices": ["がっこう で べんきょうします", "がっこう に いきます"], "answer": "がっこう で べんきょうします"}, {"type": "builder", "en": "I study at the library.", "tokens": ["わたし", "は", "としょかん", "で", "べんきょうします"], "focus": ["で"]}, {"type": "choice", "prompt": "Choose the natural Japanese for “drink tea at the cafe.”", "choices": ["カフェ で おちゃ を のみます", "カフェ に おちゃ で のみます", "おちゃ に カフェ を のみます"], "answer": "カフェ で おちゃ を のみます"}], [{"type": "builder", "en": "Are you a student?", "tokens": ["あなた", "は", "がくせい", "です", "か"], "focus": ["か"]}, {"type": "builder", "en": "Where are you going?", "tokens": ["どこ", "に", "いきます", "か"], "focus": ["に", "か"]}, {"type": "choice", "prompt": "Turn this into a polite question: あなた は せんせい です ___", "choices": ["か", "を", "で", "に"], "answer": "か"}, {"type": "choice", "prompt": "You hear: どこ に いきます か。 What is the speaker asking?", "choices": ["Where are you going?", "What are you eating?", "Who is your teacher?", "When did you go?"], "answer": "Where are you going?"}, {"type": "builder", "en": "Do you drink coffee?", "tokens": ["あなた", "は", "コーヒー", "を", "のみます", "か"], "focus": ["を", "か"]}, {"type": "choice", "prompt": "Which question asks whether someone watches movies?", "choices": ["えいが を みます か", "えいが に いきます か", "えいが で です か"], "answer": "えいが を みます か"}, {"type": "builder", "en": "Are you a teacher?", "tokens": ["あなた", "は", "せんせい", "です", "か"], "focus": ["か"]}, {"type": "choice", "prompt": "If the answer is がっこう に いきます, which question fits best?", "choices": ["どこ に いきます か", "なに を のみます か", "だれ です か"], "answer": "どこ に いきます か"}, {"type": "builder", "en": "Do you read books?", "tokens": ["あなた", "は", "ほん", "を", "よみます", "か"], "focus": ["を", "か"]}, {"type": "choice", "prompt": "Which ending makes this a polite question? コーヒー を のみます ___", "choices": ["か", "です", "で", "に"], "answer": "か"}], [{"type": "builder", "en": "I do not drink coffee.", "tokens": ["わたし", "は", "コーヒー", "を", "のみません"], "focus": ["のみません"]}, {"type": "builder", "en": "I am not going to school today.", "tokens": ["きょう", "わたし", "は", "がっこう", "に", "いきません"], "focus": ["いきません"]}, {"type": "choice", "prompt": "Complete “I do not read books”: わたし は ほん を ___。", "choices": ["よみません", "よみます", "よみました"], "answer": "よみません"}, {"type": "choice", "prompt": "Which sentence means “My friend does not watch movies”?", "choices": ["ともだち は えいが を みません", "ともだち は えいが を みます", "ともだち は えいが を みました"], "answer": "ともだち は えいが を みません"}, {"type": "builder", "en": "My father does not drink tea.", "tokens": ["おとうさん", "は", "おちゃ", "を", "のみません"], "focus": ["のみません"]}, {"type": "choice", "prompt": "You hear: きょう は いきません。 Is the speaker going today?", "choices": ["No", "Yes"], "answer": "No"}, {"type": "builder", "en": "I do not watch movies.", "tokens": ["わたし", "は", "えいが", "を", "みません"], "focus": ["みません"]}, {"type": "choice", "prompt": "Change のみます to “do not drink.”", "choices": ["のみません", "のみました", "のみたいです"], "answer": "のみません"}, {"type": "builder", "en": "My mother does not eat bread.", "tokens": ["おかあさん", "は", "パン", "を", "たべません"], "focus": ["たべません"]}, {"type": "choice", "prompt": "Which sentence can mean “I will not go”?", "choices": ["いきません", "いきました", "いきます"], "answer": "いきません"}], [{"type": "builder", "en": "Yesterday I ate sushi.", "tokens": ["きのう", "わたし", "は", "すし", "を", "たべました"], "focus": ["たべました"]}, {"type": "builder", "en": "Yesterday my friend watched a movie.", "tokens": ["きのう", "ともだち", "は", "えいが", "を", "みました"], "focus": ["みました"]}, {"type": "choice", "prompt": "Complete “Yesterday I drank coffee”: きのう コーヒー を ___。", "choices": ["のみました", "のみます", "のみません"], "answer": "のみました"}, {"type": "choice", "prompt": "You hear: きのう ほん を よみました。 What happened?", "choices": ["A book was read yesterday.", "A book will be read tomorrow.", "The speaker does not read."], "answer": "A book was read yesterday."}, {"type": "builder", "en": "Yesterday my father ate ramen.", "tokens": ["きのう", "おとうさん", "は", "ラーメン", "を", "たべました"], "focus": ["たべました"]}, {"type": "choice", "prompt": "Change いきます to “went.”", "choices": ["いきました", "いきません", "いきたいです"], "answer": "いきました"}, {"type": "builder", "en": "Yesterday I went to the library.", "tokens": ["きのう", "わたし", "は", "としょかん", "に", "いきました"], "focus": ["いきました"]}, {"type": "choice", "prompt": "Which sentence is clearly about yesterday?", "choices": ["きのう えいが を みました", "あした えいが を みます", "まいにち えいが を みます"], "answer": "きのう えいが を みました"}, {"type": "builder", "en": "Yesterday my mother drank tea.", "tokens": ["きのう", "おかあさん", "は", "おちゃ", "を", "のみました"], "focus": ["のみました"]}, {"type": "choice", "prompt": "What changed between たべます and たべました?", "choices": ["The action became past/completed.", "The object became a destination.", "The sentence became a question."], "answer": "The action became past/completed."}], [{"type": "builder", "en": "There is a friend at the park.", "tokens": ["こうえん", "に", "ともだち", "が", "います"], "focus": ["に", "が"]}, {"type": "builder", "en": "There is a book at home.", "tokens": ["うち", "に", "ほん", "が", "あります"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Complete “There is a teacher at school”: がっこう に せんせい が ___。", "choices": ["います", "あります", "いきます"], "answer": "います"}, {"type": "choice", "prompt": "Complete “There is a phone at home”: うち に でんわ が ___。", "choices": ["あります", "います", "のみます"], "answer": "あります"}, {"type": "builder", "en": "There is a student at the library.", "tokens": ["としょかん", "に", "がくせい", "が", "います"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "You hear: こうえん に ともだち が います。 Who or what is at the park?", "choices": ["a friend", "a book", "a cafe", "a train"], "answer": "a friend"}, {"type": "builder", "en": "There is a bag at home.", "tokens": ["うち", "に", "かばん", "が", "あります"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Which sentence is about something existing, not an action happening?", "choices": ["うち に ほん が あります", "うち で ほん を よみます"], "answer": "うち に ほん が あります"}, {"type": "builder", "en": "There is a teacher at the library.", "tokens": ["としょかん", "に", "せんせい", "が", "います"], "focus": ["に", "が"]}, {"type": "choice", "prompt": "Choose the natural sentence for a non-living object.", "choices": ["へや に かばん が あります", "へや に かばん が います"], "answer": "へや に かばん が あります"}], [{"type": "builder", "en": "This book is interesting.", "tokens": ["この", "ほん", "は", "おもしろい", "です"], "focus": ["おもしろい"]}, {"type": "builder", "en": "This ramen is delicious.", "tokens": ["この", "ラーメン", "は", "おいしい", "です"], "focus": ["おいしい"]}, {"type": "choice", "prompt": "Complete “Japanese is difficult”: にほんご は ___ です。", "choices": ["むずかしい", "おいしい", "やすい"], "answer": "むずかしい"}, {"type": "choice", "prompt": "You hear: この えいが は おもしろい です。 What is being described?", "choices": ["a movie", "a book", "a teacher", "a station"], "answer": "a movie"}, {"type": "builder", "en": "This movie is fun.", "tokens": ["この", "えいが", "は", "たのしい", "です"], "focus": ["たのしい"]}, {"type": "choice", "prompt": "Which sentence says “This cafe is expensive”?", "choices": ["この カフェ は たかい です", "この カフェ は やすい です", "この カフェ を たかい です"], "answer": "この カフェ は たかい です"}, {"type": "builder", "en": "This cafe is expensive.", "tokens": ["この", "カフェ", "は", "たかい", "です"], "focus": ["たかい"]}, {"type": "choice", "prompt": "If something costs very little, which word fits?", "choices": ["やすい", "たかい", "むずかしい"], "answer": "やすい"}, {"type": "builder", "en": "This book is difficult.", "tokens": ["この", "ほん", "は", "むずかしい", "です"], "focus": ["むずかしい"]}, {"type": "choice", "prompt": "Which sentence reuses the old topic pattern correctly?", "choices": ["この ほん は おもしろい です", "この ほん を おもしろい です", "おもしろい に この ほん"], "answer": "この ほん は おもしろい です"}], [{"type": "builder", "en": "I want to eat sushi.", "tokens": ["わたし", "は", "すし", "を", "たべたいです"], "focus": ["たべたいです"]}, {"type": "builder", "en": "I want to go to Japan.", "tokens": ["わたし", "は", "にほん", "に", "いきたいです"], "focus": ["に", "いきたいです"]}, {"type": "choice", "prompt": "Complete “I want to drink coffee”: コーヒー を ___。", "choices": ["のみたいです", "のみません", "のみました"], "answer": "のみたいです"}, {"type": "choice", "prompt": "Which sentence means “I want to watch a movie”?", "choices": ["えいが を みたいです", "えいが に いきたいです", "えいが を みました"], "answer": "えいが を みたいです"}, {"type": "builder", "en": "I want to eat ramen.", "tokens": ["わたし", "は", "ラーメン", "を", "たべたいです"], "focus": ["たべたいです"]}, {"type": "choice", "prompt": "You want to go to the cafe. Which particle stays with the destination?", "choices": ["に", "を", "で", "が"], "answer": "に"}, {"type": "builder", "en": "I want to go to the cafe.", "tokens": ["わたし", "は", "カフェ", "に", "いきたいです"], "focus": ["に", "いきたいです"]}, {"type": "choice", "prompt": "Change いきます into “want to go.”", "choices": ["いきたいです", "いきません", "いきました"], "answer": "いきたいです"}, {"type": "builder", "en": "I want to drink tea.", "tokens": ["わたし", "は", "おちゃ", "を", "のみたいです"], "focus": ["のみたいです"]}, {"type": "choice", "prompt": "Which sentence keeps the object particle correctly?", "choices": ["すし を たべたいです", "すし に たべたいです", "すし で たべたいです"], "answer": "すし を たべたいです"}]];
 const unit2PracticeBanks=[[{"type":"choice","prompt":"Meaning: “I read a book at the library.” Which particle belongs after としょかん? としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is the setting where the reading happens, so it takes で.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I go to school.” Which particle belongs after がっこう? がっこう ___ いきます。","choices":["に","で","を","は"],"answer":"に","why":"School is the destination target, so it takes に.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I drink water.” Which particle belongs after みず? みず ___ のみます。","choices":["を","で","に","が"],"answer":"を","why":"Water is directly affected by the action 'drink', so it takes を.","particleKey":"を"},{"type":"builder","en":"I read a book at home.","tokens":["わたし","は","うち","で","ほん","を","よみます"],"focus":["は","で","を"],"why":"Each noun-plus-particle chunk has its own job."},{"type":"choice","prompt":"In わたし は うち で ほん を よみます, which chunk tells you where the action happens?","choices":["うち で","ほん を","わたし は","よみます"],"answer":"うち で","why":"うち で marks home as the setting of the action.","particleKey":"で"},{"type":"choice","prompt":"There is a friend at the park: こうえん ___ ともだち が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, に marks where the person exists.","particleKey":"に"},{"type":"builder","en":"There is a book at home.","tokens":["うち","に","ほん","が","あります"],"focus":["に","が"],"why":"The place takes に; the thing that exists takes が."},{"type":"choice","prompt":"Which statement about particles is most useful?","choices":["They mark relationships after words or phrases.","Each particle always equals one English word.","Particles are optional decoration.","A noun always uses the same particle."],"answer":"They mark relationships after words or phrases.","why":"Particles tell you what job the preceding chunk has."},{"type":"builder","en":"My friend watches a movie at home.","tokens":["ともだち","は","うち","で","えいが","を","みます"],"focus":["は","で","を"]},{"type":"choice","prompt":"Meaning: “My friend goes to the station.” えき ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The station is where the movement is aimed.","particleKey":"に"},{"type":"choice","prompt":"Which chunk marks the thing being read in せんせい は ほん を よみます?","choices":["ほん を","せんせい は","よみます"],"answer":"ほん を","why":"ほん を marks the book as what is being read.","particleKey":"を"},{"type":"builder","en":"I drink coffee at the cafe.","tokens":["わたし","は","カフェ","で","コーヒー","を","のみます"],"focus":["は","で","を"]}],[{"type":"choice","prompt":"Context: Someone asks, “Who is the student?” Complete the answer: ともだち ___ がくせい です。","choices":["が","は","を","に"],"answer":"が","why":"が identifies the friend as the person who answers 'who?'.","particleKey":"は vs が"},{"type":"choice","prompt":"Context: You are already talking about yourself. “As for me, I am a student.” わたし ___ がくせい です。","choices":["は","が","を","で"],"answer":"は","why":"は establishes 'me' as the topic.","particleKey":"は vs が"},{"type":"choice","prompt":"There is a cat at home: うち に ねこ ___ います。","choices":["が","は","を","で"],"answer":"が","why":"The cat is the thing being presented as existing, so it takes が.","particleKey":"が"},{"type":"builder","en":"There is a student at the library.","tokens":["としょかん","に","がくせい","が","います"],"focus":["に","が"]},{"type":"choice","prompt":"Question: だれ が せんせい です か。 Which answer most directly identifies the teacher?","choices":["おかあさん が せんせい です","おかあさん は せんせい です","せんせい を おかあさん です"],"answer":"おかあさん が せんせい です","why":"The question asks which person is the teacher, so が identifies that person.","particleKey":"は vs が"},{"type":"choice","prompt":"You introduce a new fact: “There is a book.” ほん ___ あります。","choices":["が","は","を","に"],"answer":"が","why":"が presents the thing that exists.","particleKey":"が"},{"type":"builder","en":"As for my mother, she is a teacher.","tokens":["おかあさん","は","せんせい","です"],"focus":["は"]},{"type":"choice","prompt":"Which explanation is better?","choices":["は sets a topic; が often identifies or presents the subject.","は and が are just formal and casual versions of the same particle.","が always means 'is'.","は always marks the grammatical subject."],"answer":"は sets a topic; が often identifies or presents the subject.","why":"The difference is about how information is presented, not formality.","particleKey":"は vs が"},{"type":"choice","prompt":"Context: Your friend is already the topic. You add: “My friend is a student.”","choices":["ともだち は がくせい です","ともだち を がくせい です","ともだち に がくせい です"],"answer":"ともだち は がくせい です","why":"When the friend is the established topic, は is natural.","particleKey":"は vs が"},{"type":"choice","prompt":"Which sentence naturally introduces a cat as existing at the park?","choices":["こうえん に ねこ が います","こうえん で ねこ は います","ねこ を こうえん に います"],"answer":"こうえん に ねこ が います","why":"Existence uses place に + thing が.","particleKey":"が"},{"type":"builder","en":"There is a friend at home.","tokens":["うち","に","ともだち","が","います"],"focus":["に","が"]},{"type":"choice","prompt":"Context: “Who went to school?” Answer: わたし ___ がっこう に いきました。","choices":["が","は","を","で"],"answer":"が","why":"The speaker identifies 'I' as the answer to who went.","particleKey":"は vs が"}],[{"type":"choice","prompt":"Meaning: “I drink tea.” おちゃ ___ のみます。","choices":["を","に","で","が"],"answer":"を","why":"Tea is what is directly being drunk.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “My father reads a book.” ほん ___ よみます。","choices":["を","で","に","は"],"answer":"を","why":"The book is the thing being read.","particleKey":"を"},{"type":"builder","en":"My friend watches a movie.","tokens":["ともだち","は","えいが","を","みます"],"focus":["は","を"]},{"type":"choice","prompt":"Which sentence uses を for a route rather than a direct object?","choices":["みち を あるきます","ほん を よみます","みず を のみます"],"answer":"みち を あるきます","why":"The road is the space being moved through.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I walk along the road.” みち ___ あるきます。","choices":["を","に","で","が"],"answer":"を","why":"With this movement verb, を marks the route being traversed.","particleKey":"を"},{"type":"builder","en":"I read a magazine.","tokens":["わたし","は","ざっし","を","よみます"],"focus":["は","を"]},{"type":"choice","prompt":"Which chunk is directly affected in パン を たべます?","choices":["パン を","たべます","no noun is affected"],"answer":"パン を","why":"Bread is what gets eaten.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I watch television.” テレビ ___ みます。","choices":["を","に","で","は"],"answer":"を","why":"Television is what is watched.","particleKey":"を"},{"type":"builder","en":"My mother drinks water.","tokens":["おかあさん","は","みず","を","のみます"],"focus":["は","を"]},{"type":"choice","prompt":"Which is wrong for the meaning “I read a book at home”?","choices":["うち で ほん を よみます","うち で ほん に よみます"],"answer":"うち で ほん に よみます","why":"The book is the thing being read, so it needs を, not に.","particleKey":"を"},{"type":"choice","prompt":"Meaning: “I listen to music.” おんがく ___ ききます。","choices":["を","で","に","が"],"answer":"を","why":"Music is the thing being listened to in this beginner pattern.","particleKey":"を"},{"type":"builder","en":"I write a letter.","tokens":["わたし","は","てがみ","を","かきます"],"focus":["は","を"]}],[{"type":"choice","prompt":"Meaning: “I go to the station.” えき ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The station is the destination target.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I get up at seven.” しちじ ___ おきます。","choices":["に","で","を","が"],"answer":"に","why":"Seven o'clock is the specific time point for the action.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “There is a teacher at school.” がっこう ___ せんせい が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, に marks the place where the teacher exists.","particleKey":"に"},{"type":"choice","prompt":"Meaning: “I give a book to a friend.” ともだち ___ ほん を あげます。","choices":["に","で","を","と"],"answer":"に","why":"The friend is the recipient/target of the giving.","particleKey":"に"},{"type":"builder","en":"I go to the library.","tokens":["わたし","は","としょかん","に","いきます"],"focus":["は","に"]},{"type":"builder","en":"There is a phone at home.","tokens":["うち","に","でんわ","が","あります"],"focus":["に","が"]},{"type":"builder","en":"I give water to my friend.","tokens":["わたし","は","ともだち","に","みず","を","あげます"],"focus":["は","に","を"]},{"type":"choice","prompt":"Which sentence uses に as a time point?","choices":["はちじ に ねます","うち に ねこ が います","えき に いきます"],"answer":"はちじ に ねます","why":"Here に attaches the action to the specific clock time eight o'clock.","particleKey":"に"},{"type":"choice","prompt":"Which sentence uses に as an existence location?","choices":["こうえん に ともだち が います","こうえん で あるきます","こうえん を あるきます"],"answer":"こうえん に ともだち が います","why":"The friend exists at the park, so the park takes に.","particleKey":"に"},{"type":"choice","prompt":"Which sentence uses に as a recipient?","choices":["せんせい に てがみ を あげます","せんせい で てがみ を かきます","せんせい を みます"],"answer":"せんせい に てがみ を あげます","why":"The teacher is the person receiving the letter.","particleKey":"に"},{"type":"builder","en":"I get up at seven.","tokens":["しちじ","に","おきます"],"focus":["に"]},{"type":"choice","prompt":"Which time expression usually does NOT need に in a basic sentence?","choices":["きょう","しちじ","くじ"],"answer":"きょう","why":"Broad relative time words such as 'today' commonly stand without に; specific clock times commonly take it.","particleKey":"に"}],[{"type":"choice","prompt":"Meaning: “I read at the library.” としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is where the action is carried out.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I go to school by bus.” バス ___ がっこう に いきます。","choices":["で","に","を","と"],"answer":"で","why":"The bus is the means of travel.","particleKey":"で"},{"type":"choice","prompt":"Meaning: “I write my name with a pen.” ペン ___ なまえ を かきます。","choices":["で","に","を","が"],"answer":"で","why":"The pen is the tool used for the action.","particleKey":"で"},{"type":"builder","en":"I drink coffee at the cafe.","tokens":["わたし","は","カフェ","で","コーヒー","を","のみます"],"focus":["は","で","を"]},{"type":"builder","en":"I go to the station by train.","tokens":["わたし","は","でんしゃ","で","えき","に","いきます"],"focus":["は","で","に"]},{"type":"choice","prompt":"Which で marks an action location?","choices":["がっこう で べんきょうします","バス で いきます","ペン で かきます"],"answer":"がっこう で べんきょうします","why":"The school is the place where studying happens.","particleKey":"で"},{"type":"choice","prompt":"Which で marks a tool?","choices":["ペン で かきます","うち で よみます","でんしゃ で いきます"],"answer":"ペン で かきます","why":"The pen is the tool used to write.","particleKey":"で"},{"type":"choice","prompt":"Which で marks means of transport?","choices":["バス で いきます","カフェ で のみます","ペン で かきます"],"answer":"バス で いきます","why":"The bus is the means through which the travel happens.","particleKey":"で"},{"type":"builder","en":"My friend studies at home.","tokens":["ともだち","は","うち","で","べんきょうします"],"focus":["は","で"]},{"type":"choice","prompt":"Meaning: “I watch television at home.” うち ___ テレビ を みます。","choices":["で","に","を","は"],"answer":"で","why":"Watching happens at home, so home is the action setting.","particleKey":"で"},{"type":"choice","prompt":"Which sentence correctly keeps different particle jobs separate?","choices":["バス で がっこう に いきます","バス に がっこう で いきます","バス を がっこう に いきます"],"answer":"バス で がっこう に いきます","why":"で marks transport; に marks destination.","particleKey":"で vs に"},{"type":"builder","en":"I write a letter with a pen.","tokens":["わたし","は","ペン","で","てがみ","を","かきます"],"focus":["は","で","を"]}],[{"type":"choice","prompt":"Meaning: “I go to the library.” としょかん ___ いきます。","choices":["に","で","を","が"],"answer":"に","why":"The library is the destination.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “I read at the library.” としょかん ___ ほん を よみます。","choices":["で","に","を","が"],"answer":"で","why":"The library is where reading happens.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “There is a friend at the park.” こうえん ___ ともだち が います。","choices":["に","で","を","は"],"answer":"に","why":"With います, the park is the existence location.","particleKey":"に vs で"},{"type":"choice","prompt":"Meaning: “I walk in the park.” こうえん ___ あるきます。","choices":["で","に","が","は"],"answer":"で","why":"Here the park is the setting where the action happens.","particleKey":"に vs で"},{"type":"builder","en":"I go to school and study there.","tokens":["わたし","は","がっこう","に","いきます"],"focus":["は","に"],"why":"This sentence only expresses the movement; the destination takes に."},{"type":"builder","en":"I study at school.","tokens":["わたし","は","がっこう","で","べんきょうします"],"focus":["は","で"]},{"type":"choice","prompt":"Same place, different verb. Which pair is correct?","choices":["えき に いきます / えき で まちます","えき で いきます / えき に まちます","えき を いきます / えき が まちます"],"answer":"えき に いきます / えき で まちます","why":"Going targets the station; waiting happens at the station.","particleKey":"に vs で"},{"type":"choice","prompt":"Which sentence means a book exists at home?","choices":["うち に ほん が あります","うち で ほん が あります","うち を ほん が あります"],"answer":"うち に ほん が あります","why":"Existence location takes に.","particleKey":"に vs で"},{"type":"choice","prompt":"Which sentence means you read the book at home?","choices":["うち で ほん を よみます","うち に ほん を よみます","うち が ほん を よみます"],"answer":"うち で ほん を よみます","why":"The reading action happens at home, so use で.","particleKey":"に vs で"},{"type":"builder","en":"There is a teacher at school.","tokens":["がっこう","に","せんせい","が","います"],"focus":["に","が"]},{"type":"builder","en":"My teacher reads at school.","tokens":["せんせい","は","がっこう","で","ほん","を","よみます"],"focus":["は","で","を"]},{"type":"choice","prompt":"A place follows which particle when it is the setting of an ordinary action?","choices":["で","に","が","を"],"answer":"で","why":"で marks the action setting; に covers destination/existence targets.","particleKey":"に vs で"}],[{"type":"choice","prompt":"As a particle, how is へ pronounced?","choices":["e","he","wa","o"],"answer":"e","why":"Particle へ is pronounced e.","particleKey":"へ"},{"type":"choice","prompt":"Meaning: “I head toward Tokyo.” とうきょう ___ いきます。","choices":["へ","で","を","と"],"answer":"へ","why":"へ marks the direction of movement.","particleKey":"へ"},{"type":"builder","en":"I go toward Japan.","tokens":["わたし","は","にほん","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which sentence emphasizes direction toward the station?","choices":["えき へ いきます","えき で いきます","えき を いきます"],"answer":"えき へ いきます","why":"へ is the directional movement particle.","particleKey":"へ"},{"type":"choice","prompt":"With an ordinary movement destination, which statement is true?","choices":["に and へ can often both work, with へ more directional.","に and へ are always identical in every grammar use.","へ marks the place where an action happens.","へ is pronounced he as a particle."],"answer":"に and へ can often both work, with へ more directional.","why":"The two overlap for movement, but に has many other target uses.","particleKey":"に vs へ"},{"type":"choice","prompt":"Which sentence cannot normally replace に with へ?","choices":["うち に ねこ が います","にほん に いきます","えき に いきます"],"answer":"うち に ねこ が います","why":"へ is directional; it does not replace existence-location に.","particleKey":"に vs へ"},{"type":"builder","en":"My friend heads toward school.","tokens":["ともだち","は","がっこう","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which particle reading pair is correct?","choices":["は = wa, を = o, へ = e","は = ha, を = wo, へ = he","は = wa, を = wo, へ = he"],"answer":"は = wa, を = o, へ = e","why":"These three have special particle pronunciations.","particleKey":"へ"},{"type":"choice","prompt":"Meaning: “I go to Japan.” Which is also natural in a simple movement sentence?","choices":["にほん へ いきます","にほん で いきます","にほん を いきます"],"answer":"にほん へ いきます","why":"へ can mark movement toward Japan.","particleKey":"へ"},{"type":"builder","en":"I head toward the station.","tokens":["わたし","は","えき","へ","いきます"],"focus":["は","へ"]},{"type":"choice","prompt":"Which description best captures へ?","choices":["It marks movement toward a direction.","It marks direct objects.","It marks action locations.","It marks possession."],"answer":"It marks movement toward a direction.","why":"Direction is the core beginner use of へ.","particleKey":"へ"},{"type":"choice","prompt":"Which particle is broader and can also mark time points and recipients?","choices":["に","へ","を","と"],"answer":"に","why":"に is a general target marker; へ is specifically directional.","particleKey":"に vs へ"}],[{"type":"choice","prompt":"Meaning: “I watch a movie with a friend.” ともだち ___ えいが を みます。","choices":["と","の","で","も"],"answer":"と","why":"The friend is the companion doing the action with you.","particleKey":"と"},{"type":"builder","en":"I go to school with my friend.","tokens":["わたし","は","ともだち","と","がっこう","に","いきます"],"focus":["は","と","に"]},{"type":"choice","prompt":"Which phrase means “bread and water” as a complete list?","choices":["パン と みず","パン の みず","パン も みず"],"answer":"パン と みず","why":"と joins the two nouns as a complete list.","particleKey":"と"},{"type":"choice","prompt":"In はい と いいます, what is と doing?","choices":["Marking the quoted word “yes”","Marking a destination","Marking an action location","Marking possession"],"answer":"Marking the quoted word “yes”","why":"と packages はい as what is said.","particleKey":"と"},{"type":"builder","en":"I watch television with my mother.","tokens":["わたし","は","おかあさん","と","テレビ","を","みます"],"focus":["は","と","を"]},{"type":"choice","prompt":"Which sentence uses と as “with”?","choices":["ともだち と いきます","パン と みず","はい と いいます"],"answer":"ともだち と いきます","why":"The friend is the companion for the action.","particleKey":"と"},{"type":"choice","prompt":"Which expression uses と to join nouns?","choices":["コーヒー と パン","ともだち と いきます","はい と いいます"],"answer":"コーヒー と パン","why":"Two nouns are connected as a list.","particleKey":"と"},{"type":"choice","prompt":"Which expression uses と as a quotation marker?","choices":["いいえ と いいます","ともだち と みます","ほん と ざっし"],"answer":"いいえ と いいます","why":"いいえ is the content being said.","particleKey":"と"},{"type":"builder","en":"My father drinks coffee with my mother.","tokens":["おとうさん","は","おかあさん","と","コーヒー","を","のみます"],"focus":["は","と","を"]},{"type":"choice","prompt":"Meaning: “I go with my teacher.” せんせい ___ いきます。","choices":["と","の","で","を"],"answer":"と","why":"The teacher is your companion.","particleKey":"と"},{"type":"choice","prompt":"What is the best beginner rule for と?","choices":["Use context to decide whether it joins a companion, a noun list, or quoted content.","Translate every と as 'and'.","Use と after every person.","Use と for destinations."],"answer":"Use context to decide whether it joins a companion, a noun list, or quoted content.","why":"The surrounding structure determines which common use is active.","particleKey":"と"},{"type":"builder","en":"I buy bread and water.","tokens":["わたし","は","パン","と","みず","を","かいます"],"focus":["は","と","を"]}],[{"type":"choice","prompt":"Meaning: “my mother's book.” おかあさん ___ ほん","choices":["の","と","も","を"],"answer":"の","why":"の links mother to the book as a noun-to-noun relationship.","particleKey":"の"},{"type":"choice","prompt":"Meaning: “a Japanese-language book.” にほんご ___ ほん","choices":["の","と","を","で"],"answer":"の","why":"Japanese describes what kind of book it is.","particleKey":"の"},{"type":"builder","en":"This is my friend's bag.","tokens":["これ","は","ともだち","の","かばん","です"],"focus":["は","の"]},{"type":"choice","prompt":"Meaning: “I am also a student.” わたし ___ がくせい です。","choices":["も","は","の","を"],"answer":"も","why":"も adds 'also/too' and replaces the simple は slot here.","particleKey":"も"},{"type":"choice","prompt":"Which is natural for “I am also a teacher”?","choices":["わたし も せんせい です","わたし は も せんせい です","わたし の せんせい です"],"answer":"わたし も せんせい です","why":"In this basic pattern, use も instead of は.","particleKey":"も"},{"type":"builder","en":"My friend is also a student.","tokens":["ともだち","も","がくせい","です"],"focus":["も"]},{"type":"choice","prompt":"Which phrase means “the teacher's book”?","choices":["せんせい の ほん","せんせい と ほん","せんせい も ほん"],"answer":"せんせい の ほん","why":"の links the teacher and the book.","particleKey":"の"},{"type":"choice","prompt":"In にほん の えいが, what is the main noun?","choices":["えいが","にほん","の"],"answer":"えいが","why":"The noun after の is the main noun: a movie associated with Japan.","particleKey":"の"},{"type":"choice","prompt":"Which explanation of の is better?","choices":["It links one noun to another; possession is only one common use.","It always means English apostrophe-s and nothing else.","It means 'also'.","It marks a destination."],"answer":"It links one noun to another; possession is only one common use.","why":"の is a broad noun-linking particle.","particleKey":"の"},{"type":"builder","en":"My mother's name is ...","tokens":["おかあさん","の","なまえ"],"focus":["の"]},{"type":"choice","prompt":"Meaning: “My father is also a teacher.” おとうさん ___ せんせい です。","choices":["も","の","を","で"],"answer":"も","why":"The same statement is also true of the father.","particleKey":"も"},{"type":"choice","prompt":"Which pair is correct?","choices":["の links nouns; も adds also/too","の means with; も marks objects","の marks action places; も marks destinations"],"answer":"の links nouns; も adds also/too","why":"These are the core beginner jobs of の and も.","particleKey":"の vs も"}],[{"type":"choice","prompt":"Meaning: “from home.” うち ___","choices":["から","まで","に","で"],"answer":"から","why":"から marks the starting point.","particleKey":"から"},{"type":"choice","prompt":"Meaning: “as far as school.” がっこう ___","choices":["まで","から","を","で"],"answer":"まで","why":"まで marks the end boundary.","particleKey":"まで"},{"type":"builder","en":"I go from home to school.","tokens":["わたし","は","うち","から","がっこう","まで","いきます"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Meaning: “from nine to five.” くじ ___ ごじ ___","choices":["から / まで","まで / から","に / で","で / に"],"answer":"から / まで","why":"Nine is the start; five is the endpoint.","particleKey":"から vs まで"},{"type":"builder","en":"I study from nine to five.","tokens":["わたし","は","くじ","から","ごじ","まで","べんきょうします"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Which phrase marks only a starting point?","choices":["えき から","えき まで","えき に","えき で"],"answer":"えき から","why":"から marks where the range or movement begins.","particleKey":"から"},{"type":"choice","prompt":"Which phrase marks only an end boundary?","choices":["えき まで","えき から","えき で","えき を"],"answer":"えき まで","why":"まで means as far as / until the endpoint.","particleKey":"まで"},{"type":"choice","prompt":"Which sentence emphasizes an endpoint rather than simply a destination target?","choices":["がっこう まで いきます","がっこう に いきます"],"answer":"がっこう まで いきます","why":"まで highlights the boundary reached: as far as school.","particleKey":"まで"},{"type":"builder","en":"I go from the station to home.","tokens":["わたし","は","えき","から","うち","まで","いきます"],"focus":["は","から","まで"]},{"type":"choice","prompt":"Which pair can describe both place ranges and time ranges?","choices":["から / まで","は / が","を / で","に / へ"],"answer":"から / まで","why":"The start/end idea works for both space and time.","particleKey":"から vs まで"},{"type":"choice","prompt":"Meaning: “I work until five.” ごじ ___ はたらきます。","choices":["まで","から","に","で"],"answer":"まで","why":"Five o'clock is the end boundary of the working period.","particleKey":"まで"},{"type":"builder","en":"I go as far as the station.","tokens":["わたし","は","えき","まで","いきます"],"focus":["は","まで"]}]];
@@ -1438,6 +1828,7 @@ let state=loadSavedState()||{
   currentLesson:0,completedLessons:[],practiceScores:{},weak:{},vocabMastery:{},showRomaji:true,showEnglish:true
 };
 state.completedLessons=state.completedLessons||[];
+state.viewedLessons=state.viewedLessons||[...state.completedLessons];
 state.practiceScores=state.practiceScores||{};
 state.weak=state.weak||{};
 state.vocabMastery=state.vocabMastery||{};
@@ -1454,14 +1845,19 @@ Object.entries(state.vocabMastery).forEach(([word,old])=>{
   };
 });
 state.kanaMastery=state.kanaMastery||{};
+state.kanaSkippedUnits=state.kanaSkippedUnits||{};
 state.kanaMode=state.kanaMode||"unit1";
 state.particleStats=state.particleStats||{};
 state.unitFinalScores=state.unitFinalScores||{};
-state.testingBypass=false;
+state.unitSkipped=state.unitSkipped||{};
+state.devMode=!!state.devMode;
+state.testingBypass=state.devMode;
 state.reviewMeta=state.reviewMeta||{};
 state.vocabReview=state.vocabReview||{};
-state.completedLessons=state.completedLessons.filter(i=>i>=0&&i<=RELEASED_LAST_LESSON);
-state.currentLesson=Math.max(0,Math.min(state.currentLesson||0,RELEASED_LAST_LESSON));
+state.introSeen=!!state.introSeen;
+state.completedLessons=state.completedLessons.filter(i=>i>=0&&i<=availableLastLesson());
+state.viewedLessons=[...new Set(state.viewedLessons.filter(i=>i>=0&&i<=availableLastLesson()))];
+state.currentLesson=Math.max(0,Math.min(state.currentLesson||0,availableLastLesson()));
 
 const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
@@ -1508,6 +1904,7 @@ function romanizeToken(t){
   return romanizeKana(clean);
 }
 function japaneseReadingFromText(text){
+  if(tokenContainsSkippedKana(text))return "";
   const tokens=(text.match(/[\u3040-\u30ffー]+/g)||[]);
   return tokens.map(romanizeToken).filter(Boolean).join(" ");
 }
@@ -1594,7 +1991,9 @@ function applyReleaseAccessUI(){
     p.textContent=open?"Particle Practice":"Particle Practice 🔒";
     p.title=open?"Focused particle practice":"Complete Unit 2 and pass its final to unlock Particle Practice.";
   }
-  if($("#kanjiNav"))$("#kanjiNav").classList.add("hidden");
+  if($("#kanjiNav"))$("#kanjiNav").classList.toggle("hidden",!state.devMode);
+  if($("#devSidebarBadge"))$("#devSidebarBadge").classList.toggle("hidden",!state.devMode);
+  if($("#exitDevMode"))$("#exitDevMode").onclick=()=>setDevMode(false);
 }
 
 function applyRomajiLockUI(){
@@ -1608,13 +2007,36 @@ function applyRomajiLockUI(){
   if($("#romajiLockStatus"))$("#romajiLockStatus").textContent=romajiLocked()?"Romaji locked after Unit 1":"Romaji available during Unit 1";
 }
 
-function save(){storageSet("nihongoStructured",JSON.stringify(state));renderReview();renderVocab();applyRomajiLockUI();applyReleaseAccessUI();renderUnitFinalCards();renderAbout()}
+function save(){state.testingBypass=state.devMode;storageSet("nihongoStructured",JSON.stringify(state));renderReview();renderVocab();applyRomajiLockUI();applyReleaseAccessUI();renderUnitFinalCards();renderAbout()}
+function setDevMode(on){
+  const leavingDev=!on&&state.devMode;
+  state.devMode=!!on;
+  state.testingBypass=state.devMode;
+  if(!state.devMode&&unitIndexForLesson(state.currentLesson)>=PUBLIC_UNIT_COUNT){
+    state.currentLesson=nextLearningLesson();
+  }
+  storageSet("nihongoStructured",JSON.stringify(state));
+  applyReleaseAccessUI();
+  renderCourseMap();
+  renderLesson();
+  if(leavingDev&&($("#kanji")?.classList.contains("active")||$("#kanjiChallenge")?.classList.contains("active"))){
+    showView("courseMap");
+  }
+}
+function enterDevMode(){
+  setDevMode(true);
+  state.kanjiPack="3";
+  storageSet("nihongoStructured",JSON.stringify(state));
+  showApp("courseMap");
+}
+
 function showApp(view="lessons"){ $("#welcome").classList.add("hidden");$("#appShell").classList.remove("hidden");showView(view)}
 function showView(id){
   if(id==="particlePractice"&&!particlePracticeUnlocked())id="courseMap";
-  if(id==="kanji"||id==="kanjiChallenge")id="courseMap";
+  if((id==="kanji"||id==="kanjiChallenge")&&!state.devMode)id="courseMap";
   $$(".view").forEach(v=>v.classList.toggle("active",v.id===id));
   $$(".nav button[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===id));
+  if(id==="lessons"){markLessonViewed(state.currentLesson);renderLesson();}
   if(id==="courseMap")renderCourseMap();
   if(id==="particlePractice"){renderParticleStats();if(!particlePracticeState.question)chooseParticleQuestion();}
   if(id==="review")renderReview();
@@ -1622,13 +2044,50 @@ function showView(id){
   if(id==="vocabChallenge")renderVocabChallengeSummary();
   if(id==="kanji")renderKanjiPage();
   if(id==="kanjiChallenge")renderKanjiChallengeSummary();
-  if(id==="assessments"){renderAssessmentSelect();renderUnitFinalCards();}
+  if(id==="assessments"){
+    renderAssessmentSelect();renderUnitFinalCards();
+    if($("#startPlacementFromAssessments"))$("#startPlacementFromAssessments").onclick=()=>startUnitPlacement(0);
+  }
+  if(id==="intro"){
+    bindIntroButtons();
+    const eyebrow=$("#intro .eyebrow");
+    if(eyebrow&&state.introSeen&&!$("#introSeenPill")){
+      const pill=document.createElement("span");pill.id="introSeenPill";pill.className="intro-seen-pill";pill.textContent="Previously viewed";
+      eyebrow.insertAdjacentElement("afterend",pill);
+    }
+  }
   if(id==="about")renderAbout();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 $$(".nav button[data-view]").forEach(b=>b.onclick=()=>showView(b.dataset.view));
-$("#startLearning").onclick=()=>{showApp("lessons");goContinueLearning()}
+function finishIntroduction(){
+  state.introSeen=true;
+  save();
+  state.currentLesson=nextLearningLesson();
+  storageSet("nihongoStructured",JSON.stringify(state));
+  showView("lessons");
+  renderLesson();
+}
+function skipIntroduction(){
+  state.introSeen=true;
+  save();
+  state.currentLesson=nextLearningLesson();
+  storageSet("nihongoStructured",JSON.stringify(state));
+  showView("lessons");
+  renderLesson();
+}
+function bindIntroButtons(){
+  if($("#beginUnitOne"))$("#beginUnitOne").onclick=finishIntroduction;
+  if($("#skipIntroTop"))$("#skipIntroTop").onclick=skipIntroduction;
+  if($("#skipIntroBottom"))$("#skipIntroBottom").onclick=skipIntroduction;
+}
+$("#startLearning").onclick=()=>{
+  if(!state.introSeen){showApp("intro");bindIntroButtons();return}
+  showApp("lessons");goContinueLearning();
+}
 $("#explore").onclick=()=>showApp("courseMap");
+$("#devModeStart").onclick=enterDevMode;
+$("#testOutUnitOne").onclick=()=>{showApp("assessments");startUnitPlacement(0)};
 if(!storageAvailable&&$("#mobileStorageNote")){
   $("#mobileStorageNote").style.display="block";
   $("#mobileStorageNote").textContent="This browser is blocking persistent storage for the local file. The app will still work, but progress may reset when this tab closes.";
@@ -1644,41 +2103,42 @@ function tokenInfo(t){
   return {r:"",e:""};
 }
 function sentenceHTML(tokens,focus=[]){
-  const showR=romanizationVisible();
-  return `<div class="sentence-annotated">${tokens.map(t=>{const m=tokenInfo(t);return `<div class="word ${focus.includes(t)?"focus":""}"><div class="r">${showR?m.r:""}</div><div class="k">${t}</div><div class="e">${m.e}</div></div>`}).join("")}</div>`;
+  return `<div class="sentence-annotated">${tokens.map(t=>{const m=tokenInfo(t),showR=romajiSupportAllowedFor(t);return `<div class="word ${focus.includes(t)?"focus":""}"><div class="r">${showR?m.r:""}</div><div class="k">${t}</div><div class="e">${m.e}</div></div>`}).join("")}</div>`;
 }
 function renderLesson(){
   const i=state.currentLesson,l=lessons[i],ui=unitIndexForLesson(i),u=courseUnits[ui],local=localLessonNumber(i);
+  if(!$("#appShell").classList.contains("hidden")&&$("#lessons").classList.contains("active"))markLessonViewed(i);
   $("#lessonEyebrow").textContent=`Unit ${ui+1} · ${u.title}`;
   $("#lessonTitle").textContent=`Lesson ${local} of ${u.count}: ${l.title}`;
   $("#lessonLead").textContent=l.lead;
 
-  $("#unitSelect").innerHTML=courseUnits.slice(0,RELEASED_UNIT_COUNT).map((unit,j)=>{
+  $("#unitSelect").innerHTML=courseUnits.slice(0,availableUnitCount()).map((unit,j)=>{
     const locked=!unitUnlocked(j);
     return `<option value="${j}" ${j===ui?"selected":""} ${locked?"disabled":""}>${locked?"🔒 ":""}Unit ${j+1} — ${unit.title} (${unit.count})</option>`;
   }).join("");
-  const unitDone=unitLessonIndexes(ui).filter(j=>state.completedLessons.includes(j)).length;
-  const finalStatus=unitFinalPassed(ui)?"final passed":unitFinalReady(ui)?"final ready":"final locked";
-  $("#unitContext").innerHTML=`${u.description}<br><b>${unitDone}/${u.count} lessons complete</b> · ${unitComplete(ui)?"Unit complete":finalStatus}`;
+  const unitViewed=unitViewedCount(ui);
+  const finalStatus=ui===2&&state.devMode?"developer preview · no final yet":unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:"final available now";
+  $("#unitContext").innerHTML=`${u.description}<br><b>${unitViewed}/${u.count} lessons viewed</b> · ${unitComplete(ui)?"Unit complete":finalStatus}`;
   $("#unitSelect").onchange=e=>{
     const targetUi=+e.target.value;
     if(!unitUnlocked(targetUi)){e.target.value=ui;return}
     const target=courseUnits[targetUi];
-    state.currentLesson=target.start;save();$("#lessonPractice").classList.add("hidden");renderLesson();
+    state.currentLesson=target.start;markLessonViewed(target.start);save();$("#lessonPractice").classList.add("hidden");renderLesson();
   };
 
   $("#lessonToolbar").innerHTML=Array.from({length:u.count},(_,n)=>{
-    const j=u.start+n,locked=!lessonUnlocked(j);
-    return `<button class="lesson-dot ${j===i?"active":""} ${state.completedLessons.includes(j)?"done":""} ${locked?"locked":""}" data-i="${j}" title="${esc(lessons[j].title)}">${n+1}</button>`;
+    const j=u.start+n,locked=!lessonUnlocked(j),viewed=lessonViewed(j),score=state.practiceScores[j];
+    const suffix=score!==undefined?` · practice best ${score}%`:viewed?" · viewed":"";
+    return `<button class="lesson-dot ${j===i?"active":""} ${viewed?"done":""} ${locked?"locked":""}" data-i="${j}" title="${esc(lessons[j].title+suffix)}">${n+1}</button>`;
   }).join("");
   $$("#lessonToolbar .lesson-dot").forEach(b=>b.onclick=()=>{
     const j=+b.dataset.i;
     if(!lessonUnlocked(j))return;
-    state.currentLesson=j;save();$("#lessonPractice").classList.add("hidden");renderLesson()
+    state.currentLesson=j;markLessonViewed(j);save();$("#lessonPractice").classList.add("hidden");renderLesson()
   });
 
   $("#lessonContent").innerHTML=`
-    ${l.roadmap?`<div class="lesson-roadmap-note"><b>Roadmap lesson.</b> The teaching outline is in place, but its full exercise bank has not been written yet. This later lesson is still an outline. Units 1 and 2 are currently fully practice-ready.</div>`:""}
+    ${l.roadmap?`<div class="lesson-roadmap-note"><b>${ui===2&&state.devMode?"Developer preview":"Roadmap lesson"}.</b> ${ui===2&&state.devMode?"Unit 3 is exposed for testing. Its lesson structure and teaching outline are present, but the full exercise banks and final are not built yet.":"The teaching outline is in place, but its full exercise bank has not been written yet."}</div>`:""}
     <div class="rule"><b>Goal:</b> ${l.objective}</div>
     ${l.sections.map(s=>`<h2>${s[0]}</h2><p>${s[1]}</p>`).join("")}
     ${l.examples&&l.examples.length?`<h2>Examples</h2>${l.examples.map(ex=>`<div class="example-line">${sentenceHTML(ex.tokens,ex.focus)}<div class="english-line">${ex.en}</div></div>`).join("")}`:""}
@@ -1693,18 +2153,19 @@ function renderLesson(){
 
   const bank=practiceBanks[i];
   $("#practiceLesson").disabled=!bank||!bank.length;
-  $("#practiceLesson").textContent=bank&&bank.length?"Practice this lesson":"Practice bank coming later";
+  const bestPractice=state.practiceScores[i];
+  $("#practiceLesson").textContent=bank&&bank.length?(bestPractice!==undefined?`Practice again · best ${bestPractice}%`:"Optional practice"):"Practice bank coming later";
   $("#prevLesson").disabled=i===0;
   const nextIndex=i+1;
-  $("#nextLesson").disabled=nextIndex>RELEASED_LAST_LESSON||!lessonUnlocked(nextIndex);
+  $("#nextLesson").disabled=nextIndex>availableLastLesson()||!lessonUnlocked(nextIndex);
   if($("#continueFromLesson")){$("#continueFromLesson").textContent=continueActionLabel();$("#continueFromLesson").onclick=goContinueLearning;}
 }
-$("#prevLesson").onclick=()=>{if(state.currentLesson>0){state.currentLesson--;save();$("#lessonPractice").classList.add("hidden");renderLesson()}};
+$("#prevLesson").onclick=()=>{if(state.currentLesson>0){state.currentLesson--;markLessonViewed(state.currentLesson);save();$("#lessonPractice").classList.add("hidden");renderLesson()}};
 $("#nextLesson").onclick=()=>{
-  if(state.currentLesson>=RELEASED_LAST_LESSON)return;
+  if(state.currentLesson>=availableLastLesson())return;
   const target=state.currentLesson+1;
   if(!lessonUnlocked(target))return;
-  state.currentLesson=target;save();$("#lessonPractice").classList.add("hidden");renderLesson()
+  state.currentLesson=target;markLessonViewed(target);save();$("#lessonPractice").classList.add("hidden");renderLesson()
 };
 $("#practiceLesson").onclick=()=>startLessonPractice(state.currentLesson);
 
@@ -1753,34 +2214,36 @@ function nextLessonQuestion(){
 function finishLessonPractice(){
   const p=activePractice,score=Math.round(p.correct/p.qs.length*100);
   state.practiceScores[p.lessonIndex]=Math.max(state.practiceScores[p.lessonIndex]||0,score);
-  if(score>=80&&!state.completedLessons.includes(p.lessonIndex))state.completedLessons.push(p.lessonIndex);
-  maybeCompleteUnitOne();
+  markLessonViewed(p.lessonIndex);
   save();renderLesson();
   $("#lessonPractice").classList.remove("hidden");
 
   const ui=unitIndexForLesson(p.lessonIndex);
-  const kanaNeed=ui===0?Math.max(0,9-unit1MasteredCount()):0;
-  let message="";
-  if(score<80)message="Review the lesson and try another randomized set. 80% is required to mark the lesson complete.";
-  else if(ui===0&&unitLessonsComplete(0)&&kanaNeed>0)message=`All Unit 1 lessons are complete. Master ${kanaNeed} more of the first ten hiragana to unlock the Unit 1 final.`;
-  else if(unitFinalReady(ui)&&!unitFinalPassed(ui))message=`All Unit ${ui+1} lesson requirements are complete. The Unit ${ui+1} final is now unlocked.`;
-  else message="This lesson is complete. Older material will still return in cumulative review.";
+  const best=state.practiceScores[p.lessonIndex];
+  let note="";
+  if(score<60)note="This set exposed some weak spots. Review will bring mistakes back, but you are free to keep moving through the unit.";
+  else if(score<80)note="Useful practice. You can repeat it, take notes, or move on—lesson practice is not a progression gate.";
+  else note="Strong practice set. Your best score is saved, but the unit final—not lesson practice—determines progression.";
 
-  $("#lessonPractice").innerHTML=`<div class="eyebrow">${score>=80?"Lesson complete":"Progress saved"}</div><div class="big-score">${score}%</div>
-    <p>${message}</p>
-    ${ui===0&&unitLessonsComplete(0)&&kanaNeed>0?`<button class="btn orange" id="goKanaFromResult">Finish kana goal</button>`:""}
-    ${unitFinalReady(ui)&&!unitFinalPassed(ui)?`<button class="btn orange" id="goUnitFinalFromResult">Take Unit ${ui+1} final</button>`:""}
-    <button class="btn" id="redoPractice">Practice again</button>`;
-  if($("#goKanaFromResult"))$("#goKanaFromResult").onclick=()=>{state.kanaMode="unit1";save();showView("kana");renderKanaUI();nextKana()};
-  if($("#goUnitFinalFromResult"))$("#goUnitFinalFromResult").onclick=()=>{showView("assessments");renderUnitFinalCards()};
+  const nextIndex=p.lessonIndex+1;
+  const canNext=nextIndex<=availableLastLesson()&&unitIndexForLesson(nextIndex)===ui&&lessonUnlocked(nextIndex);
+
+  $("#lessonPractice").innerHTML=`<div class="eyebrow">Practice saved</div><div class="big-score">${score}%</div>
+    <p>${note}</p>
+    <p class="small">Best score for this lesson: <b>${best}%</b>. No minimum practice score is required.</p>
+    <button class="btn" id="redoPractice">Practice another set</button>
+    ${canNext?`<button class="btn orange" id="moveNextLesson">Go to next lesson →</button>`:""}
+    <button class="btn secondary" id="openUnitFinalFromPractice">Unit ${ui+1} final</button>`;
   $("#redoPractice").onclick=()=>startLessonPractice(p.lessonIndex);
+  if($("#moveNextLesson"))$("#moveNextLesson").onclick=()=>{state.currentLesson=nextIndex;markLessonViewed(nextIndex);save();$("#lessonPractice").classList.add("hidden");renderLesson();window.scrollTo({top:0,behavior:"smooth"})};
+  $("#openUnitFinalFromPractice").onclick=()=>{showView("assessments");renderUnitFinalCards();setTimeout(()=>document.querySelector(`[data-unit-final-card="${ui}"]`)?.scrollIntoView({behavior:"smooth",block:"center"}),50)};
 }
 
 function annotatedToken(t,focus=false){
   const m=tokenInfo(t);
-  return `<span class="r">${romanizationVisible()&&state.showRomaji?esc(m.r):""}</span><span class="k">${t}</span><span class="e">${state.showEnglish?esc(m.e):""}</span>`;
+  return `<span class="r">${romajiSupportAllowedFor(t)&&state.showRomaji?esc(m.r):""}</span><span class="k">${t}</span><span class="e">${state.showEnglish?esc(m.e):""}</span>`;
 }
-function renderExercise(q,container,done){
+function renderExercise(q,container,done,nextHandler=nextLessonQuestion){
   if(q.type==="choice"){
     const promptReading=romanizationVisible()?japaneseReadingFromText(q.prompt):"";
     container.innerHTML=`<div class="exercise-type">Quick check</div><h3>${q.prompt}</h3>${promptReading?`<div class="prompt-reading">${esc(promptReading)}</div>`:""}<div class="answers">${shuffle(q.choices).map(x=>`<button class="answer" data-a="${esc(x)}">${displayChoice(x)}</button>`).join("")}</div><div class="feedback"></div>`;
@@ -1790,7 +2253,14 @@ function renderExercise(q,container,done){
       fb.innerHTML=ok?`✓ Correct.${q.why?` <span class="feedback-why">${esc(q.why)}</span>`:""}`:`✗ Correct answer: ${esc(q.answer)}${q.why?` <span class="feedback-why">${esc(q.why)}</span>`:""}`;
       fb.className=`feedback ${ok?"good":"bad"}`;
       container.querySelectorAll(".answer").forEach(x=>x.disabled=true);done(ok);
-      container.insertAdjacentHTML("beforeend",`<button class="btn" onclick="nextLessonQuestion()">Next</button>`);
+      container.insertAdjacentHTML("beforeend",`<button class="btn exercise-next">Next · Enter</button>`);
+      const next=container.querySelector(".exercise-next");
+      next.onclick=nextHandler;
+      container.onkeydown=e=>{
+        if(e.key==="Enter"&&activePractice?.answered){
+          e.preventDefault();nextHandler();
+        }
+      };
     });
   } else {
     const bank=shuffle(q.tokens.map((t,i)=>({t,i}))),chosen=[];
@@ -1808,7 +2278,14 @@ function renderExercise(q,container,done){
       fb.className=`feedback ${ok?"good":"bad"}`;
       done(ok);
       container.querySelector(".check").disabled=true;
-      container.insertAdjacentHTML("beforeend",`<div class="breakdown">${sentenceHTML(q.tokens,q.focus)}</div><button class="btn" onclick="nextLessonQuestion()">Next</button>`);
+      container.insertAdjacentHTML("beforeend",`<div class="breakdown">${sentenceHTML(q.tokens,q.focus)}</div><button class="btn exercise-next">Next · Enter</button>`);
+      const next=container.querySelector(".exercise-next");
+      next.onclick=nextHandler;
+      container.onkeydown=e=>{
+        if(e.key==="Enter"&&activePractice?.answered){
+          e.preventDefault();nextHandler();
+        }
+      };
     };
   }
 }
@@ -1826,15 +2303,15 @@ function renderFree(){
   const mode=$("#freeMode").value==="mixed"?pick(["builder","verb","vocab"]):$("#freeMode").value;
   const c=$("#freePracticeArea");
   if(mode==="builder"){
-    const q=pick(freeBuilderPool);activePractice={answered:false};renderExercise({type:"builder",...q},c,ok=>{activePractice.answered=true;markWeak("sentence",q.tokens.join(" "),ok)});
+    const q=pick(freeBuilderPool);activePractice={answered:false};renderExercise({type:"builder",...q},c,ok=>{activePractice.answered=true;markWeak("sentence",q.tokens.join(" "),ok)},renderFree);
   } else if(mode==="verb"){
     const q=pick([{prompt:"Polite negative of のみます?",choices:["のみません","のみました","のんで","のみたいです"],answer:"のみません"},{prompt:"Polite past of いきます?",choices:["いきました","いきません","いって","いきたいです"],answer:"いきました"}]);
-    activePractice={answered:false};renderExercise({type:"choice",...q},c,ok=>{activePractice.answered=true;markWeak("verb",q.answer,ok)});
+    activePractice={answered:false};renderExercise({type:"choice",...q},c,ok=>{activePractice.answered=true;markWeak("verb",q.answer,ok)},renderFree);
   } else {
     const seen=introducedVocab(),pool=seen.length?seen:vocab.slice(0,20);
     const row=pick(pool),others=shuffle(vocab.filter(v=>v[0]===row[0]&&v[1]!==row[1])).slice(0,3).map(v=>v[3]);
     const q={prompt:row[1],choices:shuffle([row[3],...others]),answer:row[3]};
-    activePractice={answered:false};renderExercise({type:"choice",...q},c,ok=>{activePractice.answered=true;updateVocabRecognition(row[1],ok);markWeak("vocab",row[1],ok)});
+    activePractice={answered:false};renderExercise({type:"choice",...q},c,ok=>{activePractice.answered=true;updateVocabRecognition(row[1],ok);markWeak("vocab",row[1],ok)},renderFree);
   }
 }
 function markWeak(type,key,ok){state.weak[`${type}::${key}`]=Math.max(0,(state.weak[`${type}::${key}`]||0)+(ok?-1:2));save()}
@@ -2033,23 +2510,33 @@ function initParticlePractice(){
 function renderCourseMap(){
   const target=$("#courseMapList");if(!target)return;
 
-  const releasedUnits=courseUnits.slice(0,RELEASED_UNIT_COUNT);
+  const releasedUnits=courseUnits.slice(0,availableUnitCount());
   const completedUnits=releasedUnits.filter((_,ui)=>unitComplete(ui)).length;
-  const completedLessons=state.completedLessons.filter(i=>i<=RELEASED_LAST_LESSON).length;
+  const viewedLessons=state.viewedLessons.filter(i=>i<=availableLastLesson()).length;
   const releasedLessonTotal=releasedUnits.reduce((n,u)=>n+u.count,0);
   $("#courseProgressSummary").innerHTML=`
-    <span class="course-progress-chip"><b>${completedUnits}/${RELEASED_UNIT_COUNT}</b> beta units complete</span>
-    <span class="course-progress-chip"><b>${completedLessons}/${releasedLessonTotal}</b> released lessons complete</span>
+    <span class="course-progress-chip"><b>${completedUnits}/${availableUnitCount()}</b> beta units complete</span>
+    <span class="course-progress-chip"><b>${viewedLessons}/${releasedLessonTotal}</b> released lessons viewed</span>
     <span class="course-progress-chip"><b>Unit ${highestUnlockedUnit()+1}</b> currently unlocked</span>
-    <span class="course-progress-chip"><b>v0.1</b> Units 1–2 available</span>`;
+    <span class="course-progress-chip"><b>Finals</b> prove unit progression</span>`;
 
+  if($("#courseDevBanner"))$("#courseDevBanner").classList.toggle("hidden",!state.devMode);
   if($("#continueLearning")){
     $("#continueLearning").textContent=continueActionLabel();
     $("#continueLearning").onclick=goContinueLearning;
   }
 
-  target.innerHTML=courseUnits.map((u,ui)=>{
-    if(ui>=RELEASED_UNIT_COUNT){
+  const introCard=`<details class="course-unit ${state.introSeen?"completed":"unlocked"}">
+      <summary>
+        <div class="course-unit-number">Intro</div>
+        <div><div class="course-unit-title">Introduction to Japanese</div><div class="course-unit-sub">Writing systems, romaji, SVO vs SOV, particles, and the basic grammar vocabulary used by the course.</div></div>
+        <div class="course-unit-count">${state.introSeen?"viewed":"optional"}</div>
+      </summary>
+      <div class="coming-soon-body">Optional orientation for complete beginners. <button class="btn secondary" id="openIntroFromMap" style="margin-top:10px">Open introduction</button></div>
+    </details>`;
+
+  target.innerHTML=introCard+courseUnits.map((u,ui)=>{
+    if(ui>=availableUnitCount()){
       return `<details class="course-unit coming-soon">
         <summary>
           <div class="course-unit-number">Unit ${ui+1}</div>
@@ -2060,37 +2547,41 @@ function renderCourseMap(){
       </details>`;
     }
 
-    const done=unitLessonIndexes(ui).filter(i=>state.completedLessons.includes(i)).length;
+    const viewed=unitViewedCount(ui);
     const complete=unitComplete(ui),unlocked=unitUnlocked(ui);
-    const finalText=unitFinalPassed(ui)?"final passed":unitFinalReady(ui)?"final ready":"final locked";
-    const cls=complete?"completed":unlocked?"unlocked":"locked";
-    return `<details class="course-unit ${cls}" ${ui===unitIndexForLesson(state.currentLesson)?"open":""}>
+    const devPreview=ui===2&&state.devMode;
+    const finalText=devPreview?"DEV PREVIEW":unitFinalPassed(ui)?`final passed · ${state.unitFinalScores[ui]}%`:unlocked?"final available":"locked";
+    const cls=devPreview?"dev-preview":complete?"completed":unlocked?"unlocked":"locked";
+    return `<details class="course-unit ${cls}" ${ui===unitIndexForLesson(state.currentLesson)&&unlocked?"open":""}>
       <summary data-unit-summary="${ui}">
         <div class="course-unit-number">Unit ${ui+1}</div>
-        <div><div class="course-unit-title">${u.title}</div><div class="course-unit-sub">${u.description}</div></div>
-        <div class="course-unit-count">${done}/${u.count} lessons · ${complete?"complete":unlocked?finalText:"locked"}</div>
+        <div><div class="course-unit-title">${u.title}${devPreview?` <span class="dev-tag">DEV</span>`:""}</div><div class="course-unit-sub">${u.description}</div></div>
+        <div class="course-unit-count">${viewed}/${u.count} viewed · ${complete?"complete":finalText}</div>
       </summary>
       <div class="course-lessons">
         ${Array.from({length:u.count},(_,n)=>{
-          const i=u.start+n,l=lessons[i],done=state.completedLessons.includes(i),locked=!lessonUnlocked(i);
+          const i=u.start+n,l=lessons[i],seen=lessonViewed(i),locked=!lessonUnlocked(i),score=state.practiceScores[i];
+          const practice=score!==undefined?` · practice ${score}%`:"";
           return `<button class="course-lesson-row ${locked?"locked":""}" data-course-lesson="${i}">
             <span class="course-lesson-num">${n+1}</span>
             <span class="course-lesson-title">${l.title}</span>
-            <span class="course-lesson-state ${done?"done":locked?"locked":""}">${done?"complete":locked?"locked":"ready"}</span>
+            <span class="course-lesson-state ${seen?"done":locked?"locked":""}">${locked?"locked":seen?`viewed${practice}`:`ready${practice}`}</span>
           </button>`;
         }).join("")}
         <div class="coming-soon-body">
-          <b>Unit final:</b> ${unitFinalPassed(ui)?`passed · ${state.unitFinalScores[ui]}%`:unitFinalReady(ui)?"ready to take":"locked until requirements are complete"}
-          ${ui===0?`<br><b>Kana goal:</b> ${unit1MasteredCount()}/10 mastered · 9 required`:""}
+          <b>${devPreview?"Developer status":"Unit final"}:</b> ${devPreview?`outline exposed · no final or complete practice banks yet · <button class="btn secondary" id="openUnit3Kanji" style="margin-top:8px">Open Unit 3 kanji</button>`:unitFinalPassed(ui)?`passed · ${state.unitFinalScores[ui]}%`:unlocked?"available now — lesson practice is optional":"locked until the previous unit is complete"}
+          ${ui===0?`<br><b>Kana requirement:</b> ${unitSkippedByPlacement(0)?"skipped by placement · romaji scaffolding removed":kanaRequirementSkipped(0)?"waived · romaji removed for Unit 1 set":`${unit1MasteredCount()}/10 mastered · 9 required for Unit completion`}`:""}
         </div>
       </div>
     </details>`;
   }).join("");
 
+  if($("#openIntroFromMap"))$("#openIntroFromMap").onclick=()=>showView("intro");
+  if($("#openUnit3Kanji"))$("#openUnit3Kanji").onclick=()=>{state.kanjiPack="3";save();showView("kanji");renderKanjiPage()};
   target.querySelectorAll("[data-course-lesson]").forEach(b=>b.onclick=()=>{
     const i=+b.dataset.courseLesson;
     if(!lessonUnlocked(i))return;
-    state.currentLesson=i;save();showView("lessons");renderLesson();
+    state.currentLesson=i;markLessonViewed(i);save();showView("lessons");renderLesson();
   });
 
   target.querySelectorAll("[data-unit-summary]").forEach(s=>{
@@ -2481,7 +2972,7 @@ function updateKanjiRecognition(k,ok){const r=kanjiRecord(k);if(ok)r.recognition
 function updateKanjiMeaning(k,ok){const r=kanjiRecord(k);if(ok)r.meaningPass=Math.min(2,r.meaningPass+1);else{r.meaningWrong++;r.meaningPass=Math.max(0,r.meaningPass-1)}r.lastReviewed=Date.now()}
 function updateKanjiReading(k,ok){const r=kanjiRecord(k);if(ok)r.readingPass=Math.min(3,r.readingPass+1);else{r.readingWrong++;r.readingPass=Math.max(0,r.readingPass-1)}r.lastReviewed=Date.now()}
 function updateKanjiWordMeaning(k,ok){const r=kanjiRecord(k);if(ok)r.wordMeaningPass=Math.min(2,r.wordMeaningPass+1);else{r.wordMeaningWrong++;r.wordMeaningPass=Math.max(0,r.wordMeaningPass-1)}r.lastReviewed=Date.now()}
-function kanjiPackUnlocked(unit){return state.testingBypass||unitUnlocked(unit-1)}
+function kanjiPackUnlocked(unit){return state.devMode||unitUnlocked(unit-1)}
 function availableKanji(){return kanjiData.filter(e=>kanjiPackUnlocked(e.unit))}
 function selectedKanjiPool(){if(state.kanjiPack==="all")return availableKanji();const unit=+state.kanjiPack;return kanjiData.filter(e=>e.unit===unit&&kanjiPackUnlocked(unit))}
 function kanjiStageCounts(){const out={new:0,learning:0,familiar:0,learned:0,mastered:0};kanjiData.forEach(e=>out[kanjiStats(e.k).level]++);return out}
@@ -2497,7 +2988,7 @@ function renderKanjiSummary(target="#kanjiSummary"){
 function renderKanjiPackSelect(){
   const select=$("#kanjiPack");if(!select)return;const current=state.kanjiPack;
   select.innerHTML=`<option value="all">All available kanji</option>`+
-    Array.from({length:10},(_,i)=>i+3).map(unit=>{const locked=!kanjiPackUnlocked(unit);return `<option value="${unit}" ${locked&&!state.testingBypass?"disabled":""}>${locked&&!state.testingBypass?"🔒 ":""}Unit ${unit} · ${kanjiPackNames[unit]}</option>`}).join("");
+    Array.from({length:10},(_,i)=>i+3).map(unit=>{const locked=!kanjiPackUnlocked(unit);return `<option value="${unit}" ${locked&&!state.devMode?"disabled":""}>${locked&&!state.devMode?"🔒 ":""}Unit ${unit} · ${kanjiPackNames[unit]}</option>`}).join("");
   if([...select.options].some(o=>o.value===current&&!o.disabled))select.value=current;else select.value="3";
   state.kanjiPack=select.value;
   select.onchange=e=>{state.kanjiPack=e.target.value;save();renderKanjiPage()};
@@ -2505,8 +2996,8 @@ function renderKanjiPackSelect(){
 function renderKanjiPage(){
   if(!$("#kanjiGrid"))return;renderKanjiSummary();renderKanjiPackSelect();
   const pool=selectedKanjiPool(),note=$("#kanjiPackNote");
-  note.textContent=state.kanjiPack==="all"?`${pool.length} kanji currently available. Testing mode exposes all 100.`:`Unit ${state.kanjiPack} adds 10 kanji: ${kanjiPackNames[+state.kanjiPack]}. In learner mode this pack appears when Unit ${state.kanjiPack} is reached.`;
-  $("#kanjiGrid").innerHTML=pool.length?pool.map(e=>{const s=kanjiStats(e.k);return `<div class="kanji-entry"><div class="kanji-entry-top"><div class="kanji-char">${e.k}</div><span class="kanji-stage ${s.level}">${s.level}</span></div><div class="kanji-core">${esc(e.meaning)}</div><div class="kanji-word">${e.word}</div><div class="kanji-reading">${e.kana}</div><div class="kanji-word-en">${esc(e.en)}</div><div class="kanji-vocab-link">${kanjiCourseVocab(e)?"course vocabulary word":"example word"}</div></div>`}).join(""):`<div class="simple-section"><b>This kanji pack is locked.</b><p>Reach its course unit to unlock it, or use Testing mode while developing the course.</p></div>`;
+  note.textContent=state.kanjiPack==="all"?`${pool.length} kanji currently available. Developer mode exposes all 100 for testing.`:`Unit ${state.kanjiPack} adds 10 kanji: ${kanjiPackNames[+state.kanjiPack]}. In learner mode this pack appears when Unit ${state.kanjiPack} is reached.`;
+  $("#kanjiGrid").innerHTML=pool.length?pool.map(e=>{const s=kanjiStats(e.k);return `<div class="kanji-entry"><div class="kanji-entry-top"><div class="kanji-char">${e.k}</div><span class="kanji-stage ${s.level}">${s.level}</span></div><div class="kanji-core">${esc(e.meaning)}</div><div class="kanji-word">${e.word}</div><div class="kanji-reading">${e.kana}</div><div class="kanji-word-en">${esc(e.en)}</div><div class="kanji-vocab-link">${kanjiCourseVocab(e)?"course vocabulary word":"example word"}</div></div>`}).join(""):`<div class="simple-section"><b>This kanji pack is locked.</b><p>Reach its course unit to unlock it, or use Developer mode while developing the course.</p></div>`;
 }
 
 let kanjiDrillState=null;
@@ -2560,6 +3051,59 @@ $("#kanjiWordMeaningMode").onclick=()=>{kanjiChallengeMode="wordMeaning";kanjiCh
 const kanaRows=[["あ","ア","a"],["い","イ","i"],["う","ウ","u"],["え","エ","e"],["お","オ","o"],["か","カ","ka"],["き","キ","ki"],["く","ク","ku"],["け","ケ","ke"],["こ","コ","ko"],["さ","サ","sa"],["し","シ","shi"],["す","ス","su"],["せ","セ","se"],["そ","ソ","so"],["た","タ","ta"],["ち","チ","chi"],["つ","ツ","tsu"],["て","テ","te"],["と","ト","to"],["な","ナ","na"],["に","ニ","ni"],["ぬ","ヌ","nu"],["ね","ネ","ne"],["の","ノ","no"],["は","ハ","ha"],["ひ","ヒ","hi"],["ふ","フ","fu"],["へ","ヘ","he"],["ほ","ホ","ho"],["ま","マ","ma"],["み","ミ","mi"],["む","ム","mu"],["め","メ","me"],["も","モ","mo"],["や","ヤ","ya"],["ゆ","ユ","yu"],["よ","ヨ","yo"],["ら","ラ","ra"],["り","リ","ri"],["る","ル","ru"],["れ","レ","re"],["ろ","ロ","ro"],["わ","ワ","wa"],["を","ヲ","wo"],["ん","ン","n"]];
 const unit1Kana=kanaRows.slice(0,10).map(x=>x[0]);
 
+function kanaCharsForUnit(unitIndex){
+  if(unitIndex===0)return unit1Kana;
+  return [];
+}
+function kanaRequirementSkipped(unitIndex){
+  return !!state.kanaSkippedUnits[String(unitIndex)];
+}
+function kanaRequirementMet(unitIndex){
+  if(unitIndex===0)return unit1MasteredCount()>=9||kanaRequirementSkipped(0);
+  return true;
+}
+function setKanaRequirementSkipped(unitIndex,skipped){
+  if(skipped)state.kanaSkippedUnits[String(unitIndex)]=true;
+  else delete state.kanaSkippedUnits[String(unitIndex)];
+  save();renderKanaUI();renderLessonKanaGoal();renderCourseMap();renderUnitFinalCards();
+}
+function tokenContainsSkippedKana(text){
+  const chars=[...String(text||"")];
+  return Object.keys(state.kanaSkippedUnits).some(k=>{
+    const ui=+k;
+    if(!kanaRequirementSkipped(ui))return false;
+    const set=new Set(kanaCharsForUnit(ui));
+    return chars.some(ch=>set.has(ch));
+  });
+}
+function romajiSupportAllowedFor(text){
+  return romanizationVisible()&&!tokenContainsSkippedKana(text);
+}
+function renderKanaSkipPanel(){
+  const el=$("#kanaSkipPanel");if(!el)return;
+  const ui=state.kanaMode==="unit1"?0:null;
+  if(ui===null){
+    el.innerHTML=`<div class="skip-copy"><b>Skipping mastery is only tied to course-unit kana sets.</b> The all-hiragana and all-katakana views are optional reference/practice modes.</div>`;
+    el.classList.remove("skipped");
+    return;
+  }
+  const skipped=kanaRequirementSkipped(ui);
+  el.classList.toggle("skipped",skipped);
+  if(skipped){
+    el.innerHTML=`<div class="skip-copy"><b>Unit 1 kana mastery requirement skipped.</b> These 10 characters are <em>not</em> marked mastered. Romaji support is hidden for words containing these kana so the course does not keep giving away the readings you chose to skip.</div>
+      <button class="btn warning" id="restoreKanaRequirement">Restore mastery requirement</button>`;
+    $("#restoreKanaRequirement").onclick=()=>setKanaRequirementSkipped(ui,false);
+  }else{
+    el.innerHTML=`<div class="skip-copy"><b>Already know kana another way?</b> You may waive this unit's kana mastery requirement. This does not mark anything mastered. <b>Warning:</b> romaji support for these 10 kana will be removed immediately.</div>
+      <button class="btn warning" id="skipKanaRequirement">Skip Unit 1 kana mastery</button>`;
+    $("#skipKanaRequirement").onclick=()=>{
+      const ok=window.confirm("Skip Unit 1 kana mastery?\\n\\nThis will waive the 9/10 mastery requirement, but it will NOT mark the kana as mastered. Romaji support for these 10 characters will be removed immediately.");
+      if(ok)setKanaRequirementSkipped(ui,true);
+    };
+  }
+}
+
+
 function kanaRecord(ch){
   if(!state.kanaMastery[ch])state.kanaMastery[ch]={correct:0,misses:0,recent:[],lastReviewed:0,singlePasses:0,singleMisses:0,triplePasses:0,tripleMisses:0};
   const r=state.kanaMastery[ch];
@@ -2570,12 +3114,21 @@ function kanaRecord(ch){
 function kanaStats(ch){
   const r=kanaRecord(ch),attempts=r.correct+r.misses,recent=r.recent.slice(-8);
   const recentAcc=recent.length?recent.filter(Boolean).length/recent.length:0;
+  const noHelpAttempts=r.singlePasses+r.singleMisses+r.triplePasses+r.tripleMisses;
   let level="new";
-  if(attempts>0)level="learning";
-  if(attempts>=4&&recent.length>=4&&recentAcc>=.75)level="familiar";
-  // Assisted practice is deliberately capped at familiar.
-  if(level==="familiar"&&r.singlePasses>=2)level="learned";
-  if(r.singlePasses>=2&&r.triplePasses>=3)level="mastered";
+  if(attempts>0||noHelpAttempts>0)level="learning";
+
+  // Familiarity can be established either by assisted recognition OR by proving recall without help.
+  // This means experienced learners never have to grind the assisted drill first.
+  const assistedFamiliar=attempts>=4&&recent.length>=4&&recentAcc>=.75;
+  const noHelpFamiliar=r.singlePasses>=1||r.triplePasses>=1;
+  if(assistedFamiliar||noHelpFamiliar)level="familiar";
+
+  // Either path can establish strong knowledge. Single recall is the gentler bridge;
+  // Three-at-a-time is difficult enough to prove mastery on its own.
+  if(r.singlePasses>=2||r.triplePasses>=2)level="learned";
+  if(r.triplePasses>=3)level="mastered";
+
   return {level,attempts,recentAcc,correct:r.correct,misses:r.misses,lastReviewed:r.lastReviewed,
           singlePasses:r.singlePasses,singleMisses:r.singleMisses,triplePasses:r.triplePasses,tripleMisses:r.tripleMisses};
 }
@@ -2608,20 +3161,32 @@ function kanaPool(){
   if(state.kanaMode==="katakana")return kanaRows.map(r=>({char:r[1],romaji:r[2]}));
   return kanaRows.map(r=>({char:r[0],romaji:r[2]}));
 }
-function kanaWeight(item){
+function kanaAssistedUrgency(item){
   const s=kanaStats(item.char);
-  // Assisted practice is for getting to familiar. Learned/mastered still appear occasionally for review.
-  const base={new:8,learning:9,familiar:3.5,learned:1.2,mastered:.6}[s.level];
-  const days=s.lastReviewed?Math.max(0,(Date.now()-s.lastReviewed)/86400000):3;
-  return base+Math.min(3,days*.25);
+  const stage={new:5,learning:6,familiar:3,learned:1.5,mastered:.5}[s.level];
+  const accuracyPenalty=s.attempts?Math.max(0,1-s.recentAcc)*3:1.5;
+  const missPressure=Math.min(2,s.misses*.18);
+  const age=s.lastReviewed?Math.min(1.5,(Date.now()-s.lastReviewed)/86400000*.15):1;
+  return stage+accuracyPenalty+missPressure+age+Math.random()*.75;
 }
-function weightedKanaPick(pool){
-  const weights=pool.map(kanaWeight),total=weights.reduce((a,b)=>a+b,0);
-  let r=Math.random()*total;
-  for(let i=0;i<pool.length;i++){r-=weights[i];if(r<=0)return pool[i]}
-  return pool[pool.length-1];
+function sameKanaPool(a,b){
+  if(!a||a.length!==b.length)return false;
+  const aa=a.map(x=>x.char).sort().join("|"),bb=b.map(x=>x.char).sort().join("|");
+  return aa===bb;
 }
-let kanaCurrent=null,kanaPreviousChar=null;
+function fairKanaDeck(pool,urgencyFn,previousChar=null){
+  const deck=[...pool].sort((a,b)=>urgencyFn(b)-urgencyFn(a));
+  // Add a little local variation without destroying the weak-first tendency.
+  for(let i=0;i<deck.length-1;i+=2){
+    if(Math.random()<.45)[deck[i],deck[i+1]]=[deck[i+1],deck[i]];
+  }
+  if(previousChar&&deck.length>1&&deck[0].char===previousChar){
+    const swap=1+Math.floor(Math.random()*(deck.length-1));
+    [deck[0],deck[swap]]=[deck[swap],deck[0]];
+  }
+  return deck;
+}
+let kanaCurrent=null,kanaPreviousChar=null,kanaAssistedQueue=[],kanaAssistedPoolSnapshot=[];
 function renderKanaUI(){
   if($("#kanaMode"))$("#kanaMode").value=state.kanaMode;
   const familiar=unit1FamiliarCount(),learned=unit1LearnedCount(),mastered=unit1MasteredCount();
@@ -2629,40 +3194,58 @@ function renderKanaUI(){
     <span class="pillish"><b>${familiar}/10</b> familiar+</span>
     <span class="pillish"><b>${learned}/10</b> learned+</span>
     <span class="pillish"><b>${mastered}/10</b> mastered</span>
-    <span class="pillish">${mastered>=9?"Unit 1 kana goal met":"Need "+(9-mastered)+" more mastered"}</span>`;
+    <span class="pillish">${kanaRequirementSkipped(0)?"Kana requirement waived":mastered>=9?"Unit 1 kana goal met":"Need "+(9-mastered)+" more mastered"}</span>`;
   if($("#unit1KanaGrid"))$("#unit1KanaGrid").innerHTML=kanaRows.slice(0,10).map(r=>{
-    const s=kanaStats(r[0]);return `<div class="kana-mastery-cell ${s.level}"><div class="kc">${r[0]}</div><div class="kr">${r[2]}</div><div class="ks">${s.level}</div></div>`;
+    const s=kanaStats(r[0]);return `<div class="kana-mastery-cell ${s.level}"><div class="kc">${r[0]}</div><div class="kr">${romajiSupportAllowedFor(r[0])?r[2]:""}</div><div class="ks">${s.level}</div></div>`;
   }).join("");
   const rows=state.kanaMode==="unit1"?kanaRows.slice(0,10):kanaRows;
   if($("#kanaGrid"))$("#kanaGrid").innerHTML=rows.map(r=>{
     const ch=state.kanaMode==="katakana"?r[1]:r[0],s=kanaStats(ch);
-    const display=state.kanaMode==="unit1"?`<b>${r[0]}</b>${r[2]}`:state.kanaMode==="katakana"?`<b>${r[1]}</b>${romajiLocked()?"":r[2]}`:`<b>${r[0]}</b>${romajiLocked()?"":r[2]}`;
+    const display=state.kanaMode==="unit1"?`<b>${r[0]}</b>${romajiSupportAllowedFor(r[0])?r[2]:""}`:state.kanaMode==="katakana"?`<b>${r[1]}</b>${romajiLocked()?"":r[2]}`:`<b>${r[0]}</b>${romajiSupportAllowedFor(r[0])?r[2]:""}`;
     return `<div class="kana-cell ${s.level}">${display}<span class="mini-state">${s.level}</span></div>`;
   }).join("");
+  renderKanaSkipPanel();
   applyRomajiLockUI();
 }
 function renderLessonKanaGoal(){
   const el=$("#lessonKanaGoal");if(!el)return;
-  const familiar=unit1FamiliarCount(),learned=unit1LearnedCount(),mastered=unit1MasteredCount(),practice=(state.practiceScores[0]||0)>=80;
+  const familiar=unit1FamiliarCount(),learned=unit1LearnedCount(),mastered=unit1MasteredCount(),practice=state.practiceScores[0];
   el.innerHTML=`<div class="kana-course-card">
-    <div class="kana-course-head"><div><h2>Your Unit 1 kana goal</h2><div style="color:var(--muted);line-height:1.55">The assisted drill can teach these 10 hiragana up to <b>familiar</b>. To truly master them, move to the no-help practice after that.</div></div>
+    <div class="kana-course-head"><div><h2>Your Unit 1 kana goal</h2><div style="color:var(--muted);line-height:1.55">If these kana are new to you, use the assisted drill. If you already know some or all of them, jump straight into <b>no-help mastery practice</b> and prove them from memory.</div></div>
     <div class="romaji-lock-note">${romajiLocked()?"Romaji is now locked":"Romaji will lock after Unit 1"}</div></div>
-    <div class="kana-summary"><span class="pillish"><b>${familiar}/10</b> familiar+</span><span class="pillish"><b>${learned}/10</b> learned+</span><span class="pillish"><b>${mastered}/10</b> mastered</span><span class="pillish">Lesson practice: <b>${practice?"passed":"not passed yet"}</b></span></div>
-    <div class="kana-course-grid">${kanaRows.slice(0,10).map(r=>{const s=kanaStats(r[0]);return `<div class="kana-mastery-cell ${s.level}"><div class="kc">${r[0]}</div><div class="kr">${r[2]}</div><div class="ks">${s.level}</div></div>`}).join("")}</div>
-    <div class="course-gate">${mastered>=9?"Kana goal met. Pass the lesson practice to finish Unit 1.":`Master ${9-mastered} more of these kana. Assisted practice stops at familiar; no-help practice is required for learned and mastered.`}</div>
-    <button class="btn orange" id="lessonKanaButton" style="margin-top:12px">Assisted kana practice</button>
-    <button class="btn" id="lessonKanaMasteryButton" style="margin-top:12px">No-help mastery practice</button>
+    <div class="kana-summary"><span class="pillish"><b>${familiar}/10</b> familiar+</span><span class="pillish"><b>${learned}/10</b> learned+</span><span class="pillish"><b>${mastered}/10</b> mastered</span><span class="pillish">Lesson 1 practice: <b>${practice!==undefined?`best ${practice}%`:"optional"}</b></span></div>
+    <div class="kana-course-grid">${kanaRows.slice(0,10).map(r=>{const s=kanaStats(r[0]);return `<div class="kana-mastery-cell ${s.level}"><div class="kc">${r[0]}</div><div class="kr">${romajiSupportAllowedFor(r[0])?r[2]:""}</div><div class="ks">${s.level}</div></div>`}).join("")}</div>
+    <div class="course-gate">${kanaRequirementSkipped(0)?"Kana mastery requirement waived. These characters are not marked mastered, and their romaji support is hidden.":mastered>=9?"Kana goal met. The Unit 1 final is available whenever you want to take it.":`Master ${9-mastered} more of these kana, or deliberately waive this unit's kana requirement. Three-at-a-time practice can reach mastery by itself.`}</div>
+    <button class="btn secondary" id="lessonKanaButton" style="margin-top:12px">Assisted kana practice</button>
+    <button class="btn" id="lessonKanaMasteryButton" style="margin-top:12px">Single recall</button>
+    <button class="btn orange" id="lessonKanaTripleButton" style="margin-top:12px">Three at a time →</button>
+    ${kanaRequirementSkipped(0)?`<button class="btn warning" id="lessonRestoreKana" style="margin-top:12px">Restore kana requirement</button>`:`<button class="btn warning" id="lessonSkipKana" style="margin-top:12px">Skip kana mastery</button>`}
   </div>`;
-  $("#lessonKanaButton").onclick=()=>{state.kanaMode="unit1";save();showView("kana");renderKanaUI();nextKana()};
-  $("#lessonKanaMasteryButton").onclick=()=>openKanaChallenge();
+  $("#lessonKanaButton").onclick=()=>{state.kanaMode="unit1";resetKanaAssistedQueue();save();showView("kana");renderKanaUI();nextKana()};
+  $("#lessonKanaMasteryButton").onclick=()=>openKanaChallenge("single");
+  $("#lessonKanaTripleButton").onclick=()=>openKanaChallenge("triple");
+  if($("#lessonSkipKana"))$("#lessonSkipKana").onclick=()=>{
+    const ok=window.confirm("Skip Unit 1 kana mastery?\n\nThis waives the 9/10 mastery requirement without marking kana mastered. Romaji support for these 10 characters will be removed immediately.");
+    if(ok)setKanaRequirementSkipped(0,true);
+  };
+  if($("#lessonRestoreKana"))$("#lessonRestoreKana").onclick=()=>setKanaRequirementSkipped(0,false);
+}
+function resetKanaAssistedQueue(){
+  kanaAssistedQueue=[];kanaAssistedPoolSnapshot=[];
 }
 function nextKana(){
   const pool=kanaPool();
-  let eligible=pool;
-  if(pool.length>1&&kanaPreviousChar)eligible=pool.filter(x=>x.char!==kanaPreviousChar);
-  const item=weightedKanaPick(eligible.length?eligible:pool);
+  if(!kanaAssistedQueue.length||!sameKanaPool(kanaAssistedPoolSnapshot,pool)){
+    kanaAssistedQueue=fairKanaDeck(pool,kanaAssistedUrgency,kanaPreviousChar);
+    kanaAssistedPoolSnapshot=[...pool];
+  }
+  const item=kanaAssistedQueue.shift();
   kanaCurrent=item;kanaPreviousChar=item.char;
   $("#kanaChar").textContent=item.char;$("#kanaInput").value="";$("#kanaFeedback").textContent="";
+  if($("#kanaDrillNote")){
+    const left=kanaAssistedQueue.length;
+    $("#kanaDrillNote").textContent=`Fair adaptive cycle: ${left} other kana remain before this cycle resets. Weaker/newer kana move earlier, but none can be skipped.`;
+  }
   $("#kanaInput").focus();
 }
 $("#kanaCheck").onclick=()=>{
@@ -2676,27 +3259,26 @@ $("#kanaCheck").onclick=()=>{
   setTimeout(nextKana,650);
 };
 $("#kanaInput").onkeydown=e=>{if(e.key==="Enter")$("#kanaCheck").click()};
-$("#kanaMode").onchange=e=>{state.kanaMode=e.target.value;save();renderKanaUI();nextKana()};
+$("#kanaMode").onchange=e=>{state.kanaMode=e.target.value;resetKanaAssistedQueue();save();renderKanaUI();nextKana()};
 
 // -------------------------
 // No-help kana mastery view
 // -------------------------
-let kanaChallengeMode="single",kanaChallengeCurrent=null,kanaChallengeLocked=false,kanaChallengePreviousChar=null,kanaChallengeAdvanceReady=false;
+let kanaChallengeMode="single",kanaChallengeCurrent=null,kanaChallengeLocked=false,kanaChallengePreviousChar=null,kanaChallengeAdvanceReady=false,kanaSingleQueue=[],kanaTripleQueue=[];
 
 function challengeEligibleSingle(){
-  return kanaRows.slice(0,10).map(r=>({char:r[0],romaji:r[2]}))
-    .filter(x=>["familiar","learned","mastered"].includes(kanaStats(x.char).level));
+  return kanaRows.slice(0,10).map(r=>({char:r[0],romaji:r[2]}));
 }
 function challengeEligibleTriple(){
-  return kanaRows.slice(0,10).map(r=>({char:r[0],romaji:r[2]}))
-    .filter(x=>["familiar","learned","mastered"].includes(kanaStats(x.char).level));
+  return kanaRows.slice(0,10).map(r=>({char:r[0],romaji:r[2]}));
 }
-function openKanaChallenge(){
+function openKanaChallenge(mode="single"){
   showView("kanaChallenge");
-  kanaChallengeMode="single";
+  kanaChallengeMode=mode==="triple"?"triple":"single";
   kanaChallengePreviousChar=null;
-  $("#singleKanaMode").className="btn";
-  $("#tripleKanaMode").className="btn secondary";
+  resetKanaChallengeQueues();
+  $("#singleKanaMode").className=kanaChallengeMode==="single"?"btn":"btn secondary";
+  $("#tripleKanaMode").className=kanaChallengeMode==="triple"?"btn":"btn secondary";
   renderKanaChallengeSummary();
   nextKanaChallenge();
 }
@@ -2707,33 +3289,51 @@ function renderKanaChallengeSummary(){
     <span class="pillish"><b>${learned}/10</b> learned+</span>
     <span class="pillish"><b>${mastered}/10</b> mastered</span>`;
 }
+function kanaSingleUrgency(item){
+  const s=kanaStats(item.char);
+  const need=Math.max(0,2-s.singlePasses)*4;
+  const misses=Math.min(3,s.singleMisses*.45);
+  const stage={new:2,learning:2.5,familiar:2,learned:.7,mastered:.2}[s.level];
+  return need+misses+stage+Math.random()*.7;
+}
+function resetKanaChallengeQueues(){
+  kanaSingleQueue=[];kanaTripleQueue=[];
+}
 function singleChallengePick(pool){
   if(!pool.length)return null;
-  let eligible=pool;
-  if(pool.length>1&&kanaChallengePreviousChar)eligible=pool.filter(x=>x.char!==kanaChallengePreviousChar);
-  const weighted=[];
-  eligible.forEach(item=>{
-    const s=kanaStats(item.char);
-    const copies=s.singlePasses<2?3:1;
-    for(let i=0;i<copies;i++)weighted.push(item);
-  });
-  const picked=pick(weighted.length?weighted:eligible);
+  if(!kanaSingleQueue.length){
+    kanaSingleQueue=fairKanaDeck(pool,kanaSingleUrgency,kanaChallengePreviousChar);
+  }
+  const picked=kanaSingleQueue.shift();
   kanaChallengePreviousChar=picked.char;
   return picked;
 }
+function kanaTripleUrgency(item){
+  const s=kanaStats(item.char);
+  const need=Math.max(0,3-s.triplePasses)*3;
+  const misses=Math.min(3,s.tripleMisses*.45);
+  return need+misses+Math.random()*.7;
+}
+function refillKanaTripleQueue(pool,avoid=[]){
+  let deck=fairKanaDeck(pool,kanaTripleUrgency,null);
+  // Try not to put a just-used character immediately at the front of the next deck.
+  if(avoid.length&&deck.length>1){
+    const good=deck.findIndex(x=>!avoid.includes(x.char));
+    if(good>0)[deck[0],deck[good]]=[deck[good],deck[0]];
+  }
+  kanaTripleQueue.push(...deck);
+}
 function tripleChallengePick(pool){
   if(pool.length<3)return [];
-  const chosen=[],available=[...pool];
-  while(chosen.length<3&&available.length){
-    const weighted=[];
-    available.forEach(item=>{
-      const s=kanaStats(item.char);
-      const copies=s.triplePasses<3?3:1;
-      for(let i=0;i<copies;i++)weighted.push(item);
-    });
-    const item=pick(weighted);
-    chosen.push(item);
-    available.splice(available.findIndex(x=>x.char===item.char),1);
+  const chosen=[];
+  while(chosen.length<3){
+    if(!kanaTripleQueue.length)refillKanaTripleQueue(pool,chosen.map(x=>x.char));
+    let idx=kanaTripleQueue.findIndex(x=>!chosen.some(c=>c.char===x.char));
+    if(idx<0){
+      refillKanaTripleQueue(pool,chosen.map(x=>x.char));
+      idx=kanaTripleQueue.findIndex(x=>!chosen.some(c=>c.char===x.char));
+    }
+    chosen.push(kanaTripleQueue.splice(idx,1)[0]);
   }
   return chosen;
 }
@@ -2746,22 +3346,14 @@ function nextKanaChallenge(){
 }
 function renderSingleKanaChallenge(){
   const pool=challengeEligibleSingle(),area=$("#kanaChallengeArea");
-  if(!pool.length){
-    area.innerHTML=`<div class="kana-challenge-card"><div class="eyebrow">No familiar kana yet</div>
-      <h2>Use the assisted drill first.</h2>
-      <p>Once a kana reaches <b>familiar</b>, it will stay in the no-help rotation permanently, even after it becomes learned or mastered.</p>
-      <button class="btn secondary" id="returnAssisted">Return to assisted practice</button></div>`;
-    $("#returnAssisted").onclick=()=>{showView("kana");renderKanaUI();nextKana()};
-    return;
-  }
   const item=singleChallengePick(pool);kanaChallengeCurrent=item;
   const s=kanaStats(item.char);
   area.innerHTML=`<div class="kana-challenge-card">
     <div class="eyebrow">Single recall · no help</div>
-    <div class="challenge-note">Type the reading from memory. No reference chart is available here.</div>
+    <div class="challenge-note">Type the reading from memory. No reference chart is available here. If you already know this kana, this attempt counts directly toward mastery.</div>
     <div class="kana-challenge-char">${item.char}</div>
     <div class="pass-track">${[0,1].map(i=>`<span class="pass-dot ${i<s.singlePasses?"done":""}"></span>`).join("")}</div>
-    <div class="challenge-status">${s.singlePasses}/2 correct single recalls</div>
+    <div class="challenge-status">${s.singlePasses}/2 correct single recalls · ${kanaSingleQueue.length} other kana remain in this cycle</div>
     <div class="input-row"><input id="singleKanaInput" autocomplete="off" placeholder="Type the reading"><button class="btn" id="singleKanaSubmit">Check</button></div>
     <div class="feedback" id="singleKanaFeedback"></div>
   </div>`;
@@ -2792,25 +3384,17 @@ function renderSingleKanaChallenge(){
 }
 function renderTripleKanaChallenge(){
   const pool=challengeEligibleTriple(),area=$("#kanaChallengeArea");
-  if(pool.length<3){
-    area.innerHTML=`<div class="kana-challenge-card"><div class="eyebrow">Three-at-a-time recall</div>
-      <h2>You need at least three familiar kana.</h2>
-      <p>Three-at-a-time practice is available as soon as three kana are familiar. It does not require single recall first.</p>
-      <button class="btn secondary" id="returnAssistedTriple">Return to assisted practice</button></div>`;
-    $("#returnAssistedTriple").onclick=()=>{showView("kana");renderKanaUI();nextKana()};
-    return;
-  }
   const items=tripleChallengePick(pool);kanaChallengeCurrent=items;
   area.innerHTML=`<div class="kana-challenge-card">
     <div class="eyebrow">Three at a time · no help</div>
-    <div class="challenge-note">Recall all three independently. Each kana needs three correct appearances in this mode for mastery, but mastered kana stay in the rotation.</div>
+    <div class="challenge-note">Recall all three independently. You can use this mode immediately; assisted practice is not required first. Three correct appearances here are enough for mastery; Single recall is not required. Sets are drawn from a balanced queue so the same characters cannot dominate.</div>
     <div class="kana-three-row">${items.map((item,i)=>{
       const s=kanaStats(item.char);
       return `<div class="kana-three-item">
         <div class="kana-three-char">${item.char}</div>
         <input id="tripleInput${i}" autocomplete="off" placeholder="reading">
         <div class="pass-track">${[0,1,2].map(n=>`<span class="pass-dot ${n<s.triplePasses?"done":""}"></span>`).join("")}</div>
-        <div class="challenge-status">${s.triplePasses}/3 toward mastered</div>
+        <div class="challenge-status">${s.triplePasses}/3 toward mastered · no Single recall required</div>
       </div>`;
     }).join("")}</div>
     <button class="btn" id="tripleKanaSubmit">Check</button>
@@ -2861,10 +3445,11 @@ function renderTripleKanaChallenge(){
 
   $("#tripleInput0").focus();
 }
-$("#startKanaMastery").onclick=openKanaChallenge;
+$("#startKanaMastery").onclick=()=>openKanaChallenge("single");
+$("#startKanaTriple").onclick=()=>openKanaChallenge("triple");
 $("#backToKana").onclick=()=>{showView("kana");renderKanaUI();nextKana()};
-$("#singleKanaMode").onclick=()=>{kanaChallengeMode="single";kanaChallengePreviousChar=null;$("#singleKanaMode").className="btn";$("#tripleKanaMode").className="btn secondary";nextKanaChallenge()};
-$("#tripleKanaMode").onclick=()=>{kanaChallengeMode="triple";$("#tripleKanaMode").className="btn secondary";$("#tripleKanaMode").className="btn";$("#singleKanaMode").className="btn secondary";nextKanaChallenge()};
+$("#singleKanaMode").onclick=()=>{kanaChallengeMode="single";kanaChallengePreviousChar=null;kanaSingleQueue=[];$("#singleKanaMode").className="btn";$("#tripleKanaMode").className="btn secondary";nextKanaChallenge()};
+$("#tripleKanaMode").onclick=()=>{kanaChallengeMode="triple";kanaTripleQueue=[];$("#tripleKanaMode").className="btn";$("#singleKanaMode").className="btn secondary";nextKanaChallenge()};
 
 let reviewSession=null;
 
@@ -2889,7 +3474,7 @@ function introducedVocab(){
       .filter(([_,r])=>(r.recognitionCorrect||0)+(r.recognitionWrong||0)+(r.recallJpEn||0)+(r.recallEnJp||0)+(r.recallWrong||0)+(r.contextPasses||0)+(r.contextWrong||0)>0)
       .map(([word])=>word)
   );
-  const lessonIndexes=new Set(state.completedLessons.filter(i=>practiceBanks[i]?.length));
+  const lessonIndexes=new Set(state.viewedLessons.filter(i=>practiceBanks[i]?.length));
   if(practiceBanks[state.currentLesson]?.length)lessonIndexes.add(state.currentLesson);
   lessonIndexes.forEach(i=>{
     (practiceBanks[i]||[]).forEach(q=>{
@@ -2974,7 +3559,7 @@ function reviewGrammarItems(){
   // Maintenance questions from completed lessons if there are few explicit grammar weaknesses.
   if(items.length<4){
     const seen=new Set(items.map(x=>x.key));
-    state.completedLessons.filter(i=>practiceBanks[i]?.length).forEach(i=>{
+    state.viewedLessons.filter(i=>practiceBanks[i]?.length).forEach(i=>{
       (practiceBanks[i]||[]).filter(q=>q.type==="choice").slice(0,2).forEach(q=>{
         const target=grammarQuestionKey(q),key=`grammar::${target}`,r=reviewRecord(key);
         if(seen.has(key)||daysSince(r.lastReviewed)<5)return;
@@ -2988,7 +3573,7 @@ function reviewGrammarItems(){
 
 
 function reviewKanjiItems(){
-  if(RELEASED_UNIT_COUNT<3)return [];
+  if(!state.devMode)return [];
   return kanjiData.map(e=>{
     const s=kanjiStats(e.k),r=reviewRecord(`kanji::${e.k}`);
     let priority=0,reason="";
@@ -3035,7 +3620,7 @@ function renderReviewLists(items){
     const s=kanaStats(ch);
     if(s.level==="mastered"&&!needs.some(x=>x.key===`kana::${ch}`))strong.push({name:ch,sub:"kana · mastered"});
   });
-  if(RELEASED_UNIT_COUNT>=3)kanjiData.forEach(e=>{
+  if(state.devMode)kanjiData.forEach(e=>{
     const s=kanjiStats(e.k);
     if(s.level==="mastered"&&!needs.some(x=>x.key===`kanji::${e.k}`))strong.push({name:e.k,sub:`kanji · ${e.word} (${e.kana}) · mastered`});
   });
@@ -3102,10 +3687,10 @@ function maintenanceReviewItems(){
     const s=kanaStats(ch);
     if(["familiar","learned","mastered"].includes(s.level))items.push({type:"kana",key:`kana::${ch}`,name:ch,sub:s.level,priority:1,char:ch,romaji:romanizeToken(ch)});
   });
-  if(RELEASED_UNIT_COUNT>=3)kanjiData.filter(e=>["familiar","learned","mastered"].includes(kanjiStats(e.k).level)).forEach(e=>items.push({type:"kanji",key:`kanji::${e.k}`,name:e.k,sub:`${e.word} (${e.kana}) · ${kanjiStats(e.k).level}`,priority:1,e}));
+  if(state.devMode)kanjiData.filter(e=>["familiar","learned","mastered"].includes(kanjiStats(e.k).level)).forEach(e=>items.push({type:"kanji",key:`kanji::${e.k}`,name:e.k,sub:`${e.word} (${e.kana}) · ${kanjiStats(e.k).level}`,priority:1,e}));
   introducedVocab().forEach(row=>items.push({type:"vocab",key:`vocab::${row[1]}`,name:row[1],sub:`${row[3]} · ${vocabStats(row[1]).level}`,priority:1,row}));
   Object.keys(state.particleStats||{}).forEach(k=>items.push({type:"particle",key:`particle::${k}`,name:k,sub:"particle",priority:1,particleKey:k}));
-  state.completedLessons.filter(i=>practiceBanks[i]?.length).forEach(i=>{
+  state.viewedLessons.filter(i=>practiceBanks[i]?.length).forEach(i=>{
     const q=(practiceBanks[i]||[]).find(x=>x.type==="choice");
     if(q)items.push({type:"grammar",key:`grammar::${grammarQuestionKey(q)}`,name:q.prompt.slice(0,70),sub:"grammar",priority:1,q});
   });
@@ -3318,12 +3903,16 @@ function finishReviewSession(){
 let resetArmed=false;
 function renderAbout(){
   const el=$("#aboutProgress");if(!el)return;
-  const u1Done=unitLessonIndexes(0).filter(i=>state.completedLessons.includes(i)).length;
-  const u2Done=unitLessonIndexes(1).filter(i=>state.completedLessons.includes(i)).length;
+  const u1Done=unitViewedCount(0);
+  const u2Done=unitViewedCount(1);
   el.innerHTML=`<div class="about-progress-grid">
-    <div class="about-progress-card"><b>${u1Done}/10 lessons</b>Unit 1 · final ${unitFinalPassed(0)?`passed (${state.unitFinalScores[0]}%)`:"not passed"} · ${unit1MasteredCount()}/10 kana mastered</div>
-    <div class="about-progress-card"><b>${u2Done}/10 lessons</b>Unit 2 · final ${unitFinalPassed(1)?`passed (${state.unitFinalScores[1]}%)`:"not passed"} · ${unitComplete(1)?"complete":"in progress"}</div>
+    <div class="about-progress-card"><b>${u1Done}/10 lessons viewed</b>Unit 1 · final ${unitFinalPassed(0)?`passed (${state.unitFinalScores[0]}%)`:"not passed"} · ${kanaRequirementSkipped(0)?"kana requirement waived":`${unit1MasteredCount()}/10 kana mastered`}</div>
+    <div class="about-progress-card"><b>${u2Done}/10 lessons viewed</b>Unit 2 · final ${unitFinalPassed(1)?`passed (${state.unitFinalScores[1]}%)`:"not passed"} · ${unitComplete(1)?"complete":"in progress"}</div>
   </div>`;
+  if($("#aboutDevToggle")){
+    $("#aboutDevToggle").textContent=state.devMode?"Exit developer mode":"Enter developer mode";
+    $("#aboutDevToggle").onclick=()=>{setDevMode(!state.devMode);renderAbout()};
+  }
   const btn=$("#resetProgress");
   if(btn&&!btn.dataset.bound){
     btn.dataset.bound="1";
@@ -3381,46 +3970,79 @@ function buildUnitFinalQuestions(unitIndex){
 }
 function unitFinalRequirementRows(unitIndex){
   const rows=[];
-  const done=unitLessonIndexes(unitIndex).filter(i=>state.completedLessons.includes(i)).length;
-  rows.push({done:done===courseUnits[unitIndex].count,text:`Lessons: ${done}/${courseUnits[unitIndex].count} complete`});
-  if(unitIndex===0)rows.push({done:unit1MasteredCount()>=9,text:`Kana: ${unit1MasteredCount()}/10 mastered · 9 required`});
-  if(unitIndex===1)rows.push({done:unitComplete(0),text:`Unit 1: ${unitComplete(0)?"complete":"must be complete first"}`});
+  const viewed=unitViewedCount(unitIndex);
+  rows.push({done:true,text:`Lessons viewed: ${viewed}/${courseUnits[unitIndex].count} · viewing them is recommended, not required`});
+  rows.push({done:true,text:"Lesson practice: optional · no minimum score required"});
+  if(unitIndex===0)rows.push({
+    done:kanaRequirementMet(0),
+    text:kanaRequirementSkipped(0)
+      ?"Kana completion requirement: waived · romaji removed for Unit 1 set"
+      :`Kana completion requirement: ${unit1MasteredCount()}/10 mastered · 9 required to finish Unit 1, but not to take this final`
+  });
   return rows;
 }
 function renderUnitFinalCards(){
   const el=$("#unitFinalCards");if(!el)return;
   el.innerHTML=[0,1].map(ui=>{
     const score=state.unitFinalScores[ui]||0,passed=unitFinalPassed(ui),ready=unitFinalReady(ui),reqs=unitFinalRequirementRows(ui);
-    const status=passed?`Passed · ${score}%`:ready?`Ready · best score ${score||"—"}`:`Locked · best score ${score||"—"}`;
+    const status=passed?`Passed · ${score}%`:ready?`Available now · best score ${score||"—"}`:`Locked · best score ${score||"—"}`;
     return `<div class="unit-final-card ${passed?"passed":ready?"ready":""}" data-unit-final-card="${ui}">
       <div class="eyebrow">Unit ${ui+1}</div>
       <h3>${courseUnits[ui].title} final</h3>
       <div class="unit-final-status">${status}</div>
       <div class="unit-final-requirements">${reqs.map(r=>`<div class="unit-final-req ${r.done?"done":"missing"}">${r.done?"✓":"○"} ${r.text}</div>`).join("")}</div>
-      <button class="btn ${passed?"secondary":ready?"orange":"secondary"}" data-start-unit-final="${ui}" ${!ready?"disabled":""}>${passed?"Retake final":ready?"Start 20-question final":"Complete requirements first"}</button>
+      <button class="btn ${passed?"secondary":ready?"orange":"secondary"}" data-start-unit-final="${ui}" ${!ready?"disabled":""}>${passed?"Retake final":ready?"Start 20-question final":"Previous unit must be complete"}</button>
+      ${ui===0&&passed&&!unitComplete(0)?`<button class="btn orange" data-use-placement-pass="0" style="margin-top:8px">Use this pass to skip Unit 1</button>`:""}
     </div>`;
   }).join("");
   el.querySelectorAll("[data-start-unit-final]").forEach(b=>b.onclick=()=>startUnitFinal(+b.dataset.startUnitFinal));
+  el.querySelectorAll("[data-use-placement-pass]").forEach(b=>b.onclick=()=>acceptPlacementSkip(+b.dataset.usePlacementPass));
 }
 function renderAssessmentSelect(){
   $("#assessmentLesson").innerHTML=lessons.map((l,i)=>({l,i}))
-    .filter(x=>x.i<=RELEASED_LAST_LESSON&&practiceBanks[x.i]?.length&&(lessonUnlocked(x.i)||state.completedLessons.includes(x.i)))
+    .filter(x=>x.i<=availableLastLesson()&&practiceBanks[x.i]?.length&&lessonUnlocked(x.i))
     .map(({l,i})=>{const ui=unitIndexForLesson(i);return `<option value="${i}">Unit ${ui+1}, Lesson ${localLessonNumber(i)} — ${l.title}</option>`}).join("");
 }
 function startAssessment(lessonIndex=null,cumulative=false){
-  const maxIndex=Math.min(RELEASED_LAST_LESSON,Math.max(0,state.currentLesson));
+  const maxIndex=Math.min(availableLastLesson(),Math.max(0,state.currentLesson));
   const pool=cumulative?practiceBanks.slice(0,maxIndex+1).filter(Boolean).flat():practiceBanks[lessonIndex];
   assessment={qs:shuffle(pool).slice(0,cumulative?20:10),index:0,correct:0,cumulative,unitFinal:null};
   renderAssessmentQ();
 }
+function startUnitPlacement(unitIndex=0){
+  if(unitIndex!==0)return;
+  assessment={qs:buildUnitFinalQuestions(0),index:0,correct:0,cumulative:false,unitFinal:0,placement:true};
+  $("#assessmentArea").innerHTML=`<div class="placement-callout"><b>Unit 1 placement test.</b> Score 80% or higher to earn the option to skip Unit 1. Skipping is a separate confirmation because it also waives the Unit 1 kana requirement and removes the romaji scaffolding associated with that material.</div>`;
+  renderAssessmentQ();
+  $("#assessmentArea").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function acceptPlacementSkip(unitIndex=0){
+  if(unitIndex!==0||(state.unitFinalScores[0]||0)<80)return;
+  const ok=window.confirm("Skip Unit 1 using your placement-test pass?\\n\\nThis will unlock Unit 2 immediately, waive Unit 1 kana mastery, and remove the romaji scaffolding you would normally lose after finishing Unit 1. Your kana will NOT be falsely marked as mastered.");
+  if(!ok)return;
+  state.unitSkipped["0"]=true;
+  state.kanaSkippedUnits["0"]=true;
+  state.introSeen=true;
+  state.currentLesson=courseUnits[1].start;
+  state.showRomaji=false;
+  save();
+  showView("lessons");
+  markLessonViewed(state.currentLesson);
+  renderLesson();
+}
+
 function startUnitFinal(unitIndex){
   if(!unitFinalReady(unitIndex))return;
-  assessment={qs:buildUnitFinalQuestions(unitIndex),index:0,correct:0,cumulative:false,unitFinal:unitIndex};
+  assessment={qs:buildUnitFinalQuestions(unitIndex),index:0,correct:0,cumulative:false,unitFinal:unitIndex,placement:false};
   $("#assessmentArea").innerHTML="";
   renderAssessmentQ();
   $("#assessmentArea").scrollIntoView({behavior:"smooth",block:"start"});
 }
 function assessmentResultMessage(a,score){
+  if(a.placement){
+    if(score<80)return "You need 80% to test out of Unit 1. Nothing has been skipped; you can retry or begin the course normally.";
+    return "Placement passed. You have demonstrated the Unit 1 material. You can now choose to skip Unit 1, or keep it available and study it normally.";
+  }
   if(a.unitFinal===0){
     if(score<80)return "80% is required. Review the missed areas and take a new randomized Unit 1 final.";
     return unitComplete(0)?"Unit 1 is complete. Romaji is now locked, and Unit 2 is unlocked.":"The final passed. Finish the remaining Unit 1 requirements to complete the unit.";
@@ -3441,20 +4063,26 @@ function renderAssessmentQ(){
     }
     const message=assessmentResultMessage(a,score);
     c.innerHTML=`<div class="test-result">
-      <div class="eyebrow">${a.unitFinal!==null?`Unit ${a.unitFinal+1} final`:"Result"}</div>
+      <div class="eyebrow">${a.placement?"Unit 1 placement":a.unitFinal!==null?`Unit ${a.unitFinal+1} final`:"Result"}</div>
       <div class="big-score">${score}%</div>
       <p>${message}</p>
-      ${a.unitFinal!==null&&score<80?`<button class="btn" id="retakeUnitFinal">Retake with new questions</button>`:""}
-      ${a.unitFinal===0&&unitComplete(0)?`<button class="btn orange" id="continueAfterFinal">Continue to Unit 2</button>`:""}
+      ${a.placement&&score>=80?`<div class="placement-success"><b>Placement pass earned.</b> Skipping Unit 1 will unlock Unit 2 and waive the Unit 1 kana gate. It does not mark those kana mastered, and romaji scaffolding will be removed.</div><button class="btn orange" id="acceptPlacementSkip">Skip Unit 1 and unlock Unit 2 →</button> <button class="btn secondary" id="studyUnitOneAnyway">Keep Unit 1 and study normally</button>`:""}
+      ${a.placement&&score<80?`<button class="btn" id="retakePlacement">Retake placement test</button> <button class="btn secondary" id="startCourseInstead">Begin Unit 1</button>`:""}
+      ${!a.placement&&a.unitFinal!==null&&score<80?`<button class="btn" id="retakeUnitFinal">Retake with new questions</button>`:""}
+      ${!a.placement&&a.unitFinal===0&&unitComplete(0)?`<button class="btn orange" id="continueAfterFinal">Continue to Unit 2</button>`:""}
       ${a.unitFinal===1&&unitComplete(1)?`<div class="beta-complete-note"><b>v0.1 complete.</b> Units 1 and 2 are finished. Keep using Review and Particle Practice while later units are built.</div><button class="btn orange" id="openParticlesAfterFinal">Open Particle Practice</button>`:""}
     </div>`;
+    if($("#acceptPlacementSkip"))$("#acceptPlacementSkip").onclick=()=>acceptPlacementSkip(0);
+    if($("#studyUnitOneAnyway"))$("#studyUnitOneAnyway").onclick=()=>{state.currentLesson=courseUnits[0].start;save();showView("lessons");renderLesson()};
+    if($("#retakePlacement"))$("#retakePlacement").onclick=()=>startUnitPlacement(0);
+    if($("#startCourseInstead"))$("#startCourseInstead").onclick=()=>{state.currentLesson=courseUnits[0].start;save();showView("lessons");renderLesson()};
     if($("#retakeUnitFinal"))$("#retakeUnitFinal").onclick=()=>startUnitFinal(a.unitFinal);
     if($("#continueAfterFinal"))$("#continueAfterFinal").onclick=goContinueLearning;
     if($("#openParticlesAfterFinal"))$("#openParticlesAfterFinal").onclick=()=>showView("particlePractice");
     renderUnitFinalCards();renderCourseMap();renderAssessmentSelect();applyReleaseAccessUI();return;
   }
   const q=a.qs[a.index];
-  c.innerHTML=`<div class="simple-section"><div class="eyebrow">${a.unitFinal!==null?`Unit ${a.unitFinal+1} final · `:""}Question ${a.index+1} of ${a.qs.length}</div><div id="assessmentQuestion"></div></div>`;
+  c.innerHTML=`${a.placement?`<div class="placement-callout"><b>Placement test:</b> 80% earns the option to skip Unit 1. Nothing is skipped automatically.</div>`:""}<div class="simple-section"><div class="eyebrow">${a.placement?"Unit 1 placement · ":a.unitFinal!==null?`Unit ${a.unitFinal+1} final · `:""}Question ${a.index+1} of ${a.qs.length}</div><div id="assessmentQuestion"></div></div>`;
   const target=$("#assessmentQuestion");
   if(q.type==="choice"){
     target.innerHTML=`<h2>${q.prompt}</h2><div class="answers">${shuffle(q.choices).map(x=>`<button class="answer" data-a="${esc(x)}">${x}</button>`).join("")}</div>`;
@@ -3475,7 +4103,7 @@ if(!lessonUnlocked(state.currentLesson)){
   state.currentLesson=nextLearningLesson();
   storageSet("nihongoStructured",JSON.stringify(state));
 }
-renderLesson();renderCourseMap();renderStructures();renderVocab();renderReview();renderAssessmentSelect();renderUnitFinalCards();renderKanaUI();nextKana();applyRomajiLockUI();applyReleaseAccessUI();renderAbout();renderFree();initParticlePractice();
+bindIntroButtons();renderLesson();renderCourseMap();renderStructures();renderVocab();renderReview();renderAssessmentSelect();renderUnitFinalCards();if($("#startPlacementFromAssessments"))$("#startPlacementFromAssessments").onclick=()=>startUnitPlacement(0);renderKanaUI();nextKana();applyRomajiLockUI();applyReleaseAccessUI();renderAbout();renderFree();initParticlePractice();
 </script>
 </body>
 </html>
